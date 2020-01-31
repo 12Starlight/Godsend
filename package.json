@@ -1,5 +1,12 @@
 {
   "name": "godsend",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.11.3"
+  },
+  "scripts": {
+    "webpack": "webpack"
+  }
 }
