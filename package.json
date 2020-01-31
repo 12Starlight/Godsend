@@ -7,6 +7,6 @@
     "npm": "6.11.3"
   },
   "scripts": {
-    "webpack": "webpack"
+    "webpack": "webpack --mode=development --watch"
   }
 }
