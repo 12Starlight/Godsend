@@ -19,7 +19,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login!(@user)
-      redirect_to user_url(@user)
+      redirect_to user_url(@user) # show, @user being the wildcard
     else
       flash.now[:errors] = @user.errors.full_messages
       render :new 
@@ -35,7 +35,7 @@ class Api::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update(user_params)
-      redirect_to user_url(@user)
+      redirect_to user_url(@user) # show, @user being the wildcard
     else
       render json: @user.errors.full_messages, status: 422
     end
@@ -45,7 +45,7 @@ class Api::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.destroy
-      redirect_to users_url
+      redirect_to users_url # create
     else
       render plain: "Sorry user not found"
     end
