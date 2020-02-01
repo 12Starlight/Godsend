@@ -1,0 +1,1 @@
+json.extract! user, :id, :first_name, :last_name, :username, :email # partials never use instance variables, to avoid confusion

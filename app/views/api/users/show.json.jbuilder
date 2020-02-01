@@ -1,1 +1,1 @@
-json.extract! @user, :first_name, :last_name, :username, :email
+json.partial! "api/users/user", user: @user # references the directory # the key created from the partial gets assigned to the instance variable created in the UsersController action
