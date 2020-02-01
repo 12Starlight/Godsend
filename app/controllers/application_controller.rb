@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
 
   # Build Main Methods
-  def login(user)
+  def login!(user)
     session[:session_token] = user.session_token 
   end
 
@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  def logout
+  def logout!
     current_user.reset_session_token!
     session[:session_token] = nil 
   end
