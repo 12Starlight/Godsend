@@ -16,5 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //   };
   // }
   const store = configureStore();
-  ReactDOM.render(<Root store={store} />, root);
+  // ReactDOM.render(<Root store={store} />, root);
+  ReactDOM.render(<div>HI REACT HERE</div>, root);
 }); 
