@@ -9,10 +9,10 @@ import SignUp from './session_form';
 
 
 // mapStateToProps
-const mapStateToProps = ({ signUpErrors }) => ({
-  errors: signUpErrors.session,
+const mapStateToProps = ({ errors }) => ({
+  errors: errors.session,
   formType: 'signUp',
-  navLink: <Link to="/signIn">{'Sign In :)'}</Link>
+  navLink: <Link to="/signin">{'Sign In :)'}</Link>
 });
 
 // mapDispatchToProps
