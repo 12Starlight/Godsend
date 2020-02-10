@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 // Import Local Directory Files
 import { signUp } from '../../actions/session_actions'; 
-import SignUp from './session_form';
+import SignUp from './signup_form';
 
 
 // mapStateToProps

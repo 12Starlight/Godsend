@@ -2,14 +2,11 @@
 import React from 'react';
 
 
-class SessionForm extends React.Component {
+class SignIn extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      first_name: '',
-      last_name: '',
-      email: '',
       username: '',
       password: ''
     }
@@ -29,7 +26,8 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    const demo = {first_name: 'Awesome', last_name: 'Trader', email: 'awesome.trader@gmail.com', username: 'Trader123', password: '123456'}
+    // const demo = { first_name: 'Awesome', last_name: 'Trader', email: 'awesome.trader@gmail.com', username: 'Trader123', password: '123456' }
+    const demo = { username: 'Trader123', password: '123456' }
 
     this.props.demoAction(demo);
   }
@@ -40,7 +38,7 @@ class SessionForm extends React.Component {
         {
           this.props.errors.map((error, i) => (
             <li key={`error-${i}`}>
-              { error }
+              {error}
             </li>
           ))
         }
@@ -51,14 +49,18 @@ class SessionForm extends React.Component {
 
   render() {
     const { formType, navLink } = this.props;
-    
-    return ( 
+
+    return (
+
       <div>
-        This is the signup form 
+        <form>
+          <input />
+          <input />
+        </form>
       </div>
     )
   }
 }
 
 
-export default SessionForm; 
+export default SignIn; 
