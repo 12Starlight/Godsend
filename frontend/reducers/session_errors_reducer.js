@@ -7,7 +7,7 @@ const sessionErrorsReducer = (state = [], action) => {
 
   switch(action.type) {
     case ACCEPT_SESSION_ERRORS:
-      return action.errors; 
+      return action.errors || []; 
     case ACCEPT_CURRENT_USER:
       return []; 
     default:
@@ -17,3 +17,8 @@ const sessionErrorsReducer = (state = [], action) => {
 
 
 export default sessionErrorsReducer; 
+
+
+
+
+

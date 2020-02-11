@@ -49,7 +49,6 @@ class SignUp extends React.Component {
     const { formType, navLink } = this.props;
  
     return ( 
-
       <div>
         <form onSubmit={ this.handleSubmit } >
           <label>

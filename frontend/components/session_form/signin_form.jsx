@@ -51,11 +51,12 @@ class SignIn extends React.Component {
     const { formType, navLink } = this.props;
 
     return (
-
       <div>
-        <form>
-          <input />
-          <input />
+        <form onSubmit={ this.handleSubmit } >
+          <button onClick={ this.handleDemo } >demo</button>
+          <input type='text' placeholder='username' value={this.state.username} onChange={this.update('username')} />
+          <input type='text' placeholder='password' value={this.state.password} onChange={this.update('password')}/>
+          <input type='submit' />
         </form>
       </div>
     )

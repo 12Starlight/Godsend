@@ -5,7 +5,7 @@ import { merge } from 'lodash';
 import { ACCEPT_USER } from '../actions/user_actions'; 
 
 
-const usersReducer = (oldState ={}, action) => {
+const usersReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
 
   switch(action.type) {

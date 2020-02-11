@@ -17,7 +17,6 @@ const mapStateToProps = ({ errors }) => ({
 
 // mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
-  demoAction: (demo) => dispatch(signUp(demo)),
   userAction: (user) => dispatch(signUp(user))
 }); 
 
