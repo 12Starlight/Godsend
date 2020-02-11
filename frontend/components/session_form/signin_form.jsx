@@ -10,6 +10,9 @@ class SignIn extends React.Component {
       username: '',
       password: ''
     }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   update(field) {
@@ -54,9 +57,13 @@ class SignIn extends React.Component {
       <div>
         <form onSubmit={ this.handleSubmit } >
           <button onClick={ this.handleDemo } >demo</button>
-          <input type='text' placeholder='username' value={this.state.username} onChange={this.update('username')} />
-          <input type='text' placeholder='password' value={this.state.password} onChange={this.update('password')}/>
-          <input type='submit' />
+          <label>
+            <input type='text' placeholder='username' value={this.state.username} onChange={this.update('username')} />
+          </label>
+          <label>
+            <input type='text' placeholder='password' value={this.state.password} onChange={this.update('password')} />
+          </label>
+          <input type='submit' value={this.props.formType} />
         </form>
       </div>
     )
