@@ -9,8 +9,7 @@ class Api::SessionsController < ApplicationController
       params[:user][:password]
     )
     if @user.nil?
-      flash.now[:errors] = ['Invalid username and/or password.']
-      render :new 
+      render json: ['Incorrect password and or username'], status: 401
     else
       login!(@user)
       # redirect_to user_url(@user)
@@ -19,7 +18,14 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-    logout!
-    redirect_to api_session_url
+    @user = current_user
+
+    if @user 
+      logout!
+      render 'api/users/show'
+      # redirect_to new_api_session
+    else 
+      render json: ['Nobody SignedIn'], status: 404
+    end 
   end
 end
