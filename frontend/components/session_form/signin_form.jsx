@@ -63,7 +63,7 @@ class SignIn extends React.Component {
           <label>
             <input type='text' placeholder='password' value={this.state.password} onChange={this.update('password')} />
           </label>
-          <input type='submit' value={this.props.formType} />
+          <input type='submit' value={formType} />
         </form>
       </div>
     )

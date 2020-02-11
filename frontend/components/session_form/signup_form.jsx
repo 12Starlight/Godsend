@@ -12,7 +12,7 @@ class SignUp extends React.Component {
       email: '',
       username: '',
       password: ''
-    }
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -66,8 +66,7 @@ class SignUp extends React.Component {
           <label>
             <input type='password' placeholder='Password' value={this.state.password} onChange={this.update('password')} />
           </label>
-
-          <input type='submit' value={ this.props.formType } />
+          <input type='submit' value={ formType } />
         </form>
       </div>
     )

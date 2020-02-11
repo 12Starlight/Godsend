@@ -13,12 +13,13 @@ class Api::SessionsController < ApplicationController
       render :new 
     else
       login!(@user)
-      redirect_to user_url(@user)
+      # redirect_to user_url(@user)
+      render 'api/users/show'
     end
   end
 
   def destroy
     logout!
-    redirect_to new_session_url
+    redirect_to api_session_url
   end
 end

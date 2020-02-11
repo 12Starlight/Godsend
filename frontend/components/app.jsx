@@ -13,7 +13,7 @@ const App = () => (
     <Route exact path='/' render={() => <div>This is where the Navbar goes</div>} />
     <Switch>
       <AuthRoute exact path='/signin' component={ SignInFormContainer } />
-      <AuthRoute exact path='/signup' component= { SignUpFormContainer } />
+      <AuthRoute exact path='/signup' component={ SignUpFormContainer } />
     </Switch>
   </div>
 );
