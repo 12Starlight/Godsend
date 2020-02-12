@@ -98,7 +98,7 @@ class SignUp extends React.Component {
                   </label>   
                   <div className='su_button_container' >
                     <input className='su_button' type='submit' value={ formType } />
-                    <button className='su_button' onClick={this.handleDemo} >demo</button>                  
+                    <button className='su_button' onClick={this.handleDemo} >Demo</button>                  
                   </div>
                 </div>
               </div>

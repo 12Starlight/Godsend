@@ -80,7 +80,7 @@ class SignIn extends React.Component {
               </div>
               <div className='si_button_container' >
                 <input className='si_button' type='submit' value={formType} />
-                <button className='si_button' onClick={this.handleDemo} >demo</button>
+                <button className='si_button' onClick={this.handleDemo} >Demo</button>
               </div>
             </form>    
           </div>     
