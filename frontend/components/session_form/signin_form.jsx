@@ -74,7 +74,7 @@ class SignIn extends React.Component {
                   </label>
                   <label >
                     <div className='si_label' >Password</div>
-                    <input className='si_textbox' type='text' placeholder='' value={this.state.password} onChange={this.update('password')} />
+                    <input className='si_textbox' type='password' placeholder='' value={this.state.password} onChange={this.update('password')} />
                   </label>
                 </div>
               </div>
