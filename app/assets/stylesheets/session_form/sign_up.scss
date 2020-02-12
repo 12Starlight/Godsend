@@ -120,6 +120,26 @@
   border: solid .5px rgba(0, 0, 139, 0.1);
 }
 
+.su_errors {
+  display: block;
+  margin: 3% 0 0 0; 
+}
+
+.su_error_msg {
+  padding: .5%; 
+  font-size: .8em; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  list-style-type: none;
+  width: 61%;
+  margin: 0 0 0 -2%;
+  // border-radius: 15px;
+  // color: rgb(23, 73, 131); 
+  color: whitesmoke; 
+  // background: linear-gradient( rgb(40, 16, 148), rgba(245, 245, 245, 0.185), rgb(40, 16, 148),rgba(7, 7, 7, 0.418));
+  background: rgba(245, 245, 245, 0.137);
+}
+
 .su_button_container {
   display: flex;
   justify-content: space-between;

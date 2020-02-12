@@ -49,7 +49,7 @@ class SignUp extends React.Component {
       <ul>
         {
           this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
+            <li className='su_error_msg' key={`error-${i}`}>
               { error }
             </li>
           ))
@@ -96,6 +96,7 @@ class SignUp extends React.Component {
                   <label>
                     <input className='su_info_text' type='password' placeholder='Password' value={this.state.password} onChange={this.update('password')} />
                   </label>   
+
                   <div className='su_button_container' >
                     <input className='su_button' type='submit' value={ formType } />
                     <button className='su_button' onClick={this.handleDemo} >Demo</button>                  
@@ -106,10 +107,9 @@ class SignUp extends React.Component {
                 <div className='su_icon'></div>
               </div>
             </div>
-
-
-          </form> 
-         </div>     
+          </form>
+          <div className='su_errors' >{this.renderErrors()}</div>  
+         </div>    
         </div>
       </div>
     )

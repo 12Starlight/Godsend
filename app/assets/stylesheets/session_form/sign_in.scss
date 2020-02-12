@@ -43,9 +43,9 @@
   width: 27.2vw;
   margin: 0 0 0 65px; 
   border-radius: 5px;
-  border: solid .5px rgba(7, 47, 70, 0.185);
+  // border: solid .5px rgba(7, 47, 70, 0.185);
   // background-color: rgb(224, 255, 255);
-  background-color: rgba(27, 150, 211, 0.322);
+  // background-color: rgba(27, 150, 211, 0.322);
 }
 
 // Right // Form
@@ -88,6 +88,13 @@
   padding: 3px 3px 3px 0; 
 }
 
+.si_errors {
+  display: inline;
+  font-size: 1em; 
+  font-weight: 600;
+  color: rgb(23, 73, 131); 
+}
+
 .si_button_container {
   display: flex;
   justify-content: space-between;
@@ -116,5 +123,6 @@
   padding-left: 5%;
   outline: none;
   border-radius: 2px;
+  background: rgba(7, 47, 70, 0.082); // other style
   border: .5px solid rgba(7, 47, 70, 0.377);
 }

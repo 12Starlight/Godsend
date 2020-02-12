@@ -25,7 +25,7 @@ class SignIn extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger; 
+    // debugger; 
     const user = Object.assign({}, this.state);
     this.props.userAction(user)
   }
@@ -78,9 +78,9 @@ class SignIn extends React.Component {
                   </label>
                 </div>
               </div>
+              <div className='si_errors' >{this.renderErrors()}</div>
               <div className='si_button_container' >
                 <input className='si_button' type='submit' value={formType} />
-                <button className='si_button' onClick={this.handleDemo} >Demo</button>
               </div>
             </form>    
           </div>     
@@ -94,3 +94,4 @@ class SignIn extends React.Component {
 export default SignIn; 
 
 
+// <button className='si_button' onClick={this.handleDemo} >Demo</button>

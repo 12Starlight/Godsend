@@ -18,12 +18,11 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      login!(@user)
+      login(@user)
       #redirect_to user_url(@user) # show, @user being the wildcard
       render :show 
     else
-      flash.now[:errors] = @user.errors.full_messages
-      render :new 
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
