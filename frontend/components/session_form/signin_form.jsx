@@ -58,29 +58,29 @@ class SignIn extends React.Component {
     const { formType, navLink } = this.props;
 
     return (
-      <div className='outer_container'>
-        <div className='left_container'>
-          <div className='background_img'></div>
+      <div className='si_outer_container'>
+        <div className='si_left_container'>
+          <div className='si_background_img'></div>
         </div>
-        <div className='right_container'>
-          <div className='form_background'>
-            <form className='form' onSubmit={this.handleSubmit} >
-              <div className='form_data_container' >
-                <div className='title'>Welcome To Godsend <FontAwesomeIcon icon={faGripfire} /></div>
-                <div className='label_container'>
+        <div className='si_right_container'>
+          <div className='si_form_background'>
+            <form className='si_form' onSubmit={this.handleSubmit} >
+              <div className='si_form_data_container' >
+                <div className='si_title'>Welcome To Godsend <FontAwesomeIcon icon={faGripfire} /></div>
+                <div className='si_label_container'>
                   <label >
-                    <div className='label' >Username</div>
-                    <input className='textbox' type='text' placeholder='' value={this.state.username} onChange={this.update('username')} />
+                    <div className='si_label' >Username</div>
+                    <input className='si_textbox' type='text' placeholder='' value={this.state.username} onChange={this.update('username')} />
                   </label>
                   <label >
-                    <div className='label' >Password</div>
-                    <input className='textbox' type='text' placeholder='' value={this.state.password} onChange={this.update('password')} />
+                    <div className='si_label' >Password</div>
+                    <input className='si_textbox' type='text' placeholder='' value={this.state.password} onChange={this.update('password')} />
                   </label>
                 </div>
               </div>
-              <div className='button_container' >
-                <input className='button' type='submit' value={formType} />
-                <button className='button' onClick={this.handleDemo} >demo</button>
+              <div className='si_button_container' >
+                <input className='si_button' type='submit' value={formType} />
+                <button className='si_button' onClick={this.handleDemo} >demo</button>
               </div>
             </form>    
           </div>     

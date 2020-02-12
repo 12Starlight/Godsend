@@ -1,5 +1,5 @@
 // Structure
-.outer_container {
+.si_outer_container {
   display: flex;
   justify-content: center;
   top: 0;
@@ -9,14 +9,14 @@
 }
 
 // Left 
-.left_container {
+.si_left_container {
   display: flex;
   // margin: 30px 0 0 0; 
   height: 100vh; 
   width: 50vw; 
 }
 
-.background_img {
+.si_background_img {
   align-items: stretch;
   height: 100vh;
   width: 100vw; 
@@ -26,7 +26,7 @@
 
 
 // Right
-.right_container {
+.si_right_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +37,7 @@
   background: linear-gradient(rgb(19, 87, 126), rgb(214, 229, 241),rgb(19, 89, 126))
 }
 
-.form_background {
+.si_form_background {
   align-items: center;
   height: 45vh; 
   width: 27.2vw;
@@ -48,13 +48,13 @@
 }
 
 // Right // Form
-.form {
+.si_form {
   display: flex;
   flex-direction: column;
   padding: 20px; 
 }
 
-.title {
+.si_title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
   font-weight: 400;
@@ -62,7 +62,7 @@
   color: rgb(0, 0, 58); 
 }
 
-.form_data_container {
+.si_form_data_container {
   display: flex;
   flex-direction: column;
   height: 30vh;
@@ -71,7 +71,7 @@
   // border: solid 1px blue;
 }
 
-.label_container {
+.si_label_container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -80,21 +80,21 @@
   // border: solid 1px fuchsia; 
 }
 
-.label {
+.si_label {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
   font-size: .7em;
   padding: 3px 3px 3px 0; 
 }
 
-.button_container {
+.si_button_container {
   display: flex;
   justify-content: space-between;
   width: 355px; 
   margin: 20px 0 0 30px; 
 }
 
-.button {
+.si_button {
   font-size: .9em;
   font-weight: 500;
   color: white;
@@ -106,7 +106,7 @@
   background: linear-gradient(rgb(19, 87, 126), rgb(214, 229, 241))
 }
 
-.textbox {
+.si_textbox {
   width: 95%; 
   height: 120%; 
   padding-left: 5%;

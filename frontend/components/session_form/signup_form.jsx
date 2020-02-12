@@ -50,25 +50,31 @@ class SignUp extends React.Component {
     const { formType, navLink } = this.props;
  
     return ( 
-      <div>
-        <form onSubmit={ this.handleSubmit } >
-          <label>
-            <input type='text' placeholder='First Name' value={ this.state.first_name } onChange={ this.update('first_name') } />
-          </label>
-          <label>
-            <input type='text' placeholder='Last Name' value={this.state.last_name} onChange={this.update('last_name')} />
-          </label>
-          <label>
-            <input type='text' placeholder='Email' value={this.state.email} onChange={this.update('email')} />
-          </label>
-          <label>
-            <input type='text' placeholder='Username' value={this.state.username} onChange={this.update('username')} />
-          </label>
-          <label>
-            <input type='password' placeholder='Password' value={this.state.password} onChange={this.update('password')} />
-          </label>
-          <input type='submit' value={ formType } />
-        </form>
+      <div >
+        <div>
+          <form onSubmit={ this.handleSubmit } >
+            <div>REACH NEW HEIGHTS</div>
+            <div>
+              <label>
+                <input type='text' placeholder='First Name' value={ this.state.first_name } onChange={ this.update('first_name') } />
+              </label>
+              <label>
+                <input type='text' placeholder='Last Name' value={this.state.last_name} onChange={this.update('last_name')} />
+              </label>
+            </div> 
+
+            <label>
+              <input type='text' placeholder='Email' value={this.state.email} onChange={this.update('email')} />
+            </label>
+            <label>
+              <input type='text' placeholder='Username' value={this.state.username} onChange={this.update('username')} />
+            </label>
+            <label>
+              <input type='password' placeholder='Password' value={this.state.password} onChange={this.update('password')} />
+            </label>
+            <input type='submit' value={ formType } />
+          </form>      
+        </div>
       </div>
     )
   }
