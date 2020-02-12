@@ -2,6 +2,7 @@ const path = require('path');
 
 
 module.exports = {
+  context: __dirname,
   entry: './frontend/godsend.jsx',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
