@@ -34,7 +34,7 @@
   height: 100vh;
   width: 50vw; 
   border: solid .2px rgba(245, 245, 245, 0.541);
-  background: linear-gradient(rgb(19, 87, 126), rgb(214, 229, 241),rgb(19, 89, 126))
+  // background: linear-gradient(rgb(19, 87, 126), rgb(214, 229, 241),rgb(19, 89, 126))
 }
 
 .si_form_background {
@@ -43,8 +43,9 @@
   width: 27.2vw;
   margin: 0 0 0 65px; 
   border-radius: 5px;
-  border: solid .5px whitesmoke;
-  background-color: rgba(224, 255, 255, 0.212);
+  border: solid .5px rgba(7, 47, 70, 0.185);
+  // background-color: rgb(224, 255, 255);
+  background-color: rgba(27, 150, 211, 0.322);
 }
 
 // Right // Form
@@ -103,14 +104,15 @@
   outline: none;
   border-radius: 5px;
   border: solid .5px rgb(245, 245, 245);
-  background: linear-gradient(rgb(19, 87, 126), rgb(214, 229, 241))
+  // background: linear-gradient(rgb(19, 87, 126), rgb(214, 229, 241))
+  background: rgb(4, 39, 59);
 }
 
 .si_textbox {
   width: 95%; 
   height: 120%; 
   padding-left: 5%;
-  outline: gray;
+  outline: none;
   border-radius: 2px;
-  border: none; 
+  border: .5px solid rgba(7, 47, 70, 0.377);
 }

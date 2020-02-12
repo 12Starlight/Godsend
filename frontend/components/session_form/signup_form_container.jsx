@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 // Import Local Directory Files
-import { signUp } from '../../actions/session_actions'; 
+import { signUp, signIn } from '../../actions/session_actions'; 
 import SignUp from './signup_form';
 
 
@@ -17,7 +17,8 @@ const mapStateToProps = ({ errors }) => ({
 
 // mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
-  userAction: (user) => dispatch(signUp(user))
+  userAction: (user) => dispatch(signUp(user)),
+  demoAction: (demo) => dispatch(signIn(demo))
 }); 
 
 
