@@ -45,7 +45,7 @@ class SignIn extends React.Component {
       <ul>
         {
           this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
+            <li className='si_error' key={`error-${i}`}>
               {error}
             </li>
           ))

@@ -50,6 +50,7 @@
 
 // Right // Form
 .si_form {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 20px; 
@@ -59,6 +60,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
   font-weight: 400;
+  margin: -6% 0 0 0; 
   padding: 5px 5px 5px 0; 
   color: rgb(0, 0, 58); 
 }
@@ -90,17 +92,25 @@
 }
 
 .si_errors {
+  position: absolute;
   display: inline;
+  top: 70%; 
+  right: 34%;
   font-size: 1em; 
   font-weight: 600;
+  list-style: none;
   color: rgb(23, 73, 131); 
+}
+
+.si_error {
+  list-style: none;
 }
 
 .si_button_container {
   display: flex;
   justify-content: space-between;
   width: 355px; 
-  margin: -3% 0 0 30px; 
+  margin: -1% 0 0 30px; 
 }
 
 .si_button {
