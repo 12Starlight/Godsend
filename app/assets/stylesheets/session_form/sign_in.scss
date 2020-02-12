@@ -77,14 +77,14 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 25vh;
-  margin: -25px 0 0 0;
+  margin: -5px 0 0 0;
   // border: solid 1px fuchsia; 
 }
 
 .si_label {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
-  font-size: .7em;
+  font-size: .8em;
   padding: 3px 3px 3px 0; 
 }
 
@@ -126,3 +126,16 @@
   background: rgba(7, 47, 70, 0.082); // other style
   border: .5px solid rgba(7, 47, 70, 0.377);
 }
+
+.si_su {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em; 
+  color: rgb(4, 39, 59);
+}
+
+.si_su:visited {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em; 
+  color: lightcyan;
+}
+

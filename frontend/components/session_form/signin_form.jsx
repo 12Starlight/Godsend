@@ -2,6 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGripfire } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 class SignIn extends React.Component {
@@ -76,11 +77,13 @@ class SignIn extends React.Component {
                     <div className='si_label' >Password</div>
                     <input className='si_textbox' type='password' placeholder='' value={this.state.password} onChange={this.update('password')} />
                   </label>
+                  <span className='si_su' >Looking to sign up? <Link to='/signup' >Click Here </Link></span>
                 </div>
               </div>
               <div className='si_errors' >{this.renderErrors()}</div>
               <div className='si_button_container' >
                 <input className='si_button' type='submit' value={formType} />
+                <button className='si_button' onClick={this.handleDemo} >Demo</button>
               </div>
             </form>    
           </div>     

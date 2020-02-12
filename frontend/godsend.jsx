@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  const root = document.getElementById('content');
+  const root = document.getElementById('root');
 
   // Tesing code on the window
   window.dispatch = store.dispatch;
