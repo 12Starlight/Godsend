@@ -12,8 +12,10 @@ const sessionReducer = (oldState = _nulUser, action) => {
 
   switch(action.type) {
     case ACCEPT_CURRENT_USER:
+      // debugger; 
       return { id: action.currentUser.id }
     case END_SESSION_CURRENT_USER:
+      // debugger; 
       return _nulUser; 
     default:
       return oldState; 

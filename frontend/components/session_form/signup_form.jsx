@@ -25,6 +25,7 @@ class SignUp extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // debugger; 
     const user = Object.assign({}, this.state);
     this.props.userAction(user)
   }
@@ -75,3 +76,8 @@ class SignUp extends React.Component {
 
 
 export default SignUp; 
+
+
+
+
+

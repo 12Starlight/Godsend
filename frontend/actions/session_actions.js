@@ -27,8 +27,8 @@ const acceptErrors = (errors) => ({
 // Thunk Action Creators
 export const signIn = (user) => (dispatch) => (
   ApiUtilSession.signIn(user).then(
-    userPromise => dispatch(acceptCurrentUser(userPromise)),
-    error => dispatch(acceptErrors(error.responseJSON))
+    userResponse => dispatch(acceptCurrentUser(userResponse)),
+    errors => dispatch(acceptErrors(errors.responseJSON))
   )
 ); 
 
@@ -40,7 +40,7 @@ export const signOut = () => (dispatch) => (
 
 export const signUp = (user) => (dispatch) => (
   ApiUtilSession.signUp(user).then(
-    userPromise => dispatch(acceptCurrentUser(userPromise)),
+    userResponse => dispatch(acceptCurrentUser(userResponse)),
     errors => dispatch(acceptErrors(errors.responseJSON))
   )
 ); 

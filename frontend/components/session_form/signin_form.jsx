@@ -1,5 +1,7 @@
 // Import React Redux
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGripfire } from '@fortawesome/free-brands-svg-icons';
 
 
 class SignIn extends React.Component {
@@ -23,12 +25,14 @@ class SignIn extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger; 
     const user = Object.assign({}, this.state);
     this.props.userAction(user)
   }
 
   handleDemo(e) {
     e.preventDefault();
+    // debugger; 
     // const demo = { first_name: 'Awesome', last_name: 'Trader', email: 'awesome.trader@gmail.com', username: 'Trader123', password: '123456' }
     const demo = { username: 'Trader123', password: '123456' }
 
@@ -54,17 +58,33 @@ class SignIn extends React.Component {
     const { formType, navLink } = this.props;
 
     return (
-      <div>
-        <form onSubmit={ this.handleSubmit } >
-          <button onClick={ this.handleDemo } >demo</button>
-          <label>
-            <input type='text' placeholder='username' value={this.state.username} onChange={this.update('username')} />
-          </label>
-          <label>
-            <input type='text' placeholder='password' value={this.state.password} onChange={this.update('password')} />
-          </label>
-          <input type='submit' value={formType} />
-        </form>
+      <div className='outer_container'>
+        <div className='left_container'>
+          <div className='background_img'></div>
+        </div>
+        <div className='right_container'>
+          <div className='form_background'>
+            <form className='form' onSubmit={this.handleSubmit} >
+              <div className='form_data_container' >
+                <div className='title'>Welcome To Godsend <FontAwesomeIcon icon={faGripfire} /></div>
+                <div className='label_container'>
+                  <label >
+                    <div className='label' >Username</div>
+                    <input className='textbox' type='text' placeholder='' value={this.state.username} onChange={this.update('username')} />
+                  </label>
+                  <label >
+                    <div className='label' >Password</div>
+                    <input className='textbox' type='text' placeholder='' value={this.state.password} onChange={this.update('password')} />
+                  </label>
+                </div>
+              </div>
+              <div className='button_container' >
+                <input className='button' type='submit' value={formType} />
+                <button className='button' onClick={this.handleDemo} >demo</button>
+              </div>
+            </form>    
+          </div>     
+        </div>
       </div>
     )
   }
@@ -72,3 +92,5 @@ class SignIn extends React.Component {
 
 
 export default SignIn; 
+
+

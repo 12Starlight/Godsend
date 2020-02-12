@@ -1,0 +1,116 @@
+// Structure
+.outer_container {
+  display: flex;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+}
+
+// Left 
+.left_container {
+  display: flex;
+  // margin: 30px 0 0 0; 
+  height: 100vh; 
+  width: 50vw; 
+}
+
+.background_img {
+  align-items: stretch;
+  height: 100vh;
+  width: 100vw; 
+  background-size: cover; 
+  background-image: url('star.jpg');
+}
+
+
+// Right
+.right_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin: 30px 0 0 0; 
+  height: 100vh;
+  width: 50vw; 
+  border: solid .2px rgba(245, 245, 245, 0.541);
+  background: linear-gradient(rgb(19, 87, 126), rgb(214, 229, 241),rgb(19, 89, 126))
+}
+
+.form_background {
+  align-items: center;
+  height: 45vh; 
+  width: 27.2vw;
+  margin: 0 0 0 65px; 
+  border-radius: 5px;
+  border: solid .5px whitesmoke;
+  background-color: rgba(224, 255, 255, 0.212);
+}
+
+// Right // Form
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px; 
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 5px 5px 5px 0; 
+  color: rgb(0, 0, 58); 
+}
+
+.form_data_container {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  width: 21vw; 
+  margin: 0 0 0 30px; 
+  // border: solid 1px blue;
+}
+
+.label_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 25vh;
+  margin: -25px 0 0 0;
+  // border: solid 1px fuchsia; 
+}
+
+.label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: .7em;
+  padding: 3px 3px 3px 0; 
+}
+
+.button_container {
+  display: flex;
+  justify-content: space-between;
+  width: 355px; 
+  margin: 20px 0 0 30px; 
+}
+
+.button {
+  font-size: .9em;
+  font-weight: 500;
+  color: white;
+  height: 6vh;
+  width: 15vh; 
+  outline: none;
+  border-radius: 5px;
+  border: solid .5px rgb(245, 245, 245);
+  background: linear-gradient(rgb(19, 87, 126), rgb(214, 229, 241))
+}
+
+.textbox {
+  width: 95%; 
+  height: 120%; 
+  padding-left: 5%;
+  outline: gray;
+  border-radius: 2px;
+  border: none; 
+}
