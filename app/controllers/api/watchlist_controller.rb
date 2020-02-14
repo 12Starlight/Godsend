@@ -1,5 +1,5 @@
-class WatchlistsController < ApplicationController
-  before_action :require_logged_in, only: [:create, :destroy, :index]
+class Api::WatchlistController < ApplicationController
+    before_action :require_logged_in, only: [:create, :destroy, :index]
   
   def index 
     @user = User.find(params[:godsend_id]) # defining user 
