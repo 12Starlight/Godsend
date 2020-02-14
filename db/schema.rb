@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_31_224229) do
+ActiveRecord::Schema.define(version: 2020_02_14_022508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,19 @@ ActiveRecord::Schema.define(version: 2020_01_31_224229) do
     t.index ["last_name"], name: "index_users_on_last_name"
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "watchlists", force: :cascade do |t|
+    t.integer "godsend_id", null: false
+    t.integer "securities_id"
+    t.string "name", null: false
+    t.string "ticker"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["godsend_id"], name: "index_watchlists_on_godsend_id", unique: true
+    t.index ["name"], name: "index_watchlists_on_name", unique: true
+    t.index ["securities_id"], name: "index_watchlists_on_securities_id", unique: true
+    t.index ["ticker"], name: "index_watchlists_on_ticker", unique: true
   end
 
 end
