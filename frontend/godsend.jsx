@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signIn = signIn;
   window.receiveWatchlists = receiveWatchlists;
   window.receiveWatchlist = receiveWatchlist;
-  window.createWatchlist = createWatchlist;
+  window.createWatchlist = createWatchlist;    
   window.deleteWatchlist = deleteWatchlist; 
 
 
