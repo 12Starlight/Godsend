@@ -6,8 +6,10 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token 
 
   # Associations
-  has_many :watchlists
-
+  has_many :watchlists,
+    primary_key: :id,
+    foreign_key: :godsend_id,
+    class_name: :Watchlist 
     
   # Main Methods
   def self.find_by_credentials(username, password)
