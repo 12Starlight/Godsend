@@ -6,8 +6,9 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token 
 
   # Associations
-  has_one :watchlist 
+  has_many :watchlists
 
+    
   # Main Methods
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
