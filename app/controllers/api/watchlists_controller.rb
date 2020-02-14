@@ -22,7 +22,7 @@ class Api::WatchlistsController < ApplicationController
   #end
 
   def create 
-    debugger 
+    #debugger 
     @watchlist = Watchlist.new(watchlist_params)
     @watchlist.godsend_id = current_user.id 
 
@@ -47,7 +47,7 @@ class Api::WatchlistsController < ApplicationController
 
   private 
   def watchlist_params
-    params.require(:watchlist).permit(:company_name, :ticker, :godsend_id, :securities_id)
+    params.require(:watchlist).permit(:company_name, :securities_id, :ticker)
   end 
 end
 

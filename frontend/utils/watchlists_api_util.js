@@ -26,3 +26,9 @@ export const deleteWatchlist = (id) => (
     url: `/api/watchlists/${id}`
   })
 );
+
+
+
+
+
+
