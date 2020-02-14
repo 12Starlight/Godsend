@@ -824,6 +824,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/watchlists_api_util */ "./frontend/utils/watchlists_api_util.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Import React Redux
@@ -831,6 +832,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
  // Import Local Directory Files
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -856,7 +858,11 @@ document.addEventListener('DOMContentLoaded', function () {
   window.dispatch = store.dispatch;
   window.getState = store.getState;
   window.signOut = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["signOut"];
-  window.signIn = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["signIn"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
+  window.signIn = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["signIn"];
+  window.receiveWatchlists = _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__["receiveWatchlists"];
+  window.receiveWatchlist = _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__["receiveWatchlist"];
+  window.createWatchlist = _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__["createWatchlist"];
+  window.deleteWatchlist = _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__["deleteWatchlist"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -1201,6 +1207,49 @@ var signUp = function signUp(user) {
     data: {
       user: user
     }
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/utils/watchlists_api_util.js":
+/*!***********************************************!*\
+  !*** ./frontend/utils/watchlists_api_util.js ***!
+  \***********************************************/
+/*! exports provided: receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveWatchlists", function() { return receiveWatchlists; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveWatchlist", function() { return receiveWatchlist; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createWatchlist", function() { return createWatchlist; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteWatchlist", function() { return deleteWatchlist; });
+var receiveWatchlists = function receiveWatchlists() {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/watchlists"
+  });
+};
+var receiveWatchlist = function receiveWatchlist(id) {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/watchlists/".concat(id)
+  });
+};
+var createWatchlist = function createWatchlist(watchlist) {
+  return $.ajax({
+    method: "POST",
+    url: "/api/watchlists",
+    data: {
+      watchlist: watchlist
+    }
+  });
+};
+var deleteWatchlist = function deleteWatchlist(id) {
+  return $.ajax({
+    method: "DELETE",
+    url: "/api/watchlists/".concat(id)
   });
 };
 
