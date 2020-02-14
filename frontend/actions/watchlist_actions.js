@@ -45,7 +45,7 @@ export const getWatchlist = (id) => dispatch => (
   )
 );
 
-export const createWatchist = (watchlist) => dispatch => (
+export const createWatchlist = (watchlist) => dispatch => (
   WatchlistApiUtil.createWatchlist(watchlist).then(
     watchlistResponse => dispatch(getWatchlist(watchlistResponse)),
     errors => dispatch(getWatchlistErrors(errors))

@@ -158,6 +158,17 @@ var signUp = function signUp(user) {
 
 /***/ }),
 
+/***/ "./frontend/actions/watchlist_actions.js":
+/*!***********************************************!*\
+  !*** ./frontend/actions/watchlist_actions.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/commandcenter/Documents/Full Stack Projects/Godsend/frontend/actions/watchlist_actions.js: Identifier 'getWatchlists' has already been declared (34:13)\n\n\u001b[0m \u001b[90m 32 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 | \u001b[39m\u001b[90m// Thunk Action Creators\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m getWatchlists \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m dispatch \u001b[33m=>\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 | \u001b[39m  \u001b[33mWatchlistApiUtil\u001b[39m\u001b[33m.\u001b[39mreceiveWatchlists()\u001b[33m.\u001b[39mthen(\u001b[0m\n\u001b[0m \u001b[90m 36 | \u001b[39m    watchlistsResponse \u001b[33m=>\u001b[39m dispatch(getWatchlists(watchlistsResponse))\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 | \u001b[39m    errors \u001b[33m=>\u001b[39m dispatch(getWatchlistErrors(errors\u001b[33m.\u001b[39mresponseJSON)) \u001b[0m\n    at Object.raise (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:7017:17)\n    at ScopeHandler.checkRedeclarationInScope (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:4293:12)\n    at ScopeHandler.declareName (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:4259:12)\n    at Object.checkLVal (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:8864:22)\n    at Object.parseVarId (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11361:10)\n    at Object.parseVar (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11336:12)\n    at Object.parseVarStatement (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11158:10)\n    at Object.parseStatementContent (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10757:21)\n    at Object.parseStatement (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10690:17)\n    at Object.parseExportDeclaration (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11873:17)\n    at Object.maybeParseExportDeclaration (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11829:31)\n    at Object.parseExport (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11759:29)\n    at Object.parseStatementContent (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10794:27)\n    at Object.parseStatement (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10690:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11264:25)\n    at Object.parseBlockBody (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11251:10)\n    at Object.parseTopLevel (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10621:10)\n    at Object.parse (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:12222:10)\n    at parse (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:12273:38)\n    at parser (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/gensync/index.js:254:32)\n    at gen.next (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/gensync/index.js:266:13)\n    at async.call.value (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/gensync/index.js:216:11)");
+
+/***/ }),
+
 /***/ "./frontend/components/app.jsx":
 /*!*************************************!*\
   !*** ./frontend/components/app.jsx ***!
@@ -824,7 +835,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/session_actions */ "./frontend/actions/session_actions.js");
-/* harmony import */ var _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/watchlists_api_util */ "./frontend/utils/watchlists_api_util.js");
+/* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
+/* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Import React Redux
@@ -833,6 +845,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
  // Import Local Directory Files
 
+ // import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -859,10 +872,10 @@ document.addEventListener('DOMContentLoaded', function () {
   window.getState = store.getState;
   window.signOut = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["signOut"];
   window.signIn = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["signIn"];
-  window.receiveWatchlists = _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__["receiveWatchlists"];
-  window.receiveWatchlist = _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__["receiveWatchlist"];
-  window.createWatchlist = _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__["createWatchlist"];
-  window.deleteWatchlist = _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_5__["deleteWatchlist"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
+  window.getWatchlists = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchlists"];
+  window.getWatchlist = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchlist"];
+  window.createWatchlist = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["createWatchlist"];
+  window.trashWatchlist = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["trashWatchlist"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -1207,49 +1220,6 @@ var signUp = function signUp(user) {
     data: {
       user: user
     }
-  });
-};
-
-/***/ }),
-
-/***/ "./frontend/utils/watchlists_api_util.js":
-/*!***********************************************!*\
-  !*** ./frontend/utils/watchlists_api_util.js ***!
-  \***********************************************/
-/*! exports provided: receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveWatchlists", function() { return receiveWatchlists; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveWatchlist", function() { return receiveWatchlist; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createWatchlist", function() { return createWatchlist; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteWatchlist", function() { return deleteWatchlist; });
-var receiveWatchlists = function receiveWatchlists() {
-  return $.ajax({
-    method: 'GET',
-    url: "/api/watchlists"
-  });
-};
-var receiveWatchlist = function receiveWatchlist(id) {
-  return $.ajax({
-    method: 'GET',
-    url: "/api/watchlists/".concat(id)
-  });
-};
-var createWatchlist = function createWatchlist(watchlist) {
-  return $.ajax({
-    method: "POST",
-    url: "/api/watchlists",
-    data: {
-      watchlist: watchlist
-    }
-  });
-};
-var deleteWatchlist = function deleteWatchlist(id) {
-  return $.ajax({
-    method: "DELETE",
-    url: "/api/watchlists/".concat(id)
   });
 };
 

@@ -6,8 +6,8 @@ import configureStore from './store/store';
 
 // Import Local Directory Files
 import { signOut, signIn } from './actions/session_actions';
-import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
-
+// import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
+import { getWatchlists, getWatchlist, createWatchlist, trashWatchlist } from './actions/watchlist_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState; 
   window.signOut = signOut; 
   window.signIn = signIn;
-  window.receiveWatchlists = receiveWatchlists;
-  window.receiveWatchlist = receiveWatchlist;
-  window.createWatchlist = createWatchlist;    
-  window.deleteWatchlist = deleteWatchlist; 
+  window.getWatchlists = getWatchlists;
+  window.getWatchlist = getWatchlist;
+  window.createWatchlist = createWatchlist;
+  window.trashWatchlist = trashWatchlist; 
 
 
   // ReactDOM.render(<div>HI REACT HERE</div>, root);
