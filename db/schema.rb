@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_14_081746) do
+ActiveRecord::Schema.define(version: 2020_02_14_091615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,12 +34,12 @@ ActiveRecord::Schema.define(version: 2020_02_14_081746) do
   create_table "watchlists", force: :cascade do |t|
     t.integer "godsend_id", null: false
     t.integer "securities_id"
-    t.string "name"
+    t.string "company_name"
     t.string "ticker"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["company_name"], name: "index_watchlists_on_company_name", unique: true
     t.index ["godsend_id"], name: "index_watchlists_on_godsend_id", unique: true
-    t.index ["name"], name: "index_watchlists_on_name", unique: true
     t.index ["securities_id"], name: "index_watchlists_on_securities_id", unique: true
     t.index ["ticker"], name: "index_watchlists_on_ticker", unique: true
   end
