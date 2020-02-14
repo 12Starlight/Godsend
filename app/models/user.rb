@@ -5,6 +5,8 @@ class User < ApplicationRecord
   attr_reader :password 
   after_initialize :ensure_session_token 
 
+  # Associations
+  has_one :watchlist 
 
   # Main Methods
   def self.find_by_credentials(username, password)

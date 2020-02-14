@@ -1,5 +1,5 @@
 class Watchlist < ApplicationRecord
   validates :name, presence: true; 
 
-  has_many :securites
+  belongs_to :user 
 end 
