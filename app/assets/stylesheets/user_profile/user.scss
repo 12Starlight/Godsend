@@ -8,6 +8,7 @@
   right: 0;
   bottom: 0;
   left: 0; 
+  overflow-x: scroll;
   // background-color: rgb(29, 56, 138);
   // background-color: rgb(0, 0, 0);
 }
@@ -39,7 +40,8 @@
   margin: 0 0 0 40%; 
 
   /* allow for scrolling */
-  overflow-x: auto;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
 
   /* make it smooth on iOS */
   -webkit-overflow-scrolling: touch;
