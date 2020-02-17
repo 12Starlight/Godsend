@@ -1,5 +1,6 @@
 // Import Local Directory Files
 import { ACCEPT_CURRENT_USER, ACCEPT_SESSION_ERRORS } from '../actions/session_actions';
+import { GET_WATCHLIST_ERRORS } from '../actions/watchlist_actions';
 
 
 const sessionErrorsReducer = (state = [], action) => {
@@ -10,7 +11,9 @@ const sessionErrorsReducer = (state = [], action) => {
       // debugger; 
       return action.errors; 
     case ACCEPT_CURRENT_USER:
-      return []; 
+      return [];
+    case GET_WATCHLIST_ERRORS:
+      return action.errors;  
     default:
       return state;
   }

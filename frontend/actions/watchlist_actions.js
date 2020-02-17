@@ -3,7 +3,7 @@ import * as WatchlistApiUtil from '../utils/watchlists_api_util';
 
 // Constants
 export const GET_WATCHLISTS = 'GET_WATCHLISTS';
-export const GET_WATHLIST = 'GET_WATCHLIST';
+export const GET_WATCHLIST = 'GET_WATCHLIST';
 export const TRASH_WATCHLIST = 'TRASH_WATCHLIST';
 export const GET_WATCHLIST_ERRORS = 'GET_WATCHLIST_ERRORS'
 
@@ -19,9 +19,9 @@ const getWatchlist = (watchlist) => ({
   watchlist 
 });
 
-const trashWatchlist = (watchlistId) => ({
+const trashWatchlist = (watchlist) => ({
   type: TRASH_WATCHLIST,
-  watchlistId
+  watchlist 
 });
 
 const getWatchlistErrors = (errors) => ({
@@ -31,28 +31,28 @@ const getWatchlistErrors = (errors) => ({
 
 
 // Thunk Action Creators
-export const getWatchlists = () => dispatch => (
+export const getWatchLists = () => dispatch => (
   WatchlistApiUtil.receiveWatchlists().then(
     watchlistsResponse => dispatch(getWatchlists(watchlistsResponse)),
     errors => dispatch(getWatchlistErrors(errors.responseJSON)) 
   )
 );
 
-export const getWatchlist = (id) => dispatch => (
+export const getWatchList = (id) => dispatch => (
   WatchlistApiUtil.receiveWatchlist(id).then(
     watchlistResponse => dispatch(getWatchlist(watchlistResponse)),
     errors => dispatch(getWatchlistErrors(errors))
   )
 );
 
-export const createWatchlist = (watchlist) => dispatch => (
+export const createWatchList = (watchlist) => dispatch => (
   WatchlistApiUtil.createWatchlist(watchlist).then(
     watchlistResponse => dispatch(getWatchlist(watchlistResponse)),
     errors => dispatch(getWatchlistErrors(errors))
   )
 );
 
-export const trashWatchlist = (id) => dispatch => (
+export const trashWatchList = (id) => dispatch => (
   WatchlistApiUtil.deleteWatchlist(id).then(
     watchlistResponse => dispatch(trashWatchlist(watchlistResponse)),
     errors => dispatch(getWatchlistErrors(errors))

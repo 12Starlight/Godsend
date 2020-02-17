@@ -3,16 +3,18 @@ import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
 
-const Auth = ({ component: Component, path, loggedIn, exact }) => (
-  <Route path={path} exact={exact} render={(props) => ( // render requires a callback function
+const Auth = ({ component: Component, path, loggedIn, exact, state }) => {
+  // debugger 
+  
+  return <Route path={path} exact={exact} render={(props) => ( // render requires a callback function
     !loggedIn ? (
       <Component {...props} />
     ) : (
-      <Redirect to='/users/:awesome' />
+      <Redirect to={`/users/${state.session.id}`} />
       // <Redirect to='/' />
     ) 
   )} />
-);
+};
 
 const Protected = ({ component: Component, path, loggedIn, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
@@ -35,7 +37,7 @@ const LoggedIn = ({ component: Component, path, loggedIn, exact }) => (
 );
 
 const mapStateToProps = (state) => (
-  { loggedIn: Boolean(state.session.id) }
+  { loggedIn: Boolean(state.session.id), state: state }
 );
 
 

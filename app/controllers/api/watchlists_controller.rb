@@ -2,7 +2,7 @@ class Api::WatchlistsController < ApplicationController
   before_action :require_logged_in, only: [:index, :show, :create, :destroy]
   
   def index
-    @watchlists = current_user.watchlists.all # 2. 3. 5. 6.
+    @watchlists = current_user.watchlists.all 
     render :index 
   end
 
@@ -16,10 +16,10 @@ class Api::WatchlistsController < ApplicationController
     end
   end 
 
-  #def new
-    #@watchlist = Watchlist.new
-   # render :new 
-  #end
+  def new
+    @watchlist = Watchlist.new
+   render :new 
+  end
 
   def create 
     #debugger 
@@ -47,7 +47,7 @@ class Api::WatchlistsController < ApplicationController
 
   private 
   def watchlist_params
-    params.require(:watchlist).permit(:company_name, :securities_id, :ticker)
+    params.require(:watchlist).permit(:securities_id)
   end 
 end
 

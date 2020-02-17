@@ -162,10 +162,93 @@ var signUp = function signUp(user) {
 /*!***********************************************!*\
   !*** ./frontend/actions/watchlist_actions.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: GET_WATCHLISTS, GET_WATCHLIST, TRASH_WATCHLIST, GET_WATCHLIST_ERRORS, getWatchLists, getWatchList, createWatchList, trashWatchList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/commandcenter/Documents/Full Stack Projects/Godsend/frontend/actions/watchlist_actions.js: Identifier 'getWatchlists' has already been declared (34:13)\n\n\u001b[0m \u001b[90m 32 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 | \u001b[39m\u001b[90m// Thunk Action Creators\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m getWatchlists \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m dispatch \u001b[33m=>\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 | \u001b[39m  \u001b[33mWatchlistApiUtil\u001b[39m\u001b[33m.\u001b[39mreceiveWatchlists()\u001b[33m.\u001b[39mthen(\u001b[0m\n\u001b[0m \u001b[90m 36 | \u001b[39m    watchlistsResponse \u001b[33m=>\u001b[39m dispatch(getWatchlists(watchlistsResponse))\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 | \u001b[39m    errors \u001b[33m=>\u001b[39m dispatch(getWatchlistErrors(errors\u001b[33m.\u001b[39mresponseJSON)) \u001b[0m\n    at Object.raise (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:7017:17)\n    at ScopeHandler.checkRedeclarationInScope (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:4293:12)\n    at ScopeHandler.declareName (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:4259:12)\n    at Object.checkLVal (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:8864:22)\n    at Object.parseVarId (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11361:10)\n    at Object.parseVar (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11336:12)\n    at Object.parseVarStatement (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11158:10)\n    at Object.parseStatementContent (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10757:21)\n    at Object.parseStatement (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10690:17)\n    at Object.parseExportDeclaration (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11873:17)\n    at Object.maybeParseExportDeclaration (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11829:31)\n    at Object.parseExport (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11759:29)\n    at Object.parseStatementContent (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10794:27)\n    at Object.parseStatement (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10690:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11264:25)\n    at Object.parseBlockBody (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:11251:10)\n    at Object.parseTopLevel (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:10621:10)\n    at Object.parse (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:12222:10)\n    at parse (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/parser/lib/index.js:12273:38)\n    at parser (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/gensync/index.js:254:32)\n    at gen.next (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/gensync/index.js:266:13)\n    at async.call.value (/Users/commandcenter/Documents/Full Stack Projects/Godsend/node_modules/gensync/index.js:216:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_WATCHLISTS", function() { return GET_WATCHLISTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_WATCHLIST", function() { return GET_WATCHLIST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRASH_WATCHLIST", function() { return TRASH_WATCHLIST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_WATCHLIST_ERRORS", function() { return GET_WATCHLIST_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getWatchLists", function() { return getWatchLists; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getWatchList", function() { return getWatchList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createWatchList", function() { return createWatchList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trashWatchList", function() { return trashWatchList; });
+/* harmony import */ var _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/watchlists_api_util */ "./frontend/utils/watchlists_api_util.js");
+// Import Local Directory Files
+ // Constants
+
+var GET_WATCHLISTS = 'GET_WATCHLISTS';
+var GET_WATCHLIST = 'GET_WATCHLIST';
+var TRASH_WATCHLIST = 'TRASH_WATCHLIST';
+var GET_WATCHLIST_ERRORS = 'GET_WATCHLIST_ERRORS'; // Regular Action Creators // Return POJO
+
+var getWatchlists = function getWatchlists(watchlists) {
+  return {
+    type: GET_WATCHLISTS,
+    watchlists: watchlists
+  };
+};
+
+var getWatchlist = function getWatchlist(watchlist) {
+  return {
+    type: GET_WATCHLIST,
+    watchlist: watchlist
+  };
+};
+
+var trashWatchlist = function trashWatchlist(watchlist) {
+  return {
+    type: TRASH_WATCHLIST,
+    watchlist: watchlist
+  };
+};
+
+var getWatchlistErrors = function getWatchlistErrors(errors) {
+  return {
+    type: GET_WATCHLIST_ERRORS,
+    errors: errors
+  };
+}; // Thunk Action Creators
+
+
+var getWatchLists = function getWatchLists() {
+  return function (dispatch) {
+    return _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_0__["receiveWatchlists"]().then(function (watchlistsResponse) {
+      return dispatch(getWatchlists(watchlistsResponse));
+    }, function (errors) {
+      return dispatch(getWatchlistErrors(errors.responseJSON));
+    });
+  };
+};
+var getWatchList = function getWatchList(id) {
+  return function (dispatch) {
+    return _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_0__["receiveWatchlist"](id).then(function (watchlistResponse) {
+      return dispatch(getWatchlist(watchlistResponse));
+    }, function (errors) {
+      return dispatch(getWatchlistErrors(errors));
+    });
+  };
+};
+var createWatchList = function createWatchList(watchlist) {
+  return function (dispatch) {
+    return _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_0__["createWatchlist"](watchlist).then(function (watchlistResponse) {
+      return dispatch(getWatchlist(watchlistResponse));
+    }, function (errors) {
+      return dispatch(getWatchlistErrors(errors));
+    });
+  };
+};
+var trashWatchList = function trashWatchList(id) {
+  return function (dispatch) {
+    return _utils_watchlists_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteWatchlist"](id).then(function (watchlistResponse) {
+      return dispatch(trashWatchlist(watchlistResponse));
+    }, function (errors) {
+      return dispatch(getWatchlistErrors(errors));
+    });
+  };
+};
 
 /***/ }),
 
@@ -216,6 +299,139 @@ var App = function App() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./frontend/components/navbar/navbar.jsx":
+/*!***********************************************!*\
+  !*** ./frontend/components/navbar/navbar.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons */ "./node_modules/@fortawesome/free-brands-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+// Import React Redux
+
+
+
+
+
+
+var Navbar =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Navbar, _React$Component);
+
+  function Navbar(props) {
+    _classCallCheck(this, Navbar);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Navbar).call(this, props));
+  }
+
+  _createClass(Navbar, [{
+    key: "render",
+    value: function render() {
+      var userId = this.props.userId;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav_container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav_icon_container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav_icon_container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
+        className: "nav_icon",
+        icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faGripfire"]
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav_search_outer_container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav_search_container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
+        className: "nav_search_icon",
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faSearchDollar"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "nav_search_input",
+        placeholder: "Search"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav_links_outer"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav_links_container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav_links",
+        to: "#"
+      }, "Free Stocks")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav_links",
+        to: "#"
+      }, "Portfolio")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav_links",
+        to: "#"
+      }, "Cash")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav_links",
+        to: "#"
+      }, "Messages")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav_links",
+        to: "#"
+      }, "Account")))));
+    }
+  }]);
+
+  return Navbar;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+
+/***/ }),
+
+/***/ "./frontend/components/navbar/navbar_container.js":
+/*!********************************************************!*\
+  !*** ./frontend/components/navbar/navbar_container.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar */ "./frontend/components/navbar/navbar.jsx");
+// Import React Redux
+ // Import Local Directory Files
+
+ // mapStateToProps
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {};
+}; // mapDispatchToProps
+
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_navbar__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -723,6 +939,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _reducers_errors_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../reducers/errors_reducer */ "./frontend/reducers/errors_reducer.js");
+/* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -746,6 +963,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
  // Import Local Directory Files
 
+
+
 var UserProfile =
 /*#__PURE__*/
 function (_React$Component) {
@@ -762,10 +981,13 @@ function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           user = _this$props.user,
-          signOut = _this$props.signOut;
+          signOut = _this$props.signOut,
+          userId = _this$props.userId;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user_container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        userId: userId
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "button",
@@ -800,9 +1022,10 @@ __webpack_require__.r(__webpack_exports__);
 
  // mapStateToProps
 
-var mapStateToProps = function mapStateToProps(state) {
+var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    user: state.entities.users[state.session.id]
+    user: state.entities.users[state.session.id],
+    userId: ownProps.match.params.awesome
   };
 }; // mapDispatchToProps
 
@@ -836,7 +1059,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
-/* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Import React Redux
@@ -872,10 +1094,10 @@ document.addEventListener('DOMContentLoaded', function () {
   window.getState = store.getState;
   window.signOut = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["signOut"];
   window.signIn = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["signIn"];
-  window.getWatchlists = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchlists"];
-  window.getWatchlist = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchlist"];
-  window.createWatchlist = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["createWatchlist"];
-  window.trashWatchlist = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["trashWatchlist"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
+  window.getWatchLists = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchLists"];
+  window.getWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchList"];
+  window.createWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["createWatchList"];
+  window.trashWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["trashWatchList"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -895,12 +1117,15 @@ document.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+/* harmony import */ var _watchlist_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./watchlist_reducer */ "./frontend/reducers/watchlist_reducer.js");
 // Import React Redux
  // Import Local Directory Files
 
 
+
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  watchlists: _watchlist_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -921,8 +1146,10 @@ __webpack_require__.r(__webpack_exports__);
  // Import Local Directory Files
 
 
+
 var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  session: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  session: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  watchlist: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
 
@@ -966,7 +1193,9 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
 // Import Local Directory Files
+
 
 
 var sessionErrorsReducer = function sessionErrorsReducer() {
@@ -981,6 +1210,9 @@ var sessionErrorsReducer = function sessionErrorsReducer() {
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["ACCEPT_CURRENT_USER"]:
       return [];
+
+    case _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__["GET_WATCHLIST_ERRORS"]:
+      return action.errors;
 
     default:
       return state;
@@ -1075,6 +1307,57 @@ var usersReducer = function usersReducer() {
 
 /***/ }),
 
+/***/ "./frontend/reducers/watchlist_reducer.js":
+/*!************************************************!*\
+  !*** ./frontend/reducers/watchlist_reducer.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// Import React Redux
+ // Import Local Directory Files
+
+ // Build Variables Needed
+
+var _nulWatchlist = Object.freeze({
+  id: null
+});
+
+var watchlistReducer = function watchlistReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+  var newState;
+
+  switch (action.type) {
+    case _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__["GET_WATCHLISTS"]:
+      return Object.assign({}, oldState, action.watchlists);
+
+    case _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__["GET_WATCHLIST"]:
+      return Object.assign({}, oldState, _defineProperty({}, action.watchlist.id, action.watchlist));
+
+    case _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__["TRASH_WATCHLIST"]:
+      // debugger 
+      newState = Object.assign({}, oldState);
+      delete newState[action.watchlist.id];
+      return newState;
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (watchlistReducer);
+
+/***/ }),
+
 /***/ "./frontend/store/store.js":
 /*!*********************************!*\
   !*** ./frontend/store/store.js ***!
@@ -1127,14 +1410,16 @@ var Auth = function Auth(_ref) {
   var Component = _ref.component,
       path = _ref.path,
       loggedIn = _ref.loggedIn,
-      exact = _ref.exact;
+      exact = _ref.exact,
+      state = _ref.state;
+  // debugger 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: path,
     exact: exact,
     render: function render(props) {
       return (// render requires a callback function
         !loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
-          to: "/users/:awesome"
+          to: "/users/".concat(state.session.id)
         }) // <Redirect to='/' />
 
       );
@@ -1174,7 +1459,8 @@ var LoggedIn = function LoggedIn(_ref3) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    loggedIn: Boolean(state.session.id)
+    loggedIn: Boolean(state.session.id),
+    state: state
   };
 };
 
@@ -1220,6 +1506,49 @@ var signUp = function signUp(user) {
     data: {
       user: user
     }
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/utils/watchlists_api_util.js":
+/*!***********************************************!*\
+  !*** ./frontend/utils/watchlists_api_util.js ***!
+  \***********************************************/
+/*! exports provided: receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveWatchlists", function() { return receiveWatchlists; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveWatchlist", function() { return receiveWatchlist; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createWatchlist", function() { return createWatchlist; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteWatchlist", function() { return deleteWatchlist; });
+var receiveWatchlists = function receiveWatchlists() {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/watchlists"
+  });
+};
+var receiveWatchlist = function receiveWatchlist(id) {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/watchlists/".concat(id)
+  });
+};
+var createWatchlist = function createWatchlist(watchlist) {
+  return $.ajax({
+    method: "POST",
+    url: "/api/watchlists",
+    data: {
+      watchlist: watchlist
+    }
+  });
+};
+var deleteWatchlist = function deleteWatchlist(id) {
+  return $.ajax({
+    method: "DELETE",
+    url: "/api/watchlists/".concat(id)
   });
 };
 

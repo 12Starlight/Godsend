@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import errorsReducer from '../../reducers/errors_reducer';
 
 // Import Local Directory Files
+import NavbarContainer from '../navbar/navbar_container'
 
 
 class UserProfile extends React.Component {
@@ -13,10 +14,11 @@ class UserProfile extends React.Component {
 
 
   render() {
-    const { user, signOut } = this.props; 
+    const { user, signOut, userId } = this.props; 
 
     return (
       <div className='user_container' >
+        <NavbarContainer userId={userId} />
         <div className="user">
           <div>{user.first_name}</div>
           <div>{user.last_name}</div>

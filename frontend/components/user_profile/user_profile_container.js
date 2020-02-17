@@ -7,8 +7,9 @@ import { signOut } from '../../actions/session_actions';
 
 
 // mapStateToProps
-const mapStateToProps = (state) => ({
-  user: state.entities.users[state.session.id]
+const mapStateToProps = (state, ownProps) => ({
+  user: state.entities.users[state.session.id],
+  userId: ownProps.match.params.awesome
 });
 
 // mapDispatchToProps
