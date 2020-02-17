@@ -28,48 +28,6 @@
   color: rgb(29, 57, 138);
 }
 
-.nav_search_outer_container {
-  display: flex;
-  width: 28%; 
-  border-radius: 2%;
-  border: solid .5px rgba(29, 56, 138, 0.253);
-}
-
-.nav_search_outer_container:hover {
-  color: white; 
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-  -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
-  box-shadow: 0 4px 6px rgba(0,0,0,.3);
-}
-
-.nav_search_container {
-  display: flex; 
-  align-items: center;
-  width: 100%; 
-  // border: solid .5px blue;
-}
-
-.nav_search_icon {
-  font-size: 1.4em;
-  color: rgba(255, 255, 255, 0.692);  
-  margin: 0 4% 0 4%;
-}
-
-.nav_search_input {
-  color: rgb(255, 255, 255); 
-  font-size: .8em;
-  height: 3vh; 
-  width: 25vw; 
-  outline: none;
-  border: none; 
-  background: transparent;
-  // outline: solid 1px royalblue; 
-}
-
-::placeholder {
-  color: rgba(255, 255, 255, 0.808); 
-}
-
 .nav_links_outer {
   display: flex;
   width: 25%;

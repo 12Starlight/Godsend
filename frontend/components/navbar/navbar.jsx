@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGripfire } from '@fortawesome/free-brands-svg-icons';
 import { faSearchDollar } from '@fortawesome/free-solid-svg-icons';
 
+// Import Local Directory Files
+import SearchContainer from '../navbar/search/search_container'
+
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -18,7 +21,7 @@ class Navbar extends React.Component {
     return(
       <div className='nav_container' >
         <div className='nav_icon_container' ><div className='nav_icon_container' ><FontAwesomeIcon className='nav_icon' icon={faGripfire} /></div></div>
-        <div className='nav_search_outer_container'><div className='nav_search_container' ><FontAwesomeIcon className='nav_search_icon' icon={faSearchDollar} /><div><input className='nav_search_input' placeholder='Search' /></div></div></div>
+        <SearchContainer />
         <div className='nav_links_outer'>
           <div className='nav_links_container'>
             <div><Link className='nav_links' to='#'>Free Stocks</Link></div>
