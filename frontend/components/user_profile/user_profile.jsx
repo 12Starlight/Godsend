@@ -55,6 +55,9 @@ class UserProfile extends React.Component {
               <div className='watchlist_items'>
                 <article>News Item 7</article>
               </div>
+              <div className='watchlist_items'>
+                <button className='button' onClick={signOut} >Sign Out</button>
+              </div>
             </div>
             <div className='watchlist_container'></div>
           </div>

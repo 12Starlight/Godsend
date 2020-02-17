@@ -1019,7 +1019,12 @@ function (_React$Component) {
         className: "watchlist_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "watchlist_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "button",
+        onClick: signOut
+      }, "Sign Out"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "watchlist_container"
       }))));
     }
