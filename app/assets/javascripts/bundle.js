@@ -984,15 +984,44 @@ function (_React$Component) {
           signOut = _this$props.signOut,
           userId = _this$props.userId;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "user_container"
+        className: "user_outer_container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_3__["default"], {
         userId: userId
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user_container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "button",
-        onClick: signOut
-      }, "Sign Out")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "feed_container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Welcome To Godsend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Awesome Picture")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_body"
+      }, "Popular Colections"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_body"
+      }, "News"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom News Item 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom News Item 2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom Movers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "watchlist_container"
+      }))));
     }
   }]);
 
@@ -1000,7 +1029,11 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 ;
-/* harmony default export */ __webpack_exports__["default"] = (UserProfile);
+/* harmony default export */ __webpack_exports__["default"] = (UserProfile); // <div>{user.first_name}</div>
+// <div>{user.last_name}</div>
+// <div>{user.email}</div>
+// <div>{user.username}</div>
+// <button className='button' onClick={signOut} >Sign Out</button>
 
 /***/ }),
 
