@@ -994,33 +994,33 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_header"
+        className: "feed_header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Welcome To Godsend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Awesome Picture")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_body"
+        className: "feed_body"
       }, "Popular Colections"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_body"
+        className: "feed_body"
       }, "News"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom News Item 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom News Item 2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom Movers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "watchlist_items"
+        className: "feed_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "button",
         onClick: signOut
