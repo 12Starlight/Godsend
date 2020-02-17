@@ -17,7 +17,7 @@
   margin: 4% 0 0 0;
   height: 100%;
   width: 100%; 
-  border: solid .5px pink;  
+  // border: solid .5px pink;  
 }
 
 .user {
@@ -27,7 +27,7 @@
   justify-content: space-between;
   height: 100%;
   width: 60%;
-  border: solid .5px red; 
+  // border: solid .5px red; 
 }
 
 .feed_container {
@@ -43,13 +43,13 @@
 
   /* make it smooth on iOS */
   -webkit-overflow-scrolling: touch;
-  border: solid .5px blue; 
+  // border: solid .5px blue; 
 }
 
 .watchlist_container {
   position: fixed;
   right: 19.5%;
-  top: 8%;  
+  top: 7.7%;  
   height: 80%; 
   width: 17%;
   border: solid .5px blue; 
@@ -57,20 +57,20 @@
 
 .watchlist_header {
   height: 300px;
-  width: 100%;  
+  width: 99%;  
   border: solid .5px blue;
 }
 
 .watchlist_body {
   height: 300px;
-  width: 100%;
+  width: 99%;
   border: solid .5px blue;
 }
 
 .watchlist_items {
   list-style: none;
   height: 200px;
-  width: 100%; 
+  width: 99%; 
   border: solid .5px fuchsia;
 }
 
