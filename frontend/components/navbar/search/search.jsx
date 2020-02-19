@@ -9,45 +9,96 @@ class Search extends React.Component {
     super(props);
 
     this.state = {
-      searchTerm: ''
+      searchTerm: '',
+      ticker: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.changedValue = this.changedValue.bind(this);
+    this.company = this.company.bind(this);
   }
 
   input(type) {
     return e => {
       this.setState({
-        [type]: e.target.value
+        [type]: e.currentTarget.value
       })
     }
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(this.state.searchTerm)
+    console.log(this.state.ticker)
+  }
+
+  changedValue(val) {
+    this.setState({
+      searchTerm: val
+    })
+  }
+
+  company(e) {
+    e.preventDefault();
+    console.log(this.state.ticker) // logic for getting api
   }
 
 
   render(){
-    const {} = this.props; 
+    const { stocks } = this.props; 
 
-    return(
-      <form className='nav_search_outer_container' onSubmit={this.handleSubmit} >
-        <div className='nav_search_container' >
-          <FontAwesomeIcon className='nav_search_icon' icon={faSearchDollar} />
-          <div>
-            <input 
-              className='nav_search_input' 
-              type='text'
-              placeholder='Search' 
-              onChange={this.input('searchTerm')}
-              value={this.state.searchTerm}
-            />
+    let filteredStocks = stocks.filter(stock => {
+      
+      if (stock.ticker.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || stock.company.toLowerCase().includes(this.state.searchTerm.toLowerCase())) {
+        return stock 
+      }
+    })
+
+    const companies = filteredStocks.slice(0,6).map((stock, i) => {
+      this.state.ticker = stock.ticker; 
+      return(
+        <article key={i} onClick={this.company} >
+          <div>{stock.ticker}</div>
+          <div>{stock.company}</div>  
+        </article>
+      ) 
+    })
+
+    if (this.state.searchTerm === '') {
+      return(
+        <form className='nav_search_outer_container' onSubmit={this.handleSubmit} >
+          <div className='nav_search_container' >
+            <FontAwesomeIcon className='nav_search_icon' icon={faSearchDollar} />
+            <div>
+              <input 
+                className='nav_search_input' 
+                type='text'
+                placeholder='Search' 
+                onChange={this.input('searchTerm')}
+                value={this.state.searchTerm}
+              />
+            </div>
           </div>
-        </div>
-      </form>
-    )
+        </form>
+      )
+    } else {
+        return (
+          <form className='nav_search_outer_container' onSubmit={this.handleSubmit} >
+            <div className='nav_search_container' >
+              <FontAwesomeIcon className='nav_search_icon' icon={faSearchDollar} />
+              <div>
+                <input
+                  className='nav_search_input'
+                  type='text'
+                  placeholder='Search'
+                  onChange={this.input('searchTerm')}
+                  value={this.state.searchTerm}
+                />
+              </div>
+            </div>
+              { companies }
+          </form>
+        )
+    }
   }
 }
 
