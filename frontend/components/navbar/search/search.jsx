@@ -60,6 +60,9 @@ class Search extends React.Component {
 
     if (this.state.logic === false) {
       document.getElementById('clicked').style.background = 'rgb(29, 57, 138)'
+      document.getElementById('clicked').style.border = 'none'
+      document.getElementById('clicked').style.webkitBoxShadow = '1px 4px 6px rgba(0, 0, 0, .3)'
+      document.getElementById('clicked').style.boxShadow = '1px 4px 6px rgba(0, 0, 0, .3)'
       this.setState({
         logic: !this.state.logic 
       })
@@ -71,6 +74,8 @@ class Search extends React.Component {
 
     if (this.state.logic === true) {
       document.getElementById('clicked').style.background = 'rgba(29, 56, 138, 0)'
+      document.getElementById('clicked').style.webkitBoxShadow = 'none'
+      document.getElementById('clicked').style.boxShadow = 'none'
       document.getElementById('clicked').style.border = 'solid .5px rgba(29, 56, 138, 0.253)'
       document.getElementById('clicked').style.borderRadius = '2%'
       this.setState({
