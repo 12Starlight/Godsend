@@ -488,6 +488,7 @@ function (_React$Component) {
     _this.clicked = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
     _this.searchEntered = _this.searchEntered.bind(_assertThisInitialized(_this));
     _this.searchExited = _this.searchExited.bind(_assertThisInitialized(_this));
+    _this.selectedText = _this.selectedText.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -563,6 +564,11 @@ function (_React$Component) {
       }
     }
   }, {
+    key: "selectedText",
+    value: function selectedText(e) {
+      document.getElementById('select').style.background = 'white';
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this5 = this;
@@ -580,7 +586,13 @@ function (_React$Component) {
           onClick: function onClick(e) {
             return _this5.company(e, stock);
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, stock.ticker), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, stock.company));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "select",
+          onKeyDown: _this5.selectedText
+        }, stock.ticker), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "select",
+          onChange: _this5.selectedText
+        }, stock.company));
       });
 
       if (this.state.searchTerm === '') {

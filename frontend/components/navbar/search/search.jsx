@@ -11,7 +11,7 @@ class Search extends React.Component {
     this.state = {
       searchTerm: '',
       ticker: '',
-      logic: false
+      logic: false,
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,6 +20,7 @@ class Search extends React.Component {
     this.clicked = React.createRef(); 
     this.searchEntered = this.searchEntered.bind(this);
     this.searchExited = this.searchExited.bind(this); 
+    this.selectedText = this.selectedText.bind(this); 
   }
 
   input(type) {
@@ -79,6 +80,11 @@ class Search extends React.Component {
     }
   }
 
+  selectedText(e) {
+    document.getElementById('select').style.background = 'white'
+  }
+
+
 
   render(){
     const { stocks } = this.props; 
@@ -94,8 +100,8 @@ class Search extends React.Component {
       // debugger; 
       return(
         <article key={i} onClick={e => this.company(e, stock)} >
-          <div>{stock.ticker}</div>
-          <div>{stock.company}</div>  
+          <div id='select' onKeyDown={this.selectedText} >{stock.ticker}</div>
+          <div id='select' onChange={this.selectedText} >{stock.company}</div>  
         </article>
       ) 
     })
