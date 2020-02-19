@@ -8,6 +8,8 @@ import configureStore from './store/store';
 import { signOut, signIn } from './actions/session_actions';
 // import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
 import { getWatchLists, getWatchList, createWatchList, trashWatchList } from './actions/watchlist_actions';
+import { receiveAllNews } from './actions/feed_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getWatchList = getWatchList;
   window.createWatchList = createWatchList;
   window.trashWatchList = trashWatchList; 
+  window.receiveAllNews = receiveAllNews;
 
 
   // ReactDOM.render(<div>HI REACT HERE</div>, root);

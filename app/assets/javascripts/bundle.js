@@ -86,6 +86,52 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/feed_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/feed_actions.js ***!
+  \******************************************/
+/*! exports provided: GET_ALL_NEWS, GET_NEWS_ERRORS, receiveAllNews */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_ALL_NEWS", function() { return GET_ALL_NEWS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_NEWS_ERRORS", function() { return GET_NEWS_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllNews", function() { return receiveAllNews; });
+/* harmony import */ var _utils_feed_utl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/feed_utl */ "./frontend/utils/feed_utl.js");
+// Import Local Directory Files
+ // Constants
+
+var GET_ALL_NEWS = 'GET_ALL_NEWS';
+var GET_NEWS_ERRORS = 'GET_NEWS_ERRORS'; // Regular Action Creators // Return POJO
+
+var getAllNews = function getAllNews(news) {
+  return {
+    type: GET_ALL_NEWS,
+    news: news
+  };
+};
+
+var getNewsErrors = function getNewsErrors(errors) {
+  return {
+    type: GET_NEWS_ERRORS,
+    errors: errors
+  };
+}; // Thunk Action Creators
+
+
+var receiveAllNews = function receiveAllNews() {
+  return function (dispatch) {
+    return _utils_feed_utl__WEBPACK_IMPORTED_MODULE_0__["getNewsFeed"]().then(function (newsResponse) {
+      return dispatch(getAllNews(newsResponse));
+    }, function (errors) {
+      return dispatch(getNewsErrors);
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/session_actions.js":
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
@@ -1351,6 +1397,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
+/* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actions/feed_actions */ "./frontend/actions/feed_actions.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Import React Redux
@@ -1360,6 +1407,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  // Import Local Directory Files
 
  // import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -1389,7 +1437,8 @@ document.addEventListener('DOMContentLoaded', function () {
   window.getWatchLists = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchLists"];
   window.getWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchList"];
   window.createWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["createWatchList"];
-  window.trashWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["trashWatchList"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
+  window.trashWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["trashWatchList"];
+  window.receiveAllNews = _actions_feed_actions__WEBPACK_IMPORTED_MODULE_6__["receiveAllNews"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -1689,6 +1738,25 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/utils/feed_utl.js":
+/*!************************************!*\
+  !*** ./frontend/utils/feed_utl.js ***!
+  \************************************/
+/*! exports provided: getNewsFeed */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNewsFeed", function() { return getNewsFeed; });
+var getNewsFeed = function getNewsFeed() {
+  return {
+    method: 'GET',
+    url: 'https://cloud.iexapis.com/stable/stock/market/news?token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd'
+  };
+};
 
 /***/ }),
 
