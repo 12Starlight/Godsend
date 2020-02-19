@@ -5,6 +5,7 @@ import errorsReducer from '../../reducers/errors_reducer';
 
 // Import Local Directory Files
 import NavbarContainer from '../navbar/navbar_container'
+import FeedContainer from '../feed/feed_container';
 
 
 class UserProfile extends React.Component {
@@ -21,45 +22,9 @@ class UserProfile extends React.Component {
         <NavbarContainer userId={userId} />
         <div className="user_container">
           <div className='user'>
-            <div className='feed_container'>
-              <div className='feed_header' ><div>Welcome To Godsend</div><div>Awesome Picture</div></div>
-              <div className='feed_body'>Popular Colections</div>
-              <div className='feed_body'>News</div>
-              <div className='feed_items'>
-                <article>Tom News Item 1</article>
-              </div>
-              <div className='feed_items'>
-                <article>Tom News Item 2</article>
-              </div>
-              <div className='feed_items'>
-                <article>Tom Movers</article>
-              </div>
-              <div className='feed_items'>
-                <article>News Item 1</article>
-              </div>
-              <div className='feed_items'>
-                <article>News Item 2</article>
-              </div>
-              <div className='feed_items'>
-                <article>News Item 3</article>
-              </div>
-              <div className='feed_items'>
-                <article>News Item 4</article>
-              </div>
-              <div className='feed_items'>
-                <article>News Item 5</article>
-              </div>
-              <div className='feed_items'>
-                <article>News Item 6</article>
-              </div>
-              <div className='feed_items'>
-                <article>News Item 7</article>
-              </div>
-              <div className='feed_items'>
-                <button className='button' onClick={signOut} >Sign Out</button>
-              </div>
+            <FeedContainer />
+            <div className='watchlist_container'>
             </div>
-            <div className='watchlist_container'></div>
           </div>
         </div>
       </div>
