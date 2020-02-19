@@ -22,7 +22,7 @@ const getNewsErrors = (errors) => ({
 // Thunk Action Creators
 export const receiveAllNews = () => dispatch => (
   FeedApiUtil.getNewsFeed().then(
-    newsResponse => dispatch(getAllNews(newsResponse)),
-    errors => dispatch(getNewsErrors)
+    newsResponse => dispatch(getAllNews(newsResponse))
+    // errors => dispatch(getNewsErrors(errors.responseJSON))
   )
 );

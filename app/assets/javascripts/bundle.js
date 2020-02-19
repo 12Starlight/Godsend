@@ -124,9 +124,8 @@ var receiveAllNews = function receiveAllNews() {
   return function (dispatch) {
     return _utils_feed_utl__WEBPACK_IMPORTED_MODULE_0__["getNewsFeed"]().then(function (newsResponse) {
       return dispatch(getAllNews(newsResponse));
-    }, function (errors) {
-      return dispatch(getNewsErrors);
-    });
+    } // errors => dispatch(getNewsErrors(errors.responseJSON))
+    );
   };
 };
 
@@ -1459,14 +1458,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
 /* harmony import */ var _watchlist_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./watchlist_reducer */ "./frontend/reducers/watchlist_reducer.js");
+/* harmony import */ var _news_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./news_reducer */ "./frontend/reducers/news_reducer.js");
 // Import React Redux
  // Import Local Directory Files
 
 
 
+
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  watchlists: _watchlist_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
+  watchlists: _watchlist_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+  news: _news_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -1488,11 +1490,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   session: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  watchlist: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  watchlist: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  news: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/news_reducer.js":
+/*!*******************************************!*\
+  !*** ./frontend/reducers/news_reducer.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/feed_actions */ "./frontend/actions/feed_actions.js");
+// Import React Redux
+ // Import Local Directory Files
+
+
+
+var newsReducer = function newsReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  // debugger; 
+  Object.freeze(oldState);
+
+  switch (action.type) {
+    case _actions_feed_actions__WEBPACK_IMPORTED_MODULE_1__["GET_ALL_NEWS"]:
+      return Object.assign({}, oldState, action.news);
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (newsReducer);
 
 /***/ }),
 
@@ -1535,7 +1575,9 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
+/* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/feed_actions */ "./frontend/actions/feed_actions.js");
 // Import Local Directory Files
+
 
 
 
@@ -1553,6 +1595,9 @@ var sessionErrorsReducer = function sessionErrorsReducer() {
       return [];
 
     case _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__["GET_WATCHLIST_ERRORS"]:
+      return action.errors;
+
+    case _actions_feed_actions__WEBPACK_IMPORTED_MODULE_2__["GET_NEWS_ERRORS"]:
       return action.errors;
 
     default:
@@ -1752,10 +1797,10 @@ var configureStore = function configureStore() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNewsFeed", function() { return getNewsFeed; });
 var getNewsFeed = function getNewsFeed() {
-  return {
+  return $.ajax({
     method: 'GET',
-    url: 'https://cloud.iexapis.com/stable/stock/market/news?token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd'
-  };
+    url: 'https://cloud.iexapis.com/stable/stock/market/news?token=sk_a88370cdf5ed4d0182b3af410705cd94'
+  });
 };
 
 /***/ }),
