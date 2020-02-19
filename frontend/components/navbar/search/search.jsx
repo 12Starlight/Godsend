@@ -85,7 +85,6 @@ class Search extends React.Component {
   }
 
 
-
   render(){
     const { stocks } = this.props; 
 
@@ -99,9 +98,10 @@ class Search extends React.Component {
     const companies = filteredStocks.slice(0,6).map((stock, i) => {
       // debugger; 
       return(
-        <article key={i} onClick={e => this.company(e, stock)} >
-          <div id='select' onKeyDown={this.selectedText} >{stock.ticker}</div>
-          <div id='select' onChange={this.selectedText} >{stock.company}</div>  
+        <article key={i} className='nav_search_info_container' onClick={e => this.company(e, stock)} >
+          <div id='select' className='nav_search_ticker' onKeyDown={this.selectedText} >{stock.ticker}</div>
+          <div className='nav_search_spacer' ></div>
+          <div id='select' className='nav_search_company' onChange={this.selectedText} >{stock.company}</div>  
         </article>
       ) 
     })

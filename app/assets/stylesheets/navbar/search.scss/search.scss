@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   width: 28%; 
+  padding: .3% 0 .3% 0; 
   border-radius: 2%;
   border: solid .5px rgba(29, 56, 138, 0.253);
 }
@@ -49,8 +50,8 @@
   float: left;
   top: 100%;
   color: black;
-  padding: 6%; 
-  width: 88%; 
+  width: 100%; 
+  padding: 5% 0 5% 0;
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
   box-shadow: 0 4px 6px rgba(0,0,0,.3);
@@ -61,6 +62,37 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: .85em;
   color: rgba(245, 245, 245, 0.849);
-  padding: 0 0 5% 0; 
+  padding: 0 0 5% 5%; 
+  // margin: 0 0 0 5%; 
 }
 
+.nav_search_info_container {
+  display: flex; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85em;
+  font-weight: 500;
+  color: whitesmoke; 
+  padding: 0 0 0 5%;  
+}
+
+.nav_search_info_container:hover {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85em;
+  font-weight: 500;
+  color: rgb(29, 56, 138);
+  background: rgba(245, 245, 245, 0.945);
+}
+
+.nav_search_ticker {
+  width: 10%; 
+  padding: 1% 0 1% 0;
+}
+
+.nav_search_spacer {
+  margin: 0 10% 0 0;
+  padding: 1% 0 1% 0;
+}
+
+.nav_search_company {
+  padding: 1% 0 1% 0;
+}

@@ -583,14 +583,19 @@ function (_React$Component) {
         // debugger; 
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
           key: i,
+          className: "nav_search_info_container",
           onClick: function onClick(e) {
             return _this5.company(e, stock);
           }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "select",
+          className: "nav_search_ticker",
           onKeyDown: _this5.selectedText
         }, stock.ticker), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "nav_search_spacer"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "select",
+          className: "nav_search_company",
           onChange: _this5.selectedText
         }, stock.company));
       });
