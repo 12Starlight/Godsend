@@ -486,7 +486,8 @@ function (_React$Component) {
     _this.changedValue = _this.changedValue.bind(_assertThisInitialized(_this));
     _this.company = _this.company.bind(_assertThisInitialized(_this));
     _this.clicked = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
-    _this.searchClicked = _this.searchClicked.bind(_assertThisInitialized(_this));
+    _this.searchEntered = _this.searchEntered.bind(_assertThisInitialized(_this));
+    _this.searchExited = _this.searchExited.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -535,8 +536,8 @@ function (_React$Component) {
       });
     }
   }, {
-    key: "searchClicked",
-    value: function searchClicked(e) {
+    key: "searchEntered",
+    value: function searchEntered(e) {
       e.preventDefault();
 
       if (this.state.logic === false) {
@@ -545,9 +546,17 @@ function (_React$Component) {
         this.setState({
           logic: !this.state.logic
         });
-      } else {
+      }
+    }
+  }, {
+    key: "searchExited",
+    value: function searchExited(e) {
+      e.preventDefault();
+
+      if (this.state.logic === true) {
         document.getElementById('clicked').style.background = 'rgba(29, 56, 138, 0)';
         document.getElementById('clicked').style.border = 'solid .5px rgba(29, 56, 138, 0.253)';
+        document.getElementById('clicked').style.borderRadius = '2%';
         this.setState({
           logic: !this.state.logic
         });
@@ -577,7 +586,8 @@ function (_React$Component) {
       if (this.state.searchTerm === '') {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
           id: "clicked",
-          onClick: this.searchClicked,
+          onPointerEnter: this.searchEntered,
+          onPointerLeave: this.searchExited,
           className: "nav_search_outer_container",
           onSubmit: this.handleSubmit
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

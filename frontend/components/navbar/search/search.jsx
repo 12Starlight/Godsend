@@ -18,7 +18,8 @@ class Search extends React.Component {
     this.changedValue = this.changedValue.bind(this);
     this.company = this.company.bind(this);
     this.clicked = React.createRef(); 
-    this.searchClicked = this.searchClicked.bind(this);
+    this.searchEntered = this.searchEntered.bind(this);
+    this.searchExited = this.searchExited.bind(this); 
   }
 
   input(type) {
@@ -53,7 +54,7 @@ class Search extends React.Component {
     });
   }
 
-  searchClicked(e) {
+  searchEntered(e) {
     e.preventDefault();
 
     if (this.state.logic === false) {
@@ -62,11 +63,18 @@ class Search extends React.Component {
       this.setState({
         logic: !this.state.logic 
       })
-    } else {
+    } 
+  }
+
+  searchExited(e) {
+    e.preventDefault();
+
+    if (this.state.logic === true) {
       document.getElementById('clicked').style.background = 'rgba(29, 56, 138, 0)'
       document.getElementById('clicked').style.border = 'solid .5px rgba(29, 56, 138, 0.253)'
+      document.getElementById('clicked').style.borderRadius = '2%'
       this.setState({
-        logic: !this.state.logic 
+        logic: !this.state.logic
       })
     }
   }
@@ -94,7 +102,7 @@ class Search extends React.Component {
 
     if (this.state.searchTerm === '') {
       return(
-        <form id='clicked' onClick={this.searchClicked} className='nav_search_outer_container' onSubmit={this.handleSubmit} >
+        <form id='clicked' onPointerEnter={this.searchEntered} onPointerLeave={this.searchExited} className='nav_search_outer_container' onSubmit={this.handleSubmit} >
           <div className='nav_search_container' >
             <FontAwesomeIcon className='nav_search_icon' icon={faSearchDollar} />
             <div>
