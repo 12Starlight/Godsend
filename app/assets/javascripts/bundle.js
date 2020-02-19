@@ -541,11 +541,13 @@ function (_React$Component) {
 
       if (this.state.logic === false) {
         document.getElementById('clicked').style.background = 'rgb(29, 57, 138)';
+        document.getElementById('clicked').style.border = 'none';
         this.setState({
           logic: !this.state.logic
         });
       } else {
         document.getElementById('clicked').style.background = 'rgba(29, 56, 138, 0)';
+        document.getElementById('clicked').style.border = 'solid .5px rgba(29, 56, 138, 0.253)';
         this.setState({
           logic: !this.state.logic
         });
