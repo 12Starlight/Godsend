@@ -60,7 +60,9 @@ class Search extends React.Component {
 
     if (this.state.logic === false) {
       document.getElementById('clicked').style.background = 'rgb(29, 57, 138)'
-      document.getElementById('clicked').style.border = 'none'
+      document.getElementById('clicked').style.borderLeft = 'solid .5px rgba(23, 13, 51, 0.849)'
+      document.getElementById('clicked').style.borderRight = 'solid .5px rgba(23, 13, 51, 0.849)'
+      document.getElementById('clicked').style.borderTop = 'solid .5px rgba(23, 13, 51, 0.849'
       this.setState({
         logic: !this.state.logic 
       })
