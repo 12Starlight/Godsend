@@ -479,12 +479,14 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Search).call(this, props));
     _this.state = {
       searchTerm: '',
-      ticker: ''
+      ticker: '',
+      logic: false
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.changedValue = _this.changedValue.bind(_assertThisInitialized(_this));
     _this.company = _this.company.bind(_assertThisInitialized(_this));
     _this.clicked = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    _this.searchClicked = _this.searchClicked.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -533,6 +535,23 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "searchClicked",
+    value: function searchClicked(e) {
+      e.preventDefault();
+
+      if (this.state.logic === false) {
+        document.getElementById('clicked').style.background = 'rgb(29, 57, 138)';
+        this.setState({
+          logic: !this.state.logic
+        });
+      } else {
+        document.getElementById('clicked').style.background = 'rgba(29, 56, 138, 0)';
+        this.setState({
+          logic: !this.state.logic
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this5 = this;
@@ -555,6 +574,8 @@ function (_React$Component) {
 
       if (this.state.searchTerm === '') {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+          id: "clicked",
+          onClick: this.searchClicked,
           className: "nav_search_outer_container",
           onSubmit: this.handleSubmit
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

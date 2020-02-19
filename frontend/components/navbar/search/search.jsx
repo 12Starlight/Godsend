@@ -10,13 +10,15 @@ class Search extends React.Component {
 
     this.state = {
       searchTerm: '',
-      ticker: ''
+      ticker: '',
+      logic: false
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changedValue = this.changedValue.bind(this);
     this.company = this.company.bind(this);
     this.clicked = React.createRef(); 
+    this.searchClicked = this.searchClicked.bind(this);
   }
 
   input(type) {
@@ -51,6 +53,22 @@ class Search extends React.Component {
     });
   }
 
+  searchClicked(e) {
+    e.preventDefault();
+
+    if (this.state.logic === false) {
+      document.getElementById('clicked').style.background = 'rgb(29, 57, 138)'
+      this.setState({
+        logic: !this.state.logic 
+      })
+    } else {
+      document.getElementById('clicked').style.background = 'rgba(29, 56, 138, 0)'
+      this.setState({
+        logic: !this.state.logic 
+      })
+    }
+  }
+
 
   render(){
     const { stocks } = this.props; 
@@ -74,7 +92,7 @@ class Search extends React.Component {
 
     if (this.state.searchTerm === '') {
       return(
-        <form className='nav_search_outer_container' onSubmit={this.handleSubmit} >
+        <form id='clicked' onClick={this.searchClicked} className='nav_search_outer_container' onSubmit={this.handleSubmit} >
           <div className='nav_search_container' >
             <FontAwesomeIcon className='nav_search_icon' icon={faSearchDollar} />
             <div>
