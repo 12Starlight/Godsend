@@ -16,6 +16,7 @@ class Search extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changedValue = this.changedValue.bind(this);
     this.company = this.company.bind(this);
+    this.clicked = React.createRef(); 
   }
 
   input(type) {
@@ -28,7 +29,11 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(this.state.ticker)
+    this.setState((prev, state) => ({
+      ticker: this.clicked.current.value.toUpperCase()    
+    }), () => {
+      console.log(this.state.ticker) // user enters to get api
+    });
   }
 
   changedValue(val) {
@@ -37,9 +42,13 @@ class Search extends React.Component {
     })
   }
 
-  company(e) {
+  company(e, stock) {
     e.preventDefault();
-    console.log(this.state.ticker) // logic for getting api
+    this.setState((prev, state) => ({
+      ticker: stock.ticker
+    }), () => {
+      console.log(this.state.ticker) // logic for getting api
+    });
   }
 
 
@@ -54,9 +63,9 @@ class Search extends React.Component {
     })
 
     const companies = filteredStocks.slice(0,6).map((stock, i) => {
-      this.state.ticker = stock.ticker; 
+      // debugger; 
       return(
-        <article key={i} onClick={this.company} >
+        <article key={i} onClick={e => this.company(e, stock)} >
           <div>{stock.ticker}</div>
           <div>{stock.company}</div>  
         </article>
@@ -92,10 +101,16 @@ class Search extends React.Component {
                   placeholder='Search'
                   onChange={this.input('searchTerm')}
                   value={this.state.searchTerm}
+                  ref={this.clicked}
                 />
               </div>
             </div>
-              { companies }
+            <article className='nav_search_article_container'>
+              <label>
+                <div className='nav_search_stocks'>Stocks</div>
+              </label>
+                { companies }
+            </article>
           </form>
         )
     }

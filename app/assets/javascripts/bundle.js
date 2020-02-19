@@ -484,6 +484,7 @@ function (_React$Component) {
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.changedValue = _this.changedValue.bind(_assertThisInitialized(_this));
     _this.company = _this.company.bind(_assertThisInitialized(_this));
+    _this.clicked = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
     return _this;
   }
 
@@ -499,8 +500,16 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this3 = this;
+
       e.preventDefault();
-      console.log(this.state.ticker);
+      this.setState(function (prev, state) {
+        return {
+          ticker: _this3.clicked.current.value.toUpperCase()
+        };
+      }, function () {
+        console.log(_this3.state.ticker); // user enters to get api
+      });
     }
   }, {
     key: "changedValue",
@@ -511,26 +520,36 @@ function (_React$Component) {
     }
   }, {
     key: "company",
-    value: function company(e) {
+    value: function company(e, stock) {
+      var _this4 = this;
+
       e.preventDefault();
-      console.log(this.state.ticker); // logic for getting api
+      this.setState(function (prev, state) {
+        return {
+          ticker: stock.ticker
+        };
+      }, function () {
+        console.log(_this4.state.ticker); // logic for getting api
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this5 = this;
 
       var stocks = this.props.stocks;
       var filteredStocks = stocks.filter(function (stock) {
-        if (stock.ticker.toLowerCase().includes(_this3.state.searchTerm.toLowerCase()) || stock.company.toLowerCase().includes(_this3.state.searchTerm.toLowerCase())) {
+        if (stock.ticker.toLowerCase().includes(_this5.state.searchTerm.toLowerCase()) || stock.company.toLowerCase().includes(_this5.state.searchTerm.toLowerCase())) {
           return stock;
         }
       });
       var companies = filteredStocks.slice(0, 6).map(function (stock, i) {
-        _this3.state.ticker = stock.ticker;
+        // debugger; 
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
           key: i,
-          onClick: _this3.company
+          onClick: function onClick(e) {
+            return _this5.company(e, stock);
+          }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, stock.ticker), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, stock.company));
       });
 
@@ -564,8 +583,13 @@ function (_React$Component) {
           type: "text",
           placeholder: "Search",
           onChange: this.input('searchTerm'),
-          value: this.state.searchTerm
-        }))), companies);
+          value: this.state.searchTerm,
+          ref: this.clicked
+        }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
+          className: "nav_search_article_container"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "nav_search_stocks"
+        }, "Stocks")), companies));
       }
     }
   }]);
