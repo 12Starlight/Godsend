@@ -33,7 +33,7 @@
   flex-direction: column;
   width: 99%;
   height: 100%; 
-  border: solid .5px blue;  
+  // border: solid .5px blue;  
 }
 
 
@@ -43,10 +43,25 @@
   flex-direction: row;
   justify-content: center;
   box-sizing: border-box;
+  // color: rgb(29, 56, 138);
   width: 100%;
   height: 135px; 
-  // margin: 2% 0 2% 0; 
-  border: solid .5px fuchsia; 
+  // margin: 2% 0 2% 0;
+  -webkit-box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
+  -moz-box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
+  box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
+  // outline: solid .5px black; 
+  background: rgba(245, 245, 245, 0.151);
+  // border: solid .5px fuchsia; 
+}
+
+.feed_newsItem_container:hover {
+  // color: whitesmoke;
+  // font-weight: 600;
+  -webkit-box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
+  -moz-box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
+  box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
+  background: rgba(47, 7, 245, 0.658);
 }
 
 .feed_newsItem_container_inner {
@@ -54,11 +69,17 @@
   flex-direction: row;
   box-sizing: border-box;
   text-decoration: none;
+  color: rgb(29, 56, 138);
   width: 90%;
   height: 135px;  
   padding: 2%; 
   // border: solid .5px fuchsia;   
-  border-bottom: solid 5px black; // Yes good // padding should go on the innner container
+  border-bottom: solid 1.3px black; // Yes good // padding should go on the innner container
+}
+
+.feed_newsItem_container_inner:hover {
+  color: whitesmoke;
+  font-weight: 600;
 }
 
 .feed_newsItem_data {
@@ -70,7 +91,7 @@
   word-spacing: .5px; 
   width: 100%;
   height: 100%;
-  border: solid .5px yellowgreen;
+  // border: solid .5px yellowgreen;
 }
 
 .feed_newsItem_content_container {
@@ -78,7 +99,7 @@
   flex-direction: row;
   width: 100%;
   height: 30px; 
-  border: solid .5px blue; 
+  // border: solid .5px blue; 
 }
 
 .feed_newsItem_source  {
@@ -87,13 +108,13 @@
   font-size: .85em;
   font-weight: 600;
   margin: 0 5% 0 0;
-  border: solid .5px orange; 
+  // border: solid .5px orange; 
 }
 
 .feed_newsItem_time {
   display: inline;
   text-align: start;
-  border: solid .5px orange;
+  // border: solid .5px orange;
 }
 
 .feed_newsItem_headline_container {
@@ -106,7 +127,7 @@
   width: 90%;
   height: 60px;
   padding: 0 0 0 0;
-  border: solid .5px orange; 
+  // border: solid .5px orange; 
 }
 
 .feed_newsItem_pic_container {
