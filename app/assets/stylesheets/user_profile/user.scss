@@ -15,7 +15,8 @@
 
 .user_container {
   overflow-x: hidden;
-  margin: 4% 0 0 0;
+  display: flex;
+  margin: 4% 15% 0 0;
   height: 100%;
   width: 100%; 
   // border: solid .5px pink;  
@@ -27,26 +28,10 @@
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
-  width: 60%;
+  width: 72%;
   // border: solid .5px red; 
 }
 
-.feed_container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 1000%; 
-  width: 63%; 
-  margin: 0 0 0 40.3%; 
-
-  /* allow for scrolling */
-  // overflow-x: hidden;
-  // overflow-y: hidden;
-
-  /* make it smooth on iOS */
-  -webkit-overflow-scrolling: touch;
-  // border: solid .5px blue; 
-}
 
 .watchlist_container {
   position: fixed;
@@ -58,37 +43,12 @@
   border: solid .5px blue; 
 }
 
-.feed_header {
-  height: 300px;
-  width: 99%;  
-  border: solid .5px blue;
-}
-
-.feed_body {
-  height: 300px;
-  width: 99%;
-  border: solid .5px blue;
-}
-
-.feed_items {
-  list-style: none;
-  height: 200px;
-  width: 99%; 
-  border: solid .5px fuchsia;
-}
 
 
 
 
 
-.button {
-  margin: 5% 0 0 0;
-  height: 3vh; 
-  width: 50%; 
-  cursor: pointer;
-  outline: none; 
-  border-radius: 5px; 
-}
+
 
   // display: flex;
   // flex-direction: column;

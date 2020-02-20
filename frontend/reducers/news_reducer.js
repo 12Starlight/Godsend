@@ -5,13 +5,13 @@ import { merge } from 'lodash';
 import { GET_ALL_NEWS } from '../actions/feed_actions';
 
 
-const newsReducer = (oldState = {}, action) => {
+const newsReducer = (oldState = [], action) => {
   // debugger; 
   Object.freeze(oldState);
 
   switch(action.type) {
     case GET_ALL_NEWS:
-      return Object.assign({}, oldState, action.news);
+        return [...action.news ]
     default:
       return oldState; 
   }

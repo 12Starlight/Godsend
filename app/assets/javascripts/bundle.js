@@ -124,8 +124,9 @@ var receiveAllNews = function receiveAllNews() {
   return function (dispatch) {
     return _utils_feed_utl__WEBPACK_IMPORTED_MODULE_0__["getNewsFeed"]().then(function (newsResponse) {
       return dispatch(getAllNews(newsResponse));
-    } // errors => dispatch(getNewsErrors(errors.responseJSON))
-    );
+    }, function (errors) {
+      return dispatch(getNewsErrors(errors.responseJSON));
+    });
   };
 };
 
@@ -358,6 +359,7 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -379,6 +381,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 // Import React Redux
 
 
+
 var Feed =
 /*#__PURE__*/
 function (_React$Component) {
@@ -391,8 +394,44 @@ function (_React$Component) {
   }
 
   _createClass(Feed, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.receiveAllNews();
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this$props = this.props,
+          news = _this$props.news,
+          convert = _this$props.convert;
+
+      if (!news) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No news yet");
+      }
+
+      var allNews = news.reverse().map(function (newsItem, i) {
+        var converted = convert(newsItem.datetime);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
+          key: i,
+          className: "feed_items"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_items_line"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          className: "feed_anchor",
+          href: newsItem.url
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_header_outer_container"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_header_container"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_header_source"
+        }, newsItem.source), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, converted.hour, "h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_data_container"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, newsItem.headline), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "feed_img",
+          src: newsItem.image
+        }))))));
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -402,31 +441,11 @@ function (_React$Component) {
       }, "Popular Colections"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_body"
       }, "News"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom News Item 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom News Item 2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "Tom Movers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, "News Item 7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: ""
+      }, allNews), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "button",
         onClick: signOut
-      }, "Sign Out")));
+      }, "Sign Out"));
     }
   }]);
 
@@ -448,20 +467,32 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _feed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./feed */ "./frontend/components/feed/feed.jsx");
+/* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/feed_actions */ "./frontend/actions/feed_actions.js");
+/* harmony import */ var _reducers_selectors_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../reducers/selectors/selectors */ "./frontend/reducers/selectors/selectors.js");
 // Import React Redux
  // Import Local Directory Files
+
+
 
  // mapStateToProps 
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    news: state.entities.news
+    news: state.entities.news,
+    convert: _reducers_selectors_selectors__WEBPACK_IMPORTED_MODULE_3__["convert"]
   };
-}; // mapDispatchToProps
+}; // debugger; 
+//   news: state.entities.news 
+// };
+// mapDispatchToProps
 
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    receiveAllNews: function receiveAllNews() {
+      return dispatch(Object(_actions_feed_actions__WEBPACK_IMPORTED_MODULE_2__["receiveAllNews"])());
+    }
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_feed__WEBPACK_IMPORTED_MODULE_1__["default"]));
@@ -1602,20 +1633,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/feed_actions */ "./frontend/actions/feed_actions.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 // Import React Redux
  // Import Local Directory Files
 
 
 
 var newsReducer = function newsReducer() {
-  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
   // debugger; 
   Object.freeze(oldState);
 
   switch (action.type) {
     case _actions_feed_actions__WEBPACK_IMPORTED_MODULE_1__["GET_ALL_NEWS"]:
-      return Object.assign({}, oldState, action.news);
+      return _toConsumableArray(action.news);
 
     default:
       return oldState;
@@ -1651,6 +1690,42 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
   errors: _errors_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/selectors/selectors.js":
+/*!**************************************************!*\
+  !*** ./frontend/reducers/selectors/selectors.js ***!
+  \**************************************************/
+/*! exports provided: allNews, convert */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allNews", function() { return allNews; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "convert", function() { return convert; });
+var allNews = function allNews(_ref) {
+  var news = _ref.news;
+  return Object.keys(news).map(function (id) {
+    return news[id];
+  });
+};
+var convert = function convert(mil) {
+  var year, day, hour, minute, seconds;
+  seconds = Math.floor(mil / 1000);
+  minute = Math.floor(seconds / 60);
+  seconds = seconds % 60;
+  hour = Math.floor(minute / 60);
+  minute = minute % 60;
+  day = Math.floor(hour / 24);
+  hour = hour % 24;
+  return {
+    day: day,
+    hour: hour,
+    minute: minute,
+    seconds: seconds
+  };
+};
 
 /***/ }),
 

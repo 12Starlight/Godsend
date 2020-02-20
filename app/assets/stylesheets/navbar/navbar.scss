@@ -7,7 +7,7 @@
   height: 5vh;
   width: 100%; 
   padding: .5% 0; 
-  background-color: rgba(29, 56, 138, 0.322);
+  background-color: rgb(29, 56, 138);
 }
 
 .nav_icon_outer_container {
@@ -25,7 +25,9 @@
 }
 
 .nav_icon:hover {
-  color: rgb(29, 57, 138);
+  // color: rgb(29, 57, 138);
+  //  color: rgba(47, 7, 245, 0.171);
+  color: rgb(204, 204, 204);
 }
 
 .nav_links_outer {
@@ -51,5 +53,6 @@
 }
 
 .nav_links:hover {
-  color: rgb(29, 57, 138);
+  // color: rgb(29, 57, 138);
+  color: rgb(204, 204, 204);
 }
