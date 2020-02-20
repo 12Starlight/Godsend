@@ -11,7 +11,7 @@ import UserProfileContainer from '../components/user_profile/user_profile_contai
 
 const App = () => (
   <div>
-    <Route exact path='/' render={() => <div>This is where the Navbar goes</div>} />
+      <Route exact path='/' component={SignInFormContainer} />
     <Switch>
       <AuthRoute exact path='/signin' component={ SignInFormContainer } />
       <AuthRoute exact path='/signup' component={ SignUpFormContainer } />
