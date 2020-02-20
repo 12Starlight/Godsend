@@ -25,7 +25,7 @@ class Feed extends React.Component {
     
       return(
         <article key={i} className='feed_newsItem_container' >
-          <a href='#' className='feed_newsItem_container_inner'>
+          <a href={newsItem.url} className='feed_newsItem_container_inner'>
           <div className='feed_newsItem_data'>
             <div className='feed_newsItem_content_container'>
               <div className='feed_newsItem_source'>{newsItem.source}</div>

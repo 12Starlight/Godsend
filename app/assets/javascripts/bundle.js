@@ -414,7 +414,7 @@ function (_React$Component) {
           key: i,
           className: "feed_newsItem_container"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "#",
+          href: newsItem.url,
           className: "feed_newsItem_container_inner"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "feed_newsItem_data"
