@@ -409,28 +409,32 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No news yet");
       }
 
-      var allNews = news.reverse().map(function (newsItem, i) {
+      var allNews = news.map(function (newsItem, i) {
         var converted = convert(newsItem.datetime);
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
           key: i,
-          className: "feed_items"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "feed_items_line"
+          className: "feed_newsItem_container"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          className: "feed_anchor",
-          href: newsItem.url
+          href: "#",
+          className: "feed_newsItem_container_inner"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "feed_header_outer_container"
+          className: "feed_newsItem_data"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "feed_header_container"
+          className: "feed_newsItem_content_container"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "feed_header_source"
-        }, newsItem.source), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, converted.hour, "h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "feed_data_container"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, newsItem.headline), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          className: "feed_img",
+          className: "feed_newsItem_source"
+        }, newsItem.source), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_newsItem_time"
+        }, converted.hour, "h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_newsItem_headline_container"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_newsItem_headline"
+        }, newsItem.headline))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "feed_newsItem_pic_container"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "feed_newsItem_pic",
           src: newsItem.image
-        }))))));
+        }))));
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_container"
@@ -441,7 +445,7 @@ function (_React$Component) {
       }, "Popular Colections"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_body"
       }, "News"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: ""
+        className: "feed_news_container"
       }, allNews), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "button",
         onClick: signOut

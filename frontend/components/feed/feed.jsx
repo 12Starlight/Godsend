@@ -20,25 +20,25 @@ class Feed extends React.Component {
       return <div>No news yet</div>
     }
 
-    const allNews = news.reverse().map((newsItem, i) => {
+    const allNews = news.map((newsItem, i) => {
     const converted = convert(newsItem.datetime)  
     
       return(
-        <article key={i} className='feed_items'  >
-          <div className='feed_items_line'>
-            <a className='feed_anchor' href={newsItem.url} >
-              <div className='feed_header_outer_container'>
-                <div className='feed_header_container'>
-                  <div className='feed_header_source'>{newsItem.source}</div>
-                  <div>{converted.hour}h</div>
-                </div>
-                <div className='feed_data_container' >
-                  <p>{newsItem.headline}</p>
-                  <img className='feed_img' src={newsItem.image} />
-                </div>
-              </div>
-            </a>          
+        <article key={i} className='feed_newsItem_container' >
+          <a href='#' className='feed_newsItem_container_inner'>
+          <div className='feed_newsItem_data'>
+            <div className='feed_newsItem_content_container'>
+              <div className='feed_newsItem_source'>{newsItem.source}</div>
+              <div className='feed_newsItem_time'>{converted.hour}h</div>
+            </div>
+            <div className='feed_newsItem_headline_container'>
+              <div className='feed_newsItem_headline'>{newsItem.headline}</div>
+            </div>
           </div>
+          <div className='feed_newsItem_pic_container'>
+            <img className='feed_newsItem_pic' src={newsItem.image}/>
+          </div>
+          </a>
         </article>
       )
     })
@@ -48,7 +48,7 @@ class Feed extends React.Component {
         <div className='feed_header' ><div>Welcome To Godsend</div><div>Awesome Picture</div></div>
         <div className='feed_body'>Popular Colections</div>
         <div className='feed_body'>News</div>
-        <div className=''>
+        <div className='feed_news_container'>
           {allNews}
         </div>
         <button className='button' onClick={signOut} >Sign Out</button>
