@@ -14,7 +14,7 @@ class Feed extends React.Component {
 
 
   render(){
-    const { news, convert } = this.props; 
+    const { news, convert, signOut } = this.props; 
     
     if (!news) {
       return <div>No news yet</div>
@@ -47,7 +47,7 @@ class Feed extends React.Component {
       <div className='feed_container'>
         <div className='feed_header' ><div>Welcome To Godsend</div><div>Awesome Picture</div></div>
         <div className='feed_body'>Popular Colections</div>
-        <div className='feed_body'>News</div>
+        <div className='feed_body'>Top News</div>
         <div className='feed_news_container'>
           {allNews}
         </div>

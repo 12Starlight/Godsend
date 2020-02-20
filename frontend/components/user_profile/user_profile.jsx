@@ -22,7 +22,7 @@ class UserProfile extends React.Component {
         <NavbarContainer userId={userId} />
         <div className="user_container">
           <div className='user'>
-            <FeedContainer />
+            <FeedContainer signOut={signOut} />
             <div className='watchlist_container'>
             </div>
           </div>

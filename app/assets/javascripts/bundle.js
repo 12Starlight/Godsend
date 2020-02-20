@@ -403,7 +403,8 @@ function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           news = _this$props.news,
-          convert = _this$props.convert;
+          convert = _this$props.convert,
+          signOut = _this$props.signOut;
 
       if (!news) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No news yet");
@@ -444,7 +445,7 @@ function (_React$Component) {
         className: "feed_body"
       }, "Popular Colections"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_body"
-      }, "News"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Top News"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_news_container"
       }, allNews), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "button",
@@ -480,7 +481,7 @@ __webpack_require__.r(__webpack_exports__);
 
  // mapStateToProps 
 
-var mapStateToProps = function mapStateToProps(state) {
+var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     news: state.entities.news,
     convert: _reducers_selectors_selectors__WEBPACK_IMPORTED_MODULE_3__["convert"]
@@ -1448,7 +1449,9 @@ function (_React$Component) {
         className: "user_container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_feed_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_feed_container__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        signOut: signOut
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "watchlist_container"
       }))));
     }

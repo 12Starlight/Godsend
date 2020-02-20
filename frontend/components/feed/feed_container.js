@@ -8,7 +8,7 @@ import { convert } from '../../reducers/selectors/selectors';
 
 
 // mapStateToProps 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   news: state.entities.news, 
   convert: convert 
 });
