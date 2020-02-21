@@ -132,6 +132,54 @@ var receiveAllNews = function receiveAllNews() {
 
 /***/ }),
 
+/***/ "./frontend/actions/sectors_actions.js":
+/*!*********************************************!*\
+  !*** ./frontend/actions/sectors_actions.js ***!
+  \*********************************************/
+/*! exports provided: GET_ALL_SECTORS, GET_ALL_SECTOR_ERRORS, receiveAllSectors */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_ALL_SECTORS", function() { return GET_ALL_SECTORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_ALL_SECTOR_ERRORS", function() { return GET_ALL_SECTOR_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllSectors", function() { return receiveAllSectors; });
+/* harmony import */ var _utils_sectors_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/sectors_util */ "./frontend/utils/sectors_util.js");
+function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
+
+// Import Local Directory Files
+ // Import Constants
+
+var GET_ALL_SECTORS = 'GET_ALL_SECTORS';
+var GET_ALL_SECTOR_ERRORS = 'GET_ALL_SECTOR_ERRORS'; // Regular Action Creators
+
+var getAllSectors = function getAllSectors(sectors) {
+  return {
+    type: GET_ALL_SECTORS,
+    sectors: sectors
+  };
+};
+
+var getAllSectorErrors = function getAllSectorErrors(errors) {
+  return {
+    type: GET_ALL_SECTOR_ERRORS = (_readOnlyError("GET_ALL_SECTOR_ERRORS"), 'GET_ALL_SECTOR_ERRORS'),
+    errors: errors
+  };
+}; // Thunk Action Creators
+
+
+var receiveAllSectors = function receiveAllSectors() {
+  return function (dispatch) {
+    return _utils_sectors_util__WEBPACK_IMPORTED_MODULE_0__["getSectorsFeed"]().then(function (sectorsResponse) {
+      return dispatch(getAllSectors(sectorsResponse));
+    }, function (errors) {
+      return dispatch(getALLSectorErrors(errors));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/session_actions.js":
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
@@ -1528,6 +1576,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
 /* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actions/news_actions */ "./frontend/actions/news_actions.js");
+/* harmony import */ var _actions_sectors_actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./actions/sectors_actions */ "./frontend/actions/sectors_actions.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Import React Redux
@@ -1537,6 +1586,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  // Import Local Directory Files
 
  // import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
+
 
 
 
@@ -1568,7 +1618,8 @@ document.addEventListener('DOMContentLoaded', function () {
   window.getWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchList"];
   window.createWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["createWatchList"];
   window.trashWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["trashWatchList"];
-  window.receiveAllNews = _actions_news_actions__WEBPACK_IMPORTED_MODULE_6__["receiveAllNews"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
+  window.receiveAllNews = _actions_news_actions__WEBPACK_IMPORTED_MODULE_6__["receiveAllNews"];
+  window.receiveAllSectors = _actions_sectors_actions__WEBPACK_IMPORTED_MODULE_7__["receiveAllSectors"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -2061,6 +2112,25 @@ var mapStateToProps = function mapStateToProps(state) {
 var AuthRoute = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Auth));
 var ProtectedRoute = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Protected));
 var LoggedInRoute = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(LoggedIn));
+
+/***/ }),
+
+/***/ "./frontend/utils/sectors_util.js":
+/*!****************************************!*\
+  !*** ./frontend/utils/sectors_util.js ***!
+  \****************************************/
+/*! exports provided: getSectorsFeed */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSectorsFeed", function() { return getSectorsFeed; });
+var getSectorsFeed = function getSectorsFeed() {
+  return $.ajax({
+    method: 'GET',
+    url: 'https://sandbox.iexapis.com/stable/stock/market/sector-performance?token=Tpk_c61a1c45d7e04f02bf2f23d427b5f6af'
+  });
+};
 
 /***/ }),
 

@@ -9,6 +9,7 @@ import { signOut, signIn } from './actions/session_actions';
 // import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
 import { getWatchLists, getWatchList, createWatchList, trashWatchList } from './actions/watchlist_actions';
 import { receiveAllNews } from './actions/news_actions';
+import { receiveAllSectors } from './actions/sectors_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.createWatchList = createWatchList;
   window.trashWatchList = trashWatchList; 
   window.receiveAllNews = receiveAllNews;
+  window.receiveAllSectors = receiveAllSectors; 
 
 
   // ReactDOM.render(<div>HI REACT HERE</div>, root);

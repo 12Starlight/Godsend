@@ -13,14 +13,14 @@ const getAllSectors = (sectors) => ({
 });
 
 const getAllSectorErrors = (errors) => ({
-  type: GET_ALL_SECTOR_ERRORS = 'GET_ALL_SECTOR_ERRORS';
+  type: GET_ALL_SECTOR_ERRORS = 'GET_ALL_SECTOR_ERRORS',
   errors 
 });
 
 // Thunk Action Creators
-export const receiveALLSectors = () => dispatch => (
+export const receiveAllSectors = () => dispatch => (
   SectorApiUtil.getSectorsFeed().then(
     sectorsResponse => dispatch(getAllSectors(sectorsResponse)),
-    errors => dispatch(getSectorsErrors(errors))
+    errors => dispatch(getALLSectorErrors(errors))
   )
 );
