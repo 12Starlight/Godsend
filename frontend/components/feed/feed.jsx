@@ -2,6 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Import Local Directory Files
+import feedChart from '../../../app/assets/images/feed/stock-chart';
+
 
 class Feed extends React.Component {
   constructor(props) {
@@ -45,7 +48,10 @@ class Feed extends React.Component {
 
     return(
       <div className='feed_container'>
-        <div className='feed_header' ><div>Welcome To Godsend</div><div>Awesome Picture</div></div>
+        <div className='feed_header' >
+          <div className='feed_header_title' >Welcome To Godsend</div>
+          <img src={feedChart} className='feed_header_pic' />
+        </div>
         <div className='feed_body'>Popular Colections</div>
         <div className='feed_body'>Top News</div>
         <div className='feed_news_container'>

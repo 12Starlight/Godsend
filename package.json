@@ -28,5 +28,8 @@
   },
   "scripts": {
     "webpack": "webpack --mode=development --watch"
+  },
+  "devDependencies": {
+    "file-loader": "^5.1.0"
   }
 }
