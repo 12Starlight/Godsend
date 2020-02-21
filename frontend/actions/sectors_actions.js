@@ -21,6 +21,6 @@ const getAllSectorErrors = (errors) => ({
 export const receiveAllSectors = () => dispatch => (
   SectorApiUtil.getSectorsFeed().then(
     sectorsResponse => dispatch(getAllSectors(sectorsResponse)),
-    errors => dispatch(getALLSectorErrors(errors))
+    errors => dispatch(getAllSectorErrors(errors))
   )
 );

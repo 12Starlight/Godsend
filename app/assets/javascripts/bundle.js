@@ -173,7 +173,7 @@ var receiveAllSectors = function receiveAllSectors() {
     return _utils_sectors_util__WEBPACK_IMPORTED_MODULE_0__["getSectorsFeed"]().then(function (sectorsResponse) {
       return dispatch(getAllSectors(sectorsResponse));
     }, function (errors) {
-      return dispatch(getALLSectorErrors(errors));
+      return dispatch(getAllSectorErrors(errors));
     });
   };
 };
@@ -1770,7 +1770,7 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _actions_sectors_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/sectors_actions */ "./frontend/actions/sectors_actions.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -1787,10 +1787,11 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var sectorsReducer = function sectorsReducer() {
   var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
+  debugger;
   Object.freeze(oldState);
 
-  switch (action.types) {
-    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__["GET_ALL_SECTORS"]:
+  switch (action.type) {
+    case _actions_sectors_actions__WEBPACK_IMPORTED_MODULE_1__["GET_ALL_SECTORS"]:
       return _toConsumableArray(action.sectors);
 
     default:
