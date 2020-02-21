@@ -406,6 +406,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _sectors_sector_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sectors/sector_container */ "./frontend/components/feed/sectors/sector_container.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -428,6 +429,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
  // Import Local Directory Files
 // import feedChart from '../../../app/assets/images/feed/stock-chart.jpg';
+
+
 
 var Feed =
 /*#__PURE__*/
@@ -492,9 +495,7 @@ function (_React$Component) {
         className: "feed_header_title"
       }, "Welcome To Godsend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_header_pic"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "feed_body"
-      }, "Sectors"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sectors_sector_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_body"
       }, "Top News"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_news_container"
@@ -552,6 +553,115 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_feed__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/feed/sectors/sector_container.js":
+/*!**************************************************************!*\
+  !*** ./frontend/components/feed/sectors/sector_container.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _sectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sectors */ "./frontend/components/feed/sectors/sectors.jsx");
+// Import React Redux
+ // Import Local Directory Files
+
+ // mapStateToProps 
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    sectors: state.entities.sectors
+  };
+}; // mapDispatchToProps
+
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    receiveAllSectors: function (_receiveAllSectors) {
+      function receiveAllSectors() {
+        return _receiveAllSectors.apply(this, arguments);
+      }
+
+      receiveAllSectors.toString = function () {
+        return _receiveAllSectors.toString();
+      };
+
+      return receiveAllSectors;
+    }(function () {
+      return dispatch(receiveAllSectors());
+    })
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_sectors__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/feed/sectors/sectors.jsx":
+/*!******************************************************!*\
+  !*** ./frontend/components/feed/sectors/sectors.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+// Import Local Directory Files
+
+
+var Sectors =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Sectors, _React$Component);
+
+  function Sectors(props) {
+    _classCallCheck(this, Sectors);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Sectors).call(this, props));
+  }
+
+  _createClass(Sectors, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.receiveAllSectors();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "feed_body"
+      }, "Sectors");
+    }
+  }]);
+
+  return Sectors;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Sectors);
 
 /***/ }),
 
@@ -1787,7 +1897,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var sectorsReducer = function sectorsReducer() {
   var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  debugger;
+  // debugger; 
   Object.freeze(oldState);
 
   switch (action.type) {

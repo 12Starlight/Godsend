@@ -6,7 +6,7 @@ import { GET_ALL_SECTORS } from '../actions/sectors_actions';
 
 
 const sectorsReducer = (oldState = [], action) => {
-  debugger; 
+  // debugger; 
   Object.freeze(oldState);
 
   switch(action.type) {

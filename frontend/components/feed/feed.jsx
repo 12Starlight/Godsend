@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 // Import Local Directory Files
 // import feedChart from '../../../app/assets/images/feed/stock-chart.jpg';
+import SectorsContainer from './sectors/sector_container';
 
 
 class Feed extends React.Component {
@@ -52,7 +53,7 @@ class Feed extends React.Component {
           <div className='feed_header_title' >Welcome To Godsend</div>
           <div className='feed_header_pic' ></div>
         </div>
-        <div className='feed_body'>Sectors</div> {/* Popular Collections */}
+        <SectorsContainer /> {/* Popular Collections */}
         <div className='feed_body'>Top News</div>
         <div className='feed_news_container'>
           {allNews}
