@@ -20,21 +20,19 @@ module.exports = {
           }
         },
       },
-      {
-        test: /\.(png|svg|jpg?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'images',
-            },
-          },
-        ]
-      },
+      // {
+      //   test: /\.(png|svg|jpg?g|gif)$/i,
+      //   use: {
+      //     loader: 'file-loader',
+      //     // options: {
+      //     //   outputPath: 'images',
+      //     // },
+      //   }
+      // },
     ]
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.js', '.jsx', '.jpg', '*']
+    extensions: ['.js', '.jsx', '*']
   }
 };
