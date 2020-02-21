@@ -54,7 +54,7 @@ class Feed extends React.Component {
           <div className='feed_header_pic' ></div>
         </div>
         <SectorsContainer /> {/* Popular Collections */}
-        <div className='feed_body'>Top News</div>
+        <div className='topNews_container'></div> {/* Top News */}
         <div className='feed_news_container'>
           {allNews}
         </div>

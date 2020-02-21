@@ -35,6 +35,11 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.4em;
   font-weight: 600;
+  text-shadow:  .3px .3px #fe490223, 
+                .4px .4px #fe4902, 
+                .5px .5px #fe49021c;
+  letter-spacing: -2.8px;
+  word-spacing: .1px; 
   color:  rgb(29, 56, 138);
   text-align: start;
   max-height: 20%;
@@ -47,13 +52,6 @@
   width: 100%;
   background-size: cover;
   background-image: url('stock-chart');
-}
-
-
-.feed_body {
-  height: 300px;
-  width: 99%;
-  border: solid .5px blue;
 }
 
 .feed_news_container {

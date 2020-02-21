@@ -14,7 +14,21 @@ class Sectors extends React.Component {
 
   render(){
     return(
-      <div className='feed_body'>Sectors</div>
+      <article className='sectors_container'>
+        <div className='sectors_container_inner'>
+          <div className='sectors_title'>Sectors</div>
+          <div className='sectorsItem_container'>
+            <div className='sectorsItem_container_inner'></div>
+            <div className='sectorsItem_container_inner'></div>
+            <div className='sectorsItem_container_inner'></div>
+            <div className='sectorsItem_container_inner'></div>
+            <div className='sectorsItem_container_inner'></div>
+            <div className='sectorsItem_container_inner'></div>
+            <div className='sectorsItem_container_inner'></div>
+            <div className='sectorsItem_container_inner'></div>      
+          </div>
+        </div>
+      </article>
     )
   }
 }
