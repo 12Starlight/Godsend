@@ -2,7 +2,7 @@
 import { merge } from 'lodash';
 
 // Import Local Directory Files
-import { GET_ALL_NEWS } from '../actions/feed_actions';
+import { GET_ALL_NEWS } from '../actions/news_actions';
 
 
 const newsReducer = (oldState = [], action) => {

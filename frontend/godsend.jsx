@@ -8,7 +8,7 @@ import configureStore from './store/store';
 import { signOut, signIn } from './actions/session_actions';
 // import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
 import { getWatchLists, getWatchList, createWatchList, trashWatchList } from './actions/watchlist_actions';
-import { receiveAllNews } from './actions/feed_actions';
+import { receiveAllNews } from './actions/news_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 // Import Local Directory Files
 import Feed from './feed';
-import { receiveAllNews } from '../../actions/feed_actions';
+import { receiveAllNews } from '../../actions/news_actions';
 import { convert } from '../../reducers/selectors/selectors';
 
 

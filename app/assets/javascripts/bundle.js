@@ -86,22 +86,9 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/assets/images/feed/stock-chart.jpg":
-/*!************************************************!*\
-  !*** ./app/assets/images/feed/stock-chart.jpg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/f75ef260dc8b655bd009284811394ef1.jpg");
-
-/***/ }),
-
-/***/ "./frontend/actions/feed_actions.js":
+/***/ "./frontend/actions/news_actions.js":
 /*!******************************************!*\
-  !*** ./frontend/actions/feed_actions.js ***!
+  !*** ./frontend/actions/news_actions.js ***!
   \******************************************/
 /*! exports provided: GET_ALL_NEWS, GET_NEWS_ERRORS, receiveAllNews */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -111,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_ALL_NEWS", function() { return GET_ALL_NEWS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_NEWS_ERRORS", function() { return GET_NEWS_ERRORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllNews", function() { return receiveAllNews; });
-/* harmony import */ var _utils_feed_utl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/feed_utl */ "./frontend/utils/feed_utl.js");
+/* harmony import */ var _utils_news_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/news_util */ "./frontend/utils/news_util.js");
 // Import Local Directory Files
  // Constants
 
@@ -135,7 +122,7 @@ var getNewsErrors = function getNewsErrors(errors) {
 
 var receiveAllNews = function receiveAllNews() {
   return function (dispatch) {
-    return _utils_feed_utl__WEBPACK_IMPORTED_MODULE_0__["getNewsFeed"]().then(function (newsResponse) {
+    return _utils_news_util__WEBPACK_IMPORTED_MODULE_0__["getNewsFeed"]().then(function (newsResponse) {
       return dispatch(getAllNews(newsResponse));
     }, function (errors) {
       return dispatch(getNewsErrors(errors.responseJSON));
@@ -371,7 +358,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _app_assets_images_feed_stock_chart_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/feed/stock-chart.jpg */ "./app/assets/images/feed/stock-chart.jpg");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -393,8 +379,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 // Import React Redux
 
  // Import Local Directory Files
-
-
+// import feedChart from '../../../app/assets/images/feed/stock-chart.jpg';
 
 var Feed =
 /*#__PURE__*/
@@ -457,8 +442,7 @@ function (_React$Component) {
         className: "feed_header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_header_title"
-      }, "Welcome To Godsend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _app_assets_images_feed_stock_chart_jpg__WEBPACK_IMPORTED_MODULE_2__["default"],
+      }, "Welcome To Godsend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_header_pic"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_body"
@@ -476,7 +460,7 @@ function (_React$Component) {
   return Feed;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Feed); // <div className='feed_header_pic' ></div>
+/* harmony default export */ __webpack_exports__["default"] = (Feed); // <img src={feedChart} className='feed_header_pic' />
 
 /***/ }),
 
@@ -491,7 +475,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _feed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./feed */ "./frontend/components/feed/feed.jsx");
-/* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/feed_actions */ "./frontend/actions/feed_actions.js");
+/* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/news_actions */ "./frontend/actions/news_actions.js");
 /* harmony import */ var _reducers_selectors_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../reducers/selectors/selectors */ "./frontend/reducers/selectors/selectors.js");
 // Import React Redux
  // Import Local Directory Files
@@ -514,7 +498,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     receiveAllNews: function receiveAllNews() {
-      return dispatch(Object(_actions_feed_actions__WEBPACK_IMPORTED_MODULE_2__["receiveAllNews"])());
+      return dispatch(Object(_actions_news_actions__WEBPACK_IMPORTED_MODULE_2__["receiveAllNews"])());
     }
   };
 };
@@ -1543,7 +1527,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
-/* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actions/feed_actions */ "./frontend/actions/feed_actions.js");
+/* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actions/news_actions */ "./frontend/actions/news_actions.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Import React Redux
@@ -1584,7 +1568,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.getWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["getWatchList"];
   window.createWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["createWatchList"];
   window.trashWatchList = _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_5__["trashWatchList"];
-  window.receiveAllNews = _actions_feed_actions__WEBPACK_IMPORTED_MODULE_6__["receiveAllNews"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
+  window.receiveAllNews = _actions_news_actions__WEBPACK_IMPORTED_MODULE_6__["receiveAllNews"]; // ReactDOM.render(<div>HI REACT HERE</div>, root);
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -1658,7 +1642,7 @@ var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"]
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/feed_actions */ "./frontend/actions/feed_actions.js");
+/* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/news_actions */ "./frontend/actions/news_actions.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -1679,7 +1663,7 @@ var newsReducer = function newsReducer() {
   Object.freeze(oldState);
 
   switch (action.type) {
-    case _actions_feed_actions__WEBPACK_IMPORTED_MODULE_1__["GET_ALL_NEWS"]:
+    case _actions_news_actions__WEBPACK_IMPORTED_MODULE_1__["GET_ALL_NEWS"]:
       return _toConsumableArray(action.news);
 
     default:
@@ -1766,7 +1750,7 @@ var convert = function convert(mil) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
-/* harmony import */ var _actions_feed_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/feed_actions */ "./frontend/actions/feed_actions.js");
+/* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/news_actions */ "./frontend/actions/news_actions.js");
 // Import Local Directory Files
 
 
@@ -1788,7 +1772,7 @@ var sessionErrorsReducer = function sessionErrorsReducer() {
     case _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__["GET_WATCHLIST_ERRORS"]:
       return action.errors;
 
-    case _actions_feed_actions__WEBPACK_IMPORTED_MODULE_2__["GET_NEWS_ERRORS"]:
+    case _actions_news_actions__WEBPACK_IMPORTED_MODULE_2__["GET_NEWS_ERRORS"]:
       return action.errors;
 
     default:
@@ -1977,10 +1961,10 @@ var configureStore = function configureStore() {
 
 /***/ }),
 
-/***/ "./frontend/utils/feed_utl.js":
-/*!************************************!*\
-  !*** ./frontend/utils/feed_utl.js ***!
-  \************************************/
+/***/ "./frontend/utils/news_util.js":
+/*!*************************************!*\
+  !*** ./frontend/utils/news_util.js ***!
+  \*************************************/
 /*! exports provided: getNewsFeed */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import Local Directory Files
-import feedChart from '../../../app/assets/images/feed/stock-chart.jpg';
+// import feedChart from '../../../app/assets/images/feed/stock-chart.jpg';
 
 
 class Feed extends React.Component {
@@ -50,8 +50,7 @@ class Feed extends React.Component {
       <div className='feed_container'>
         <div className='feed_header' >
           <div className='feed_header_title' >Welcome To Godsend</div>
-
-          <img src={feedChart} className='feed_header_pic' />
+          <div className='feed_header_pic' ></div>
         </div>
         <div className='feed_body'>Popular Colections</div>
         <div className='feed_body'>Top News</div>
@@ -68,4 +67,4 @@ class Feed extends React.Component {
 export default Feed; 
 
 
-// <div className='feed_header_pic' ></div>
+// <img src={feedChart} className='feed_header_pic' />
