@@ -95,7 +95,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "f75ef260dc8b655bd009284811394ef1.jpg");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/f75ef260dc8b655bd009284811394ef1.jpg");
 
 /***/ }),
 
@@ -371,7 +371,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _app_assets_images_feed_stock_chart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/feed/stock-chart */ "./app/assets/images/feed/stock-chart.jpg");
+/* harmony import */ var _app_assets_images_feed_stock_chart_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/feed/stock-chart.jpg */ "./app/assets/images/feed/stock-chart.jpg");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -458,7 +458,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_header_title"
       }, "Welcome To Godsend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _app_assets_images_feed_stock_chart__WEBPACK_IMPORTED_MODULE_2__["default"],
+        src: _app_assets_images_feed_stock_chart_jpg__WEBPACK_IMPORTED_MODULE_2__["default"],
         className: "feed_header_pic"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_body"
@@ -476,7 +476,7 @@ function (_React$Component) {
   return Feed;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Feed);
+/* harmony default export */ __webpack_exports__["default"] = (Feed); // <div className='feed_header_pic' ></div>
 
 /***/ }),
 
