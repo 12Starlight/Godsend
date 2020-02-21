@@ -652,6 +652,20 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var sectors = this.props.sectors; // debugger; 
+
+      var allSectors = sectors.slice(0, 8).map(function (sector, i) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: i,
+          className: "sectorsItem_container_inner"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "sectorsItem"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "sectorsItem_title"
+        }, sector.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "sectorsItem_rate"
+        }, (sector.performance * 100).toFixed(2) + '%')));
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
         className: "sectors_container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -660,39 +674,7 @@ function (_React$Component) {
         className: "sectors_title"
       }, "Sectors"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sectorsItem_container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem_container_inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem_container_inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem_container_inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem_container_inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem_container_inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem_container_inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem_container_inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem_container_inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sectorsItem"
-      })))));
+      }, allSectors)));
     }
   }]);
 
