@@ -5,12 +5,14 @@ import { combineReducers } from 'redux';
 import session from './session_errors_reducer';
 import watchlist from './session_errors_reducer';
 import news from './session_errors_reducer';
+import sectors from './session_errors_reducer';
 
 
 const errorsReducer = combineReducers({
   session: session,
   watchlist: watchlist, 
-  news: news
+  news: news,
+  sectors: sectors,
 });
 
 

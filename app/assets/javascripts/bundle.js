@@ -1676,10 +1676,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   session: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   watchlist: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  news: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  news: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  sectors: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
 
@@ -1848,7 +1850,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_watchlist_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/watchlist_actions */ "./frontend/actions/watchlist_actions.js");
 /* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/news_actions */ "./frontend/actions/news_actions.js");
+/* harmony import */ var _actions_sectors_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions/sectors_actions */ "./frontend/actions/sectors_actions.js");
 // Import Local Directory Files
+
 
 
 
@@ -1870,6 +1874,9 @@ var sessionErrorsReducer = function sessionErrorsReducer() {
       return action.errors;
 
     case _actions_news_actions__WEBPACK_IMPORTED_MODULE_2__["GET_NEWS_ERRORS"]:
+      return action.errors;
+
+    case _actions_sectors_actions__WEBPACK_IMPORTED_MODULE_3__["GET_ALL_SECTOR_ERRORS"]:
       return action.errors;
 
     default:
