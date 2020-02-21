@@ -457,7 +457,7 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No news yet");
       }
 
-      var allNews = news.map(function (newsItem, i) {
+      var allNews = news.reverse().map(function (newsItem, i) {
         var converted = convert(newsItem.datetime);
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
           key: i,
@@ -494,7 +494,7 @@ function (_React$Component) {
         className: "feed_header_pic"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_body"
-      }, "Popular Colections"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Sectors"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_body"
       }, "Top News"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed_news_container"

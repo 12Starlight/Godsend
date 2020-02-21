@@ -23,7 +23,7 @@ class Feed extends React.Component {
       return <div>No news yet</div>
     }
 
-    const allNews = news.map((newsItem, i) => {
+    const allNews = news.reverse().map((newsItem, i) => {
     const converted = convert(newsItem.datetime)  
     
       return(
@@ -52,7 +52,7 @@ class Feed extends React.Component {
           <div className='feed_header_title' >Welcome To Godsend</div>
           <div className='feed_header_pic' ></div>
         </div>
-        <div className='feed_body'>Popular Colections</div>
+        <div className='feed_body'>Sectors</div> {/* Popular Collections */}
         <div className='feed_body'>Top News</div>
         <div className='feed_news_container'>
           {allNews}
