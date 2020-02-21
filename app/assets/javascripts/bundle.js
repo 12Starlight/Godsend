@@ -1641,8 +1641,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
 /* harmony import */ var _watchlist_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./watchlist_reducer */ "./frontend/reducers/watchlist_reducer.js");
 /* harmony import */ var _news_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./news_reducer */ "./frontend/reducers/news_reducer.js");
+/* harmony import */ var _sectors_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sectors_reducer */ "./frontend/reducers/sectors_reducer.js");
 // Import React Redux
  // Import Local Directory Files
+
 
 
 
@@ -1650,7 +1652,8 @@ __webpack_require__.r(__webpack_exports__);
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   watchlists: _watchlist_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
-  news: _news_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  news: _news_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  sectors: _sectors_reducer__WEBPACK_IMPORTED_MODULE_4__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -1751,6 +1754,49 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
   errors: _errors_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/sectors_reducer.js":
+/*!**********************************************!*\
+  !*** ./frontend/reducers/sectors_reducer.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+// Import React Redux
+ // Import Local Directory Files
+
+
+
+var sectorsReducer = function sectorsReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+
+  switch (action.types) {
+    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__["GET_ALL_SECTORS"]:
+      return _toConsumableArray(action.sectors);
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (sectorsReducer);
 
 /***/ }),
 
