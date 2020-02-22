@@ -3,6 +3,7 @@ import { ACCEPT_CURRENT_USER, ACCEPT_SESSION_ERRORS } from '../actions/session_a
 import { GET_WATCHLIST_ERRORS } from '../actions/watchlist_actions';
 import { GET_NEWS_ERRORS } from '../actions/news_actions';
 import { GET_ALL_SECTOR_ERRORS } from '../actions/sectors_actions';
+import { STOCK_ERRORS } from '../actions/stock_actions';
 
 
 const sessionErrorsReducer = (state = [], action) => {
@@ -20,6 +21,8 @@ const sessionErrorsReducer = (state = [], action) => {
       return action.errors;  
     case GET_ALL_SECTOR_ERRORS:
       return action.errors; 
+    case STOCK_ERRORS:
+      return action.errors || []; 
     default:
       return state;
   }

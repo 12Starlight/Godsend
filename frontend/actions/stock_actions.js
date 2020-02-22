@@ -31,9 +31,9 @@ const gotStockEarnings = (stockEarnings) => ({
   stockEarnings 
 });
 
-const gotRecommendations = (recomendations) => ({
+const gotRecommendations = (recommendations) => ({
   type: PEOPLE_ALSO_BOUGHT,
-  recomendations
+  recommendations
 });
 
 const gotStockErrors = (stockErrors) => ({
@@ -72,16 +72,16 @@ export const giveMeMyStockEarnings = (stockSearch) => (dispatch) => (
 
 export const givePeopleAlsoBought = (stockSearch) => (dispatch) => (
   StockApiUtil.givePeopleAlsoBought(stockSearch).then(
-    peopleAlsoBoughtReturned => dispatch(getRecommendations(peopleAlsoBoughtReturned)),
+    peopleAlsoBoughtReturned => dispatch(gotRecommendations(peopleAlsoBoughtReturned)),
     stockErrors => dispatch(gotStockErrors(stockErrors))
   )
 );
 
-export const gotStock = (stockSearch) => (
+export const gotStockInfo = (stockSearch) => (
   giveMeMyStock(stockSearch),
   giveMeMyStockNews(stockSearch),
   giveMeMyStockRatings(stockSearch),
   giveMeMyStockEarnings(stockSearch),
-  giveMePeopleAlsoBought(stockSearch)
+  givePeopleAlsoBought(stockSearch)
 );
 

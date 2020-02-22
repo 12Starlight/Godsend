@@ -10,6 +10,15 @@ import { signOut, signIn } from './actions/session_actions';
 import { getWatchLists, getWatchList, createWatchList, trashWatchList } from './actions/watchlist_actions';
 import { receiveAllNews } from './actions/news_actions';
 import { receiveAllSectors } from './actions/sectors_actions';
+import { 
+  giveMeMyStock, 
+  giveMeMyStockNews, 
+  giveMeMyStockRatings,
+  giveMeMyStockEarnings,
+  givePeopleAlsoBought,
+  gotStockInfo 
+} from './actions/stock_actions';
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,6 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
   window.trashWatchList = trashWatchList; 
   window.receiveAllNews = receiveAllNews;
   window.receiveAllSectors = receiveAllSectors; 
+  window.giveMeMyStock = giveMeMyStock;
+  window.giveMeMyStockNews = giveMeMyStockNews;
+  window.giveMeMyStockRatings = giveMeMyStockRatings;
+  window.giveMeMyStockEarnings = giveMeMyStockEarnings;
+  window.givePeopleAlsoBought = givePeopleAlsoBought;
+  window.gotStockInfo = gotStockInfo; 
 
 
   // ReactDOM.render(<div>HI REACT HERE</div>, root);

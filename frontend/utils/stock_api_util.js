@@ -2,7 +2,7 @@
 export const giveMeMyStock = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/company?token=Tsk_a67dbc04df1e4d4291c42cc6c261a96c`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/company?token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd`
   })
 );
 
@@ -10,7 +10,7 @@ export const giveMeMyStock = (stockSearch) => (
 export const giveMeMyStockNews = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/news?token=Tsk_a67dbc04df1e4d4291c42cc6c261a96c`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/news?token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd`
   })
 ); 
 
@@ -26,7 +26,7 @@ export const giveMeMYStockRatings = (stockSearch) => (
 export const giveMeMyStockEarnings = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/earnings/1?period=annual&token=Tsk_a67dbc04df1e4d4291c42cc6c261a96c`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/earnings/1?period=annual&token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd`
   })
 );
 
