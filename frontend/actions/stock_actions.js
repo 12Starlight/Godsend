@@ -77,11 +77,4 @@ export const givePeopleAlsoBought = (stockSearch) => (dispatch) => (
   )
 );
 
-export const gotStockInfo = (stockSearch) => (
-  giveMeMyStock(stockSearch),
-  giveMeMyStockNews(stockSearch),
-  giveMeMyStockRatings(stockSearch),
-  giveMeMyStockEarnings(stockSearch),
-  givePeopleAlsoBought(stockSearch)
-);
 
