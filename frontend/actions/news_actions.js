@@ -1,5 +1,5 @@
 // Import Local Directory Files
-import * as FeedApiUtil from '../utils/news_util';
+import * as FeedApiUtil from '../utils/news_api_util';
 
 // Constants
 export const GET_ALL_NEWS = 'GET_ALL_NEWS';

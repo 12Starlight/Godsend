@@ -1,5 +1,5 @@
 // Import Local Directory Files
-import * as SectorApiUtil from '../utils/sectors_util';
+import * as SectorApiUtil from '../utils/sectors_api_util';
 
 // Import Constants
 export const GET_ALL_SECTORS = 'GET_ALL_SECTORS';
