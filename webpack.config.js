@@ -13,26 +13,53 @@ module.exports = {
       {
         test: [/\.jsx?$/],
         exclude: /(node_modules)/,
-        use: {
+        use: { 
           loader: 'babel-loader',
           query: {
             presets: ['@babel/env', '@babel/react']
           }
         },
+      }, 
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
-      // {
-      //   test: /\.(png|svg|jpg?g|gif)$/i,
-      //   use: {
-      //     loader: 'file-loader',
-      //     // options: {
-      //     //   outputPath: 'images',
-      //     // },
-      //   }
-      // },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      }, 
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name(resourcePath, resourceQuery) {
+                // `resourcePath` - `/absolute/path/to/file.js`
+                // `resourceQuery` - `?foo=bar`
+
+                if (process.env.NODE_ENV === 'development') {
+                  return '[path][name].[ext]';
+                }
+
+                return '[contenthash].[ext]';
+              },
+            },
+          },
+        ],
+      },
     ]
   },
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   resolve: {
-    extensions: ['.js', '.jsx', '*']
+    extensions: ['.js', '.jsx', '.jpg', '*']
   }
 };
+

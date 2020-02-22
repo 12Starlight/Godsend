@@ -1,5 +1,6 @@
 // Import Local Directory Files
 import React from 'react';
+import SectorItem from './sector_item'
 
 
 class Sectors extends React.Component {
@@ -19,10 +20,7 @@ class Sectors extends React.Component {
       
       return(
         <div key={i} className='sectorsItem_container_inner'>
-          <div className='sectorsItem'>
-            <div className='sectorsItem_title'>{sector.name}</div>
-            <div className='sectorsItem_rate'>{(sector.performance * 100).toFixed(2) + '%'}</div>
-          </div>
+          <SectorItem sector={sector} />
         </div>
       )
     }) 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import Local Directory Files
-// import feedChart from '../../../app/assets/images/feed/stock-chart.jpg';
+// import feedChart from '../../../app/assets/images/feed/stock-chart';
 import SectorsContainer from './sectors/sector_container';
 
 
@@ -66,6 +66,8 @@ class Feed extends React.Component {
 
 
 export default Feed; 
+
+
 
 
 // <img src={feedChart} className='feed_header_pic' />
