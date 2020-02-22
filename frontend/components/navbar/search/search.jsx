@@ -77,7 +77,7 @@ class Search extends React.Component {
       document.getElementById('clicked').style.background = 'rgba(29, 56, 138, 0)'
       document.getElementById('clicked').style.webkitBoxShadow = 'none'
       document.getElementById('clicked').style.boxShadow = 'none'
-      document.getElementById('clicked').style.border = 'solid .5px rgba(29, 56, 138, 0.253)'
+      document.getElementById('clicked').style.border = 'solid .5px rgba(17, 33, 80, 0.726)'
       document.getElementById('clicked').style.borderRadius = '2%'
       this.setState({
         logic: !this.state.logic

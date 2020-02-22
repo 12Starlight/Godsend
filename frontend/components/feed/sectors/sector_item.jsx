@@ -23,12 +23,12 @@ class SectorItem extends React.Component {
         // this.value.style.background = 'rgba(129, 71, 0, .822)';
         this.value.style.background = '#ffffff';
         this.value.style.boxShadow = 'inset 0px 0px 12px 1px rgba(194,0,0,1)';
-        this.value.style.border = 'inset 7px darkred';
+        this.value.style.border = 'inset 2.5px darkred';
       } else {
         // this.value.style.background = 'rgba(100, 0, 231, 0.822)';
         this.value.style.background = '#ffffff';
         this.value.style.boxShadow = 'inset 0px 0px 12px 1px rgba(0,112,7,1)';
-        this.value.style.border = 'inset 7px darkgreen'
+        this.value.style.border = 'inset 2.5px darkgreen'
       }
     }
     this.setState({
@@ -42,7 +42,7 @@ class SectorItem extends React.Component {
     if (this.state.logic === true) {
       this.value.style.background = 'rgb(245, 245, 245';
       this.value.style.boxShadow = 'none'
-      this.value.style.border = 'outset 7px rgb(29, 56, 138)'; 
+      this.value.style.border = 'outset 2.5px rgb(29, 56, 138)'; 
       this.value.style.color = 'rgb(29, 56, 138)';
     }
     this.setState({

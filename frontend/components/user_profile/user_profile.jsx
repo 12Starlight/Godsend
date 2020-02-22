@@ -13,6 +13,8 @@ class UserProfile extends React.Component {
     super(props);
   }
 
+  
+
 
   render() {
     const { user, signOut, userId } = this.props; 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import Local Directory Files
-// import feedChart from '../../../app/assets/images/feed/stock-chart';
+// import feedChart from '../../../app/assets/images/feed/stock_chart';
 import SectorsContainer from './sectors/sector_container';
 
 
@@ -22,9 +22,9 @@ class Feed extends React.Component {
     
     if (!news) {
       return <div>No news yet</div>
-    }
-
-    const allNews = news.reverse().map((newsItem, i) => {
+    } 
+    // debugger; 
+    const allNews = news.map((newsItem, i) => {
     const converted = convert(newsItem.datetime)  
     
       return(
@@ -47,6 +47,8 @@ class Feed extends React.Component {
       )
     })
 
+    const reversed = allNews.reverse(); 
+
     return(
       <div className='feed_container'>
         <div className='feed_header' >
@@ -56,7 +58,7 @@ class Feed extends React.Component {
         <SectorsContainer /> {/* Popular Collections */}
         <div className='topNews_container'></div> {/* Top News */}
         <div className='feed_news_container'>
-          {allNews}
+          {reversed}
         </div>
         <button className='button' onClick={signOut} >Sign Out</button>
       </div>
