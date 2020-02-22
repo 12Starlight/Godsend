@@ -28,4 +28,12 @@ export const giveMeMyStockEarnings = (stockSearch) => (
     type: 'GET',
     url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/earnings/1?period=annual&token=Tsk_a67dbc04df1e4d4291c42cc6c261a96c`
   })
-)
+);
+
+// Also Bought
+export const givePeopleAlsoBought = (stockSearch) => (
+  $.ajax({
+    type: 'GET',
+    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/peers?token=Tsk_a67dbc04df1e4d4291c42cc6c261a96c`
+  })
+);
