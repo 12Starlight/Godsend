@@ -26,17 +26,62 @@ const gotStockRatings = (stockRatings) => ({
   stockRatings 
 });
 
-const getStockEarnings = (stockEarnings) => ({
+const gotStockEarnings = (stockEarnings) => ({
   type: GET_MY_STOCK_EARNINGS,
   stockEarnings 
 });
 
-const getRecommendations = (recomendations) => ({
+const gotRecommendations = (recomendations) => ({
   type: PEOPLE_ALSO_BOUGHT,
   recomendations
 });
 
-const getStockErrors = (stockErrors) => ({
+const gotStockErrors = (stockErrors) => ({
   type: STOCK_ERRORS,
   stockErrors
 });
+
+// Thunk Action Creators
+export const giveMeMyStock = (stockSearch) => (dispatch) => (
+  StockApiUtil.giveMeMyStock(stockSearch).then(
+    stockReturned => dispatch(gotStock(stockReturned)),
+    stockErrors => dispatch(gotStockErrors(stockErrors))
+  )
+);
+
+export const giveMeMyStockNews = (stockSearch) => (dispatch) => (
+  StockApiUtil.giveMeMyStockNews(stockSearch).then(
+    stockNewsReturned => dispatch(gotStockNews(stockNewsReturned)),
+    stockErrors => dispatch(gotStockErrors(stockErrors))
+  )
+);
+
+export const giveMeMyStockRatings = (stockSearch) => (dispatch) => (
+  StockApiUtil.giveMeMYStockRatings(stockSearch).then(
+    stockRatingsReturned => dispatch(gotStockRatings(stockRatingsReturned)),
+    stockErrors => dispatch(gotStockErrors(stockErrors))
+  )
+);
+
+export const giveMeMyStockEarnings = (stockSearch) => (dispatch) => (
+  StockApiUtil.giveMeMyStockEarnings(stockSearch).then(
+    stockEarningsReturned => dispatch(gotStockEarnings(stockEarningsReturned)),
+    stockErrors => dispatch(gotStockErrors(stockErrors))
+  )
+);
+
+export const givePeopleAlsoBought = (stockSearch) => (dispatch) => (
+  StockApiUtil.givePeopleAlsoBought(stockSearch).then(
+    peopleAlsoBoughtReturned => dispatch(getRecommendations(peopleAlsoBoughtReturned)),
+    stockErrors => dispatch(gotStockErrors(stockErrors))
+  )
+);
+
+export const gotStock = (stockSearch) => (
+  giveMeMyStock(stockSearch),
+  giveMeMyStockNews(stockSearch),
+  giveMeMyStockRatings(stockSearch),
+  giveMeMyStockEarnings(stockSearch),
+  giveMePeopleAlsoBought(stockSearch)
+);
+
