@@ -36,7 +36,7 @@ class Search extends React.Component {
     this.setState((prev, state) => ({
       ticker: this.clicked.current.value.toUpperCase()    
     }), () => {
-      console.log(this.state.ticker) // user enters to get api
+      // console.log(this.state.ticker) // user enters to get api
     });
   }
 
