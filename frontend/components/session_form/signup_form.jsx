@@ -62,13 +62,21 @@ class SignUp extends React.Component {
     );
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.userId === true && this.props.location.pathname !== prevProps.location.pathname) {
+      this.props.history.push(`/users/protrader`);
+    }
+  }
+
+
+
 
   render() {
     const { formType, navLink } = this.props;
  
-    if (this.props.userId) {
-      return <Route to={`/users/${this.props.userId}`} component={UserProfileContainer} />;
-    }
+    // if (this.props.userId) {
+    //   return <Route to={`/users/${this.props.userId}`} component={UserProfileContainer} />;
+    // }
 
     return ( 
       <div className='su_container' >

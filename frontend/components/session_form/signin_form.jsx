@@ -57,14 +57,20 @@ class SignIn extends React.Component {
     );
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.sessionId === true && this.props.location.pathname !== prevProps.location.pathname) {
+      this.props.history.push(`/users/protrader`);
+    }
+  }
+
 
   render() {
     // debugger; 
     const { formType, navLink } = this.props;
 
-    if (this.props.sessionId) {
-      return <Route to={`/users/${this.props.userId}`} component={UserProfileContainer} />;
-    }
+    // if (this.props.sessionId) {
+    //   return <Route to={`/users/${this.props.userId}`} component={UserProfileContainer} />;
+    // }
 
     return (
       <div className='si_outer_container'>
