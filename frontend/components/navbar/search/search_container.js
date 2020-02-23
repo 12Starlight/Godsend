@@ -21,7 +21,7 @@ const mapStateToProps = (state) => ({
 // mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
   giveMeMyStock: (stockSearch) => dispatch(giveMeMyStock(stockSearch)),
-  giveMeMyStockEarnings: (stockSearch) => dispatch(giveMeMyStockNews(stockSearch)),
+  giveMeMyStockNews: (stockSearch) => dispatch(giveMeMyStockNews(stockSearch)),
   giveMeMyStockRatings: (stockSearch) => dispatch(giveMeMyStockRatings(stockSearch)),
   giveMeMyStockEarnings: (stockSearch) => dispatch(giveMeMyStockEarnings(stockSearch)),
   givePeopleAlsoBought: (stockSearch) => dispatch(givePeopleAlsoBought(stockSearch))

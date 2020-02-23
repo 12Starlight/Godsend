@@ -2,6 +2,11 @@
 import React from 'react'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearchDollar } from '@fortawesome/free-solid-svg-icons';
+import { Redirect, Route, withRouter } from 'react-router-dom';
+// import { ProtectedRoute } from '../../../utils/route_util';
+
+// Import Local Directory Files
+import SignInFormContainer from '../../session_form/signin_form_container';
 
 
 class Search extends React.Component {
@@ -12,9 +17,11 @@ class Search extends React.Component {
       searchTerm: '',
       ticker: '',
       logic: false,
+      redirect: false
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.redirect = this.redirect.bind(this);
     this.changedValue = this.changedValue.bind(this);
     this.company = this.company.bind(this);
     this.clicked = React.createRef(); 
@@ -37,6 +44,15 @@ class Search extends React.Component {
       ticker: this.clicked.current.value.toUpperCase()    
     }), () => {
       // console.log(this.state.ticker) // user enters to get api
+      // this.props.giveMeMyStock(this.state.ticker);
+      // this.props.giveMeMyStockNews(this.state.ticker);
+      // this.props.giveMeMyStockRatings(this.state.ticker);
+      // this.props.giveMeMyStockEarnings(this.state.ticker);
+      // this.props.givePeopleAlsoBought(this.state.ticker);
+      this.setState({
+        redirect: !this.state.redirect
+      });
+      // this.props.history.push(`/stock/${this.state.ticker}`);
     });
   }
 
@@ -89,9 +105,21 @@ class Search extends React.Component {
     document.getElementById('select').style.background = 'white'
   }
 
+  // componentDidUpdate(){
+  //   if (this.state.redirect === true) {
+  //     this.props.history.push(`/stock/${this.state.ticker}`);
+  //   }
+  // }
+
 
   render(){
     const { stocks } = this.props; 
+
+    if (this.state.redirect === true) {
+      return <Redirect to={`/stock/${this.state.ticker}`} />;
+    }
+
+
 
     let filteredStocks = stocks.filter(stock => {
       
@@ -157,4 +185,5 @@ class Search extends React.Component {
 }
 
 
+// export default withRouter(Search);
 export default Search;
