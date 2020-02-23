@@ -13,7 +13,7 @@ class Search extends React.Component {
       searchTerm: '',
       ticker: '',
       logic: false,
-      rendered: true 
+      rendered: false
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,23 +36,25 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     this.setState((prev, state) => ({
-      ticker: this.clicked.current.value.toUpperCase()    
+      ticker: this.clicked.current.value.toUpperCase(),   
     }), () => {
       // console.log(this.state.ticker) // user enters to get api
-      this.props.stocks.forEach((stock) => {
-        if (stock.ticker.includes(this.state.ticker)) {
-      // this.props.giveMeMyStock(this.state.ticker);
-      // this.props.giveMeMyStockNews(this.state.ticker);
-      // this.props.giveMeMyStockRatings(this.state.ticker);
-      // this.props.giveMeMyStockEarnings(this.state.ticker);
-      // this.props.givePeopleAlsoBought(this.state.ticker);
-          this.props.history.push(`/stock/${this.state.ticker}`);
-        } 
+      let logic = false; 
 
-        this.setState({
-          rendered: !this.state.rendered 
+      if (logic === false) {
+        this.props.stocks.forEach((stock) => {
+          if (stock.ticker.includes(this.state.ticker)) {
+            logic = true; 
+          } 
         })
-      })
+        // console.log(this.state.ticker);
+        this.props.giveMeMyStock(this.state.ticker);
+        // this.props.giveMeMyStockNews(this.state.ticker);
+        // this.props.giveMeMyStockRatings(this.state.ticker);
+        // this.props.giveMeMyStockEarnings(this.state.ticker);
+        // this.props.givePeopleAlsoBought(this.state.ticker);
+        this.props.history.push(`/stock/${this.state.ticker}`);
+      }      
     });
   }
 
@@ -68,7 +70,7 @@ class Search extends React.Component {
       ticker: stock.ticker
     }), () => {
       // console.log(this.state.ticker) // logic for getting api
-      // this.props.giveMeMyStock(this.state.ticker);
+      this.props.giveMeMyStock(this.state.ticker);
       // this.props.giveMeMyStockNews(this.state.ticker);
       // this.props.giveMeMyStockRatings(this.state.ticker);
       // this.props.giveMeMyStockEarnings(this.state.ticker);

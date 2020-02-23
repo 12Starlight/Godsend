@@ -2,7 +2,7 @@
 export const giveMeMyStock = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/company?token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd`
+    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/company?token=Tpk_c61a1c45d7e04f02bf2f23d427b5f6af`
   })
 );
 

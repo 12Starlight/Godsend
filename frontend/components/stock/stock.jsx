@@ -18,7 +18,8 @@ class Stock extends React.Component {
       <div className='stock_outer_container'> 
         <NavbarContainer />
         <div className='stock_container'>
-          
+          <div></div>
+          <div></div>
         </div>
       </div>
     )

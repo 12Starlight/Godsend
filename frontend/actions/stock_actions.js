@@ -8,6 +8,7 @@ export const GET_MY_STOCK_RATINGS = 'GET_MY_STOCK_RATINGS';
 export const GET_MY_STOCK_EARNINGS = 'GET_MY_STOCK_EARNINGS';
 export const PEOPLE_ALSO_BOUGHT = 'PEOPLE_ALSO_BOUGHT';
 export const STOCK_ERRORS = 'STOCK_ERRORS';
+export const WIPE_OUT_STOCK = 'WIPE_OUT_STOCK';
 
 
 // Regular Action Creators

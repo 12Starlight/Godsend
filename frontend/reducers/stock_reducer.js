@@ -14,10 +14,14 @@ import {
 const stockReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
 
+
   switch(action.type) {
     case GET_MY_STOCK:
       // debugger; 
-      return Object.assign({}, oldState, { [action.stock.symbol]: action.stock });
+      let newState = Object.assign({}, oldState);
+      newState = {};
+      debugger; 
+      return Object.assign({}, newState, { [action.stock.symbol]: action.stock });
     case GET_MY_STOCK_NEWS:
       return Object.assign({}, oldState, { newsId: action.stockNews} )
     case GET_MY_STOCK_RATINGS:
