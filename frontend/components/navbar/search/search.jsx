@@ -44,6 +44,11 @@ class Search extends React.Component {
       // console.log(this.state.ticker) // user enters to get api
       this.props.stocks.forEach((stock) => {
         if (stock.ticker.includes(this.state.ticker)) {
+      // this.props.giveMeMyStock(this.state.ticker);
+      // this.props.giveMeMyStockNews(this.state.ticker);
+      // this.props.giveMeMyStockRatings(this.state.ticker);
+      // this.props.giveMeMyStockEarnings(this.state.ticker);
+      // this.props.givePeopleAlsoBought(this.state.ticker);
           this.props.history.push(`/stock/${this.state.ticker}`);
         } 
 
@@ -51,12 +56,6 @@ class Search extends React.Component {
           rendered: !this.state.rendered 
         })
       })
-      // this.props.giveMeMyStock(this.state.ticker);
-      // this.props.giveMeMyStockNews(this.state.ticker);
-      // this.props.giveMeMyStockRatings(this.state.ticker);
-      // this.props.giveMeMyStockEarnings(this.state.ticker);
-      // this.props.givePeopleAlsoBought(this.state.ticker);
-      
     });
   }
 
