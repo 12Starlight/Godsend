@@ -1,7 +1,7 @@
 // Import React Redux
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
-import { ReactBasicScroll } from 'react-basic-scroll'; 
+// import { ReactBasicScroll } from 'react-basic-scroll'; 
 
 // Import Local Directory Files
 import NavbarContainer from '../navbar/navbar_container'
@@ -18,19 +18,19 @@ class UserProfile extends React.Component {
   render() {
     const { user, signOut, userId } = this.props; 
 
-    const config = {
-      from: 'top-top',
-      to: 'bottom-bottom',
-      props: {
-        '--opacity': {
-          from: 0.1,
-          to: 0.99
-        }
-      }
-    };
+    // const config = {
+    //   from: 'top-top',
+    //   to: 'bottom-bottom',
+    //   props: {
+    //     '--opacity': {
+    //       from: 0.1,
+    //       to: 0.99
+    //     }
+    //   }
+    // };
 
     return (
-      <ReactBasicScroll config={config} >
+      // <ReactBasicScroll config={config} >
       <div className='user_outer_container' >
         <NavbarContainer userId={userId} />
         <div className="user_container">
@@ -41,7 +41,7 @@ class UserProfile extends React.Component {
           </div>
         </div>
       </div>
-      </ReactBasicScroll> 
+      // </ReactBasicScroll> 
     );
   }
 };

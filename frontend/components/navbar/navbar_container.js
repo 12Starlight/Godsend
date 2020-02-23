@@ -7,8 +7,9 @@ import Navbar from './navbar';
 
 // mapStateToProps
 const mapStateToProps = (state, ownProps) => {
+  // debugger; 
   return {
-  
+    userId: state.session.id 
   }
 }
 

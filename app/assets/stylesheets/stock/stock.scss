@@ -1,4 +1,10 @@
-.stock:hover {
-  font-weight: 600;
-  color: blue;
+.stock_outer_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 1;
+  left: 0; 
 }

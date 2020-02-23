@@ -20,7 +20,7 @@ class Navbar extends React.Component {
 
     return(
       <div className='nav_container' >
-        <div className='nav_icon_container' ><div className='nav_icon_container' ><FontAwesomeIcon className='nav_icon' icon={faGripfire} /></div></div>
+        <div className='nav_icon_container' ><div className='nav_icon_container' ><Link to={`/users/${userId}`} ><FontAwesomeIcon className='nav_icon' icon={faGripfire} /></Link></div></div>
         <SearchContainer />
         <div className='nav_links_outer'>
           <div className='nav_links_container'>

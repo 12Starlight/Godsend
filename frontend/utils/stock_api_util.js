@@ -34,6 +34,6 @@ export const giveMeMyStockEarnings = (stockSearch) => (
 export const givePeopleAlsoBought = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/peers?token=Tsk_a67dbc04df1e4d4291c42cc6c261a96c`
+    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/peers?token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd`
   })
 );

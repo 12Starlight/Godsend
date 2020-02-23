@@ -12,9 +12,9 @@
   // overflow-y: hidden;
 
   /* make it smooth on iOS */
-  -webkit-overflow-scrolling: touch;
+  // -webkit-overflow-scrolling: touch;
 
-    -webkit-box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
+  -webkit-box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
   -moz-box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
   box-shadow: 5px 0px 20px 5px rgba(29, 56, 138, .30);
   background: rgb(245, 245, 245);

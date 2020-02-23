@@ -4,9 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearchDollar } from '@fortawesome/free-solid-svg-icons';
 import { Redirect, withRouter } from 'react-router-dom';
 
-// Import Local Directory Files
-import SignInFormContainer from '../../session_form/signin_form_container';
-
 
 class Search extends React.Component {
   constructor(props) {
