@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import NavbarContainer from '../navbar/navbar_container';
 
 // Import Local Directory Files
+import StockFeedContainer from '../stock/stock_feed/stock_feed_container';
 
 
 class Stock extends React.Component {
@@ -29,8 +30,11 @@ class Stock extends React.Component {
       <div className='stock_outer_container'> 
         <NavbarContainer />
         <div className='stock_container'>
-          <div></div>
-          <div></div>
+          <StockFeedContainer />
+          <div className='action_container'>
+            <div className='trade_container' >Trade</div>
+            <button className='watchlist_action'>Watchlist</button>
+          </div>
         </div>
       </div>
     )
