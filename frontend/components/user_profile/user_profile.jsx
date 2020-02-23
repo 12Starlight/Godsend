@@ -14,6 +14,12 @@ class UserProfile extends React.Component {
     super(props);
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      this.props.history.push(`/users/${this.props.match.params.awesome}`)
+    }
+  }
+
 
   render() {
     const { user, signOut, userId } = this.props; 

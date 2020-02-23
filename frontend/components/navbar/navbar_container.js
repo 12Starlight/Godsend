@@ -9,7 +9,7 @@ import Navbar from './navbar';
 const mapStateToProps = (state, ownProps) => {
   // debugger; 
   return {
-    userId: state.session.id 
+    userId: state.session.id
   }
 }
 
