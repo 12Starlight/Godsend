@@ -13,23 +13,31 @@ import {
 
 const stockReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
-
+  let newState;
 
   switch(action.type) {
     case GET_MY_STOCK:
       // debugger; 
-      let newState = Object.assign({}, oldState);
+      newState = Object.assign({}, oldState);
       newState = {};
-      debugger; 
+      // debugger; 
       return Object.assign({}, newState, { [action.stock.symbol]: action.stock });
     case GET_MY_STOCK_NEWS:
-      return Object.assign({}, oldState, { newsId: action.stockNews} )
+      newState = Object.assign({}, oldState);
+      newState = {}; 
+      return Object.assign({}, newState, { newsId: action.stockNews} )
     case GET_MY_STOCK_RATINGS:
-      return Object.assign({}, oldState, { ratingId: action.stockRatings });
+      newState = Object.assign({}, oldState);
+      newState = {}; 
+      return Object.assign({}, newState, { ratingId: action.stockRatings });
     case GET_MY_STOCK_EARNINGS:
-      return Object.assign({}, oldState, { earningsSymbol: action.stockEarnings });
+      newState = Object.assign({}, oldState);
+      newState = {}; 
+      return Object.assign({}, newState, { earningsSymbol: action.stockEarnings });
     case PEOPLE_ALSO_BOUGHT:
-      return Object.assign({}, oldState, { recommendId: action.recommendations });
+      newState = Object.assign({}, oldState);
+      newState = {}; 
+      return Object.assign({}, newState, { recommendId: action.recommendations });
     default:
       return oldState; 
   }

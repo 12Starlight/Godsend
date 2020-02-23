@@ -11,8 +11,19 @@ class Stock extends React.Component {
     super(props);
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      // console.log('Now I am on fire')
+      // console.log(this.props.match.params);
+      // debugger; 
+      this.props.giveMeMyStock(this.props.match.params.ticker);
+      this.props.history.push(`/stock/${this.props.match.params.ticker}`);
+    }
+  }
+
 
   render(){
+    // debugger; 
 
     return(
       <div className='stock_outer_container'> 
