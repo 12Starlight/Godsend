@@ -1,19 +1,18 @@
 // Import React Redux
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { ReactBasicScroll } from 'react-basic-scroll'; 
 
 // Import Local Directory Files
 import NavbarContainer from '../navbar/navbar_container'
 import FeedContainer from '../feed/feed_container';
+import UserProfileContainer from './user_profile_container';
 
 
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  
 
 
   render() {

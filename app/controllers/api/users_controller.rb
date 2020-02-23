@@ -15,12 +15,13 @@ class Api::UsersController < ApplicationController
   end
 
   def create
+    # debugger 
     @user = User.new(user_params)
 
     if @user.save
-      login(@user)
+      login!(@user)
       #redirect_to user_url(@user) # show, @user being the wildcard
-      render :show 
+      render :show
     else
       render json: @user.errors.full_messages, status: 422
     end

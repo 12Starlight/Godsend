@@ -3,6 +3,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
+import { Route, withRouter } from 'react-router-dom';
+
+// Import Local Directory Files
+import UserProfileContainer from '../user_profile/user_profile_container';
 
 
 class SignUp extends React.Component {
@@ -62,6 +66,10 @@ class SignUp extends React.Component {
   render() {
     const { formType, navLink } = this.props;
  
+    if (this.props.userId) {
+      return <Route to={`/users/${this.props.userId}`} component={UserProfileContainer} />;
+    }
+
     return ( 
       <div className='su_container' >
         <div className='su_single_container' >
@@ -117,7 +125,7 @@ class SignUp extends React.Component {
 }
 
 
-export default SignUp; 
+export default withRouter(SignUp); 
 
 
 

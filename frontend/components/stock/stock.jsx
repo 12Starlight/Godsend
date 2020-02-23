@@ -1,5 +1,6 @@
 // Import React Redux
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 // Import Local Directory Files
 
@@ -11,11 +12,12 @@ class Stock extends React.Component {
 
 
   render(){
+
     return(
-      <div>Give Me My Stock!</div>
+      <div className='stock'>Give Me My Stock!</div>
     )
   }
 }
 
 
-export default Stock; 
+export default withRouter(Stock); 

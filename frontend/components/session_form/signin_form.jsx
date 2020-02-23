@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGripfire } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 
+// Import Local Directory Files
+import UserProfileContainer from '../user_profile/user_profile_container';
+
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -56,7 +59,12 @@ class SignIn extends React.Component {
 
 
   render() {
+    // debugger; 
     const { formType, navLink } = this.props;
+
+    if (this.props.sessionId) {
+      return <Route to={`/users/${this.props.userId}`} component={UserProfileContainer} />;
+    }
 
     return (
       <div className='si_outer_container'>

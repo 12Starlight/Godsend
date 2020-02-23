@@ -15,8 +15,7 @@ import {
   giveMeMyStockNews, 
   giveMeMyStockRatings,
   giveMeMyStockEarnings,
-  givePeopleAlsoBought,
-  gotStockInfo 
+  givePeopleAlsoBought
 } from './actions/stock_actions';
 
 
@@ -54,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.giveMeMyStockRatings = giveMeMyStockRatings;
   window.giveMeMyStockEarnings = giveMeMyStockEarnings;
   window.givePeopleAlsoBought = givePeopleAlsoBought;
-  window.gotStockInfo = gotStockInfo; 
 
 
   // ReactDOM.render(<div>HI REACT HERE</div>, root);
