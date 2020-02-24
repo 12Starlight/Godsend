@@ -20,7 +20,7 @@ class About extends React.Component {
 
   componentDidMount() {
     // debugger; 
-    this.props.giveMeMyStock(); 
+    this.props.giveMeMyStock(this.props.match.params.ticker); 
   }
 
   componentDidUpdate(){
@@ -31,7 +31,6 @@ class About extends React.Component {
 
   render() {
     const { stock } = this.props; 
-    // const dataObj = Object.assign({}, )
     
     if (!stock) {
       return <div>There are no stocks</div>;

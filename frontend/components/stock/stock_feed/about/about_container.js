@@ -11,24 +11,23 @@ import About from './about';
 const mapStateToProps = (state, ownProps) => {
   let stock = state.entities.stock.stockSymbol
   
-  if (stock) {
-    stock = merge({}, stock);
-  }
+  // if (stock) {
+  //   stock = merge({}, stock);
+  // }
 
   return {
-    stock: stock,
-    ticker: ownProps.match.params.ticker   
+    stock: stock
   }
 };
 
 // mapDispatchToProps
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const ticker = ownProps.match.params.ticker;
+  // const ticker = ownProps.match.params.ticker;
 
   return  {
-    giveMeMyStock: () => dispatch(giveMeMyStock(ticker))
+    giveMeMyStock: (searchTerm) => dispatch(giveMeMyStock(searchTerm))
   }
 };
 
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(About)); 
+export default connect(mapStateToProps, mapDispatchToProps)(About); 
