@@ -17,7 +17,9 @@ class Stock extends React.Component {
       // console.log('Now I am on fire')
       // console.log(this.props.match.params);
       // debugger; 
-      this.props.giveMeMyStock(this.props.match.params.ticker);
+      // if (Object.values(this.props.stock).includes(prevProps.match.params.ticker)) {
+        this.props.giveMeMyStock(this.props.match.params.ticker);
+      // }
       this.props.history.push(`/stock/${this.props.match.params.ticker}`);
     }
   }

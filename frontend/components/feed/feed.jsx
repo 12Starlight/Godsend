@@ -47,7 +47,7 @@ class Feed extends React.Component {
       )
     })
 
-    const reversed = allNews.reverse(); 
+    const reversed = allNews
 
     return(
       <div className='feed_container'>

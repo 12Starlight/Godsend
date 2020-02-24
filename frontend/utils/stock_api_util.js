@@ -2,7 +2,7 @@
 export const giveMeMyStock = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/company?token=Tsk_a67dbc04df1e4d4291c42cc6c261a96c`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/company?token=sk_a88370cdf5ed4d0182b3af410705cd94`
   })
 );
 
@@ -10,7 +10,7 @@ export const giveMeMyStock = (stockSearch) => (
 export const giveMeMyStockNews = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/news?token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/news?token=sk_a88370cdf5ed4d0182b3af410705cd94` // cloud
   })
 ); 
 
@@ -18,7 +18,7 @@ export const giveMeMyStockNews = (stockSearch) => (
 export const giveMeMYStockRatings = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/recommendation-trends?token=Tsk_a67dbc04df1e4d4291c42cc6c261a96c`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/recommendation-trends?token=sk_a88370cdf5ed4d0182b3af410705cd94`
   })
 );
 
@@ -26,7 +26,7 @@ export const giveMeMYStockRatings = (stockSearch) => (
 export const giveMeMyStockEarnings = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/earnings/1?period=annual&token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/earnings/4/?token=sk_a88370cdf5ed4d0182b3af410705cd94` // cloud
   })
 );
 
@@ -34,6 +34,6 @@ export const giveMeMyStockEarnings = (stockSearch) => (
 export const givePeopleAlsoBought = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://sandbox.iexapis.com/stable/stock/${stockSearch}/peers?token=pk_9dbe2686af9e4869b46f1ff7fb1b54dd`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/peers?token=sk_a88370cdf5ed4d0182b3af410705cd94`
   })
 );

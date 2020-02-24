@@ -8,7 +8,7 @@ import { giveMeMyStock } from '../../actions/stock_actions';
 
 // mapStateToProps
 const mapStateToProps = (state) => ({
-
+  stock: state.entities.stock
 });
 
 const mapDispatchToProps = (dispatch) => ({
