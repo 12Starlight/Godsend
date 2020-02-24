@@ -13,26 +13,36 @@ class About extends React.Component {
 
     }
   }
-
+  
+  componentWillMount() {
+    // this.props.giveMeMyStock();
+  }
 
   componentDidMount() {
+    // debugger; 
     this.props.giveMeMyStock(); 
+  }
+
+  componentDidUpdate(){
+    // debugger; 
+    // this.props.giveMeMyStock(); 
   }
 
 
   render() {
     const { stock } = this.props; 
+    // const dataObj = Object.assign({}, )
     
-    // if (!stock.description) {
-      // return <div>There are no stocks</div>;
-      // }
+    if (!stock) {
+      return <div>There are no stocks</div>;
+    }
       
-    debugger; 
+    // debugger; 
     return(
       <article className='about_container' >
-        <div>
+        <div className='about_container_inner'>
           <div>About</div>
-          <div>{stock.stockSymbol.description}</div>
+          <div>{stock.description}</div>
         </div>
       </article>
     )
