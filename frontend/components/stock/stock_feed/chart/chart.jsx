@@ -82,9 +82,8 @@ class Chart extends React.Component {
       timeseriesDs: {
         type: "timeseries",
         renderAt: "container",
-        margin: "50",
         width: "674",
-        height: "350",
+        height: "380",
         dataSource
       }
     };
