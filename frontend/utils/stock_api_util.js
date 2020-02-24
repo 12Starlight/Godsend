@@ -6,6 +6,14 @@ export const giveMeMyStock = (stockSearch) => (
   })
 );
 
+// Stats
+export const giveMeMyStockStats = (stockSearch) => (
+  $.ajax({
+    type: 'GET',
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/stats/stat?token=sk_a88370cdf5ed4d0182b3af410705cd94`
+  })
+)
+
 // News
 export const giveMeMyStockNews = (stockSearch) => (
   $.ajax({

@@ -9,14 +9,14 @@ import About from './about';
 
 // mapStateToProps
 const mapStateToProps = (state, ownProps) => {
-  let stock = state.entities.stock.stockSymbol
+  // let stock = state.entities.stock.stockSymbol
   
   // if (stock) {
   //   stock = merge({}, stock);
   // }
 
   return {
-    stock: stock
+    stock: state.entities.stock.stockSymbol
   }
 };
 

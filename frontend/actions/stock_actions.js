@@ -3,6 +3,7 @@ import * as StockApiUtil from '../utils/stock_api_util';
 
 // Constants
 export const GET_MY_STOCK = 'GET_MY_STOCK';
+export const GET_MY_STOCK_STATS = 'GET_MY_STOCK_STATS'; 
 export const GET_MY_STOCK_NEWS = 'GET_MY_STOCK_NEWS';
 export const GET_MY_STOCK_RATINGS = 'GET_MY_STOCK_RATINGS';
 export const GET_MY_STOCK_EARNINGS = 'GET_MY_STOCK_EARNINGS';
@@ -15,6 +16,11 @@ export const WIPE_OUT_STOCK = 'WIPE_OUT_STOCK';
 const gotStock = (stock) => ({
   type: GET_MY_STOCK,
   stock
+});
+
+const gotStockStats = (stats) => ({
+  type: GET_MY_STOCK_STATS,
+  stats
 });
 
 const gotStockNews = (stockNews) => ({
@@ -46,6 +52,13 @@ const gotStockErrors = (stockErrors) => ({
 export const giveMeMyStock = (stockSearch) => (dispatch) => (
   StockApiUtil.giveMeMyStock(stockSearch).then(
     stockReturned => dispatch(gotStock(stockReturned)),
+    stockErrors => dispatch(gotStockErrors(stockErrors))
+  )
+);
+
+export const giveMeMyStockStats = (stockSearch) => (dispatch) => (
+  StockApiUtil.giveMeMyStockStats(stockSearch).then(
+    stockStatsReturned => dispatch(gotStockStats(stockStatsReturned)),
     stockErrors => dispatch(gotStockErrors(stockErrors))
   )
 );

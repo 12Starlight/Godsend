@@ -12,19 +12,19 @@ class Stock extends React.Component {
     super(props);
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.location.pathname !== prevProps.location.pathname) {
-      // console.log('Now I am on fire')
-      // console.log(this.props.match.params);
-      // debugger; 
-      this.props.giveMeMyStock(this.props.match.params.ticker);
-      // this.props.giveMeMyStockNews(this.props.match.params.ticker);
-      // this.props.giveMeMyStockRatings(this.props.match.params.ticker);
-      // this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
-      // this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
-      this.props.history.push(`/stock/${this.props.match.params.ticker}`);
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (this.props.location.pathname !== prevProps.location.pathname) {
+  //     // console.log('Now I am on fire')
+  //     // console.log(this.props.match.params);
+  //     // debugger; 
+  //     this.props.giveMeMyStock(this.props.match.params.ticker);
+  //     // this.props.giveMeMyStockNews(this.props.match.params.ticker);
+  //     // this.props.giveMeMyStockRatings(this.props.match.params.ticker);
+  //     // this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
+  //     // this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
+  //     this.props.history.push(`/stock/${this.props.match.params.ticker}`);
+  //   }
+  // }
 
 
   render(){

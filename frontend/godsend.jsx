@@ -12,6 +12,7 @@ import { receiveAllNews } from './actions/news_actions';
 import { receiveAllSectors } from './actions/sectors_actions';
 import { 
   giveMeMyStock, 
+  giveMeMyStockStats,
   giveMeMyStockNews, 
   giveMeMyStockRatings,
   giveMeMyStockEarnings,
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveAllNews = receiveAllNews;
   window.receiveAllSectors = receiveAllSectors; 
   window.giveMeMyStock = giveMeMyStock;
+  window.giveMeMyStockStats = giveMeMyStockStats; 
   window.giveMeMyStockNews = giveMeMyStockNews;
   window.giveMeMyStockRatings = giveMeMyStockRatings;
   window.giveMeMyStockEarnings = giveMeMyStockEarnings;
