@@ -47,15 +47,19 @@ class Search extends React.Component {
             logic = true; 
           } 
         })
-        // console.log(this.state.ticker);
-        this.props.giveMeMyStock(this.state.ticker);
+
+        if (logic === true) {
+          console.log(this.state.ticker);
+          this.props.giveMeMyStock(this.state.ticker);
         // this.props.giveMeMyStockNews(this.state.ticker);
         // this.props.giveMeMyStockRatings(this.state.ticker);
         // this.props.giveMeMyStockEarnings(this.state.ticker);
         // this.props.givePeopleAlsoBought(this.state.ticker);
-        this.props.history.push(`/stock/${this.state.ticker}`);
+          this.props.history.push(`/stock/${this.state.ticker}`);
+        }
       }      
     });
+    // console.log(this.state.ticker);
   }
 
   changedValue(val) {
