@@ -1,5 +1,6 @@
 // Import React Redux
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 // Import Local Directory Files
 
@@ -14,16 +15,37 @@ class About extends React.Component {
   }
 
 
+  componentDidMount() {
+    this.props.giveMeMyStock(); 
+  }
+
+
   render() {
+    const { stock } = this.props; 
+    
+    // if (!stock.description) {
+      // return <div>There are no stocks</div>;
+      // }
+      
+    debugger; 
     return(
-      <div className='about_container' >
-        About
-      
-      
-      </div>
+      <article className='about_container' >
+        <div>
+          <div>About</div>
+          <div>{stock.stockSymbol.description}</div>
+        </div>
+      </article>
     )
   }
 }
 
 
-export default About; 
+export default withRouter(About); 
+
+
+// <div>{}</div>
+// <div>{}</div>
+// <div>{}</div>
+// <div>{}</div>
+
+

@@ -29,13 +29,15 @@ class Stock extends React.Component {
 
   render(){
     // debugger; 
-    const { stock } = this.props;
+    const { stock } = this.props; 
+    // debugger; 
+
 
     return(
       <div className='stock_outer_container'> 
         <NavbarContainer />
         <div className='stock_container'>
-          <StockFeedContainer stock={stock} />
+          <StockFeedContainer />
           <div className='action_container'>
             <div className='trade_container' >Trade</div>
             <button className='watchlist_action'>Watchlist</button>

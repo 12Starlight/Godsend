@@ -52,7 +52,7 @@ class SectorItem extends React.Component {
 
 
   render(){
-    const { sector} = this.props; 
+    const { sector } = this.props; 
 
     return(
       <div ref={e => this.value = e} onPointerEnter={(e) => this.valueEnter(e, sector)} onPointerLeave={(e) => this.valueExit(e)} className='sectorsItem'>

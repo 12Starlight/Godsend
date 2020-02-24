@@ -1,13 +1,11 @@
 // Import React Redux
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 
 // Import FusionCharts
 import FusionCharts from 'fusioncharts';
 import TimeSeries from 'fusioncharts/fusioncharts.timeseries';
 import ReactFC from 'react-fusioncharts';
-
-
-// Import Local Directory Files
 
 
 // class Chart extends React.Component {
@@ -31,7 +29,7 @@ import ReactFC from 'react-fusioncharts';
 
   const dataSource = {
     caption: {
-      text: "Apple Inc. Stock Price"
+      text: `Apple, Inc. Stock Price`
     },
     subcaption: {
       text: "Stock prices from May 2014 - November 2018"
@@ -89,8 +87,14 @@ class Chart extends React.Component {
     };
   }
 
+  // componentWillMount() {
+  //   this.props.giveMeMyStock(this.props.match.params.ticker);
+  // }
+
+
   componentDidMount() {
     this.onFetchData();
+    // this.props.giveMeMyStock(this.props.match.params.ticker);
   }
 
   onFetchData() {
@@ -110,8 +114,12 @@ class Chart extends React.Component {
   }
 
   render() {
+    const { stock } = this.props; 
+    // debugger; 
+
     return(
       <div className='chart_container' >
+
         {this.state.timeseriesDs.dataSource.data ? (
           <ReactFC {...this.state.timeseriesDs} />
         ) : (
@@ -123,4 +131,6 @@ class Chart extends React.Component {
 }
 
 
-export default Chart; 
+export default withRouter(Chart); 
+
+

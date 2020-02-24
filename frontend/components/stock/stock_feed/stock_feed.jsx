@@ -21,10 +21,13 @@ class StockFeed extends React.Component {
 
 
   render() {
+    // debugger; 
+    const { stock } = this.props; 
+
     return(
       <div className='stockFeed_container' >
-        <ChartContainer />
-        <AboutContainer />
+        <ChartContainer stock={stock} />
+        <AboutContainer stock={stock} />
         <StockNewsContainer />
         <AnalystContainer />
         <StockEarningsContainer />

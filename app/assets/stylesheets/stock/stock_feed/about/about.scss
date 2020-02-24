@@ -1,8 +1,17 @@
 .about_container {
   display: flex; 
   box-sizing: border-box;
-  height: 30%;
+  height: 400vh;
   width: 100%; 
   // background: black; 
   border: solid .5px blue;   
+}
+
+.about_container_inner {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-sizing: border-box;
+  height: 100%; 
+  width: 100%;
 }
