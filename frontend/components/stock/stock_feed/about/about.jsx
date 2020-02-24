@@ -16,7 +16,11 @@ class About extends React.Component {
 
   render() {
     return(
-      <div className='about_container' >About</div>
+      <div className='about_container' >
+        About
+      
+      
+      </div>
     )
   }
 }
