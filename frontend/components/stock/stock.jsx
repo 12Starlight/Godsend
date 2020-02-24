@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import NavbarContainer from '../navbar/navbar_container';
 
 // Import Local Directory Files
-import StockFeedContainer from '../stock/stock_feed/stock_feed_container';
+import StockFeedContainer from './stock_feed/stock_feed_container';
 
 
 class Stock extends React.Component {

@@ -16,7 +16,7 @@ class Analyst extends React.Component {
 
   render() {
     return(
-      <div>Analyst Recommendations</div>
+      <div className='analyst_container' >Analyst Recommendations</div>
     )
   }
 }

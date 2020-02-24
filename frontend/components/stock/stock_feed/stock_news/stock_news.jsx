@@ -16,7 +16,7 @@ class StockNews extends React.Component {
 
   render() {
     return(
-      <div>Stock News</div>
+      <div className='stockNews_container' >Stock News</div>
     )
   }
 }

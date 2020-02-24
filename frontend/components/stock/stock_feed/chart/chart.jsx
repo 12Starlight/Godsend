@@ -16,7 +16,7 @@ class Chart extends React.Component {
 
   render() {
     return(
-      <div>This is where my chart goes</div>
+      <div className='chart_container' >This is where my chart goes</div>
     )
   }
 }

@@ -16,7 +16,7 @@ class StockEarnings extends React.Component {
 
   render() {
     return(
-      <div>Stock Earnings</div>
+      <div className='stockEarnings_container' >Stock Earnings</div>
     )
   }
 }

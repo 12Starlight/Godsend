@@ -16,7 +16,7 @@ class Also extends React.Component {
 
   render() {
     return(
-      <div>Also Bought</div>
+      <div className='also_container' >Also Bought</div>
     )
   }
 }
