@@ -1,7 +1,7 @@
 .about_container {
   display: flex; 
   box-sizing: border-box;
-  height: 40vh;
+  height: 38vh;
   width: 100%; 
   // background: black; 
   border: solid .5px blue;   
@@ -13,7 +13,7 @@
   flex-direction: column;
   text-align: left;
   box-sizing: border-box;
-  height: 60%; 
+  height: 100%; 
   width: 100%;
   border: solid .5px orange; 
 }
@@ -23,14 +23,24 @@
   box-sizing: border-box;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 40%;
+  justify-content: flex-start;
+  height: 100%;
   width: 100%;
-  border: solid .5px fuchsia; 
+  margin: 3% 0 0 0;
+  // border: solid .5px fuchsia; 
 }
 
 .aboutData_inner {
   display: flex;
   flex-direction: column;
-  color: white;
-  background: darkgray;
+  justify-content: space-around;
+  word-break: break-all;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  height: 15%;
+  width: 23%;
+  padding: 0 .5% 0 0; 
+  // border-radius: 3%;
+  // color: white;
+  // background: darkgray;
 }

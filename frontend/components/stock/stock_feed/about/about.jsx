@@ -43,11 +43,11 @@ class About extends React.Component {
   render() {
     const { stock, stockStats } = this.props; 
     
-    if (!stock) {
-      return <div>There are no stocks</div>;
+    if (!stock || !stockStats) {
+      return <div></div>;
     }
       
-    debugger; 
+    // debugger; 
     return(
       <article className='about_container' >
         <div className='about_inner'>
