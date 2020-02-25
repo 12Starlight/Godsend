@@ -2,10 +2,11 @@
 .feed_container {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   text-align: center;
   // height: 1000%; 
-  width: 60%; 
-  margin: 0 0 0 34.44%; 
+  width: 56%; 
+  margin: 0 0 0 37.44%; 
 
   /* allow for scrolling */
   // overflow-x: hidden;
