@@ -34,14 +34,14 @@ class StockNews extends React.Component {
 
 
   render() {
-    const { stockNews } = this.props; 
+    const { stockNews, convert } = this.props; 
 
     if (!stockNews) {
       return <div></div>;
     }
 
     const allNews = stockNews.map((newsItem, i) => {
-    debugger; 
+    // debugger; 
     const converted = convert(newsItem.datetime)
 
       return (
@@ -65,7 +65,8 @@ class StockNews extends React.Component {
     })
 
     return(
-      <div className='stockNews_container' >Stock News
+      <div className='stockNews_container' >
+        <div className='stockNews_title' >News</div>
         {allNews}
       </div>
     )
