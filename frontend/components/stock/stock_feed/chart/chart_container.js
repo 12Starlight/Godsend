@@ -7,11 +7,13 @@ import Chart from './chart';
 
 // mapStateToProps
 const mapStateToProps = (state) => ({
+  stock: state.entities.stock.stockSymbol,
+  stockStats: state.entities.stock.stockStats 
 });
 
 // mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
-  giveMeMyStock: (searchTerm) => dispatch(giveMeMyStock(searchTerm))
+  giveMeMyStock: (searchTerm) => dispatch(giveMeMyStock(searchTer))
 });
 
 

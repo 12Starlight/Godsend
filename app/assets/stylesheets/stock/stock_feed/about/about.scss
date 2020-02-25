@@ -1,10 +1,10 @@
 .about_container {
   display: flex; 
   box-sizing: border-box;
-  height: 38vh;
+  height: 100%;
   width: 100%; 
   // background: black; 
-  border: solid .5px blue;   
+  // border: solid .5px blue;   
 }
 
 .about_inner {
@@ -15,7 +15,51 @@
   box-sizing: border-box;
   height: 100%; 
   width: 100%;
-  border: solid .5px orange; 
+  // border: solid .5px orange; 
+}
+
+.about_title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6em;
+  font-weight: 500;
+  // text-shadow:  .3px .3px #fe490223, 
+  //               .4px .4px #fe4902, 
+  //               .5px .5px #fe49021c;
+  text-shadow:  0 .6px 0 rgb(207, 93, 0),
+                0 .7px 0 rgb(201, 90, 0),
+                0 .8px 0 rgb(196, 85, 0),
+                0 .9px 0 rgb(191, 80, 0),
+                0 1px 0rgb(186, 75, 0),
+                0 1.1px 1px rgba(0,0,0,.1),
+                0 0 1px rgba(0,0,0,.1),
+                0 .6px .8px rgba(0,0,0,.3),
+                0 .8px 1px rgba(0,0,0,.2),
+                0 1px .6px rgba(0,0,0,.25),
+                0 .6px .6px rgba(0,0,0,.2),
+                0 .7px .7px rgba(0,0,0,.15);
+  letter-spacing: -1.6px;
+  word-spacing: .1px; 
+  color:  rgb(29, 56, 138);
+  text-align: start;
+  max-height: 20%;
+  width: 100%;
+  margin: 6% 0 3% 0;  
+}
+
+.about_description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 0;
+  font-size: .9em; 
+  letter-spacing: .1px;
+  word-spacing: .1px; 
+  line-height: 125%;
+  width: 100%;
+  height: 100%; 
+  padding: 0 3% 0 0;
 }
 
 .aboutData_container {
@@ -24,9 +68,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  height: 100%;
+  // line-height: 125%;
+  height: 20vh;
   width: 100%;
-  margin: 3% 0 0 0;
+  margin: 5% 0 0 0;
   // border: solid .5px fuchsia; 
 }
 
@@ -37,10 +82,40 @@
   word-break: break-all;
   font-family: Arial, Helvetica, sans-serif;
   font-size: .8em;
-  height: 15%;
+  font-weight: 300;
+  height: 18%;
   width: 23%;
-  padding: 0 .5% 0 0; 
+  padding: 0 2% 0 0; 
   // border-radius: 3%;
   // color: white;
   // background: darkgray;
+}
+
+.aboutData_title {
+  font-size: .9em;
+  font-weight: 550; 
+}
+
+.aboutData_ceo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  // text-shadow:  .3px .3px #fe490223, 
+  //               .4px .4px #fe4902, 
+  //               .5px .5px #fe49021c;
+  text-shadow:  0 .6px 0 rgb(207, 93, 0),
+                0 .7px 0 rgb(201, 90, 0),
+                0 .8px 0 rgb(196, 85, 0),
+                0 .9px 0 rgb(191, 80, 0),
+                0 1px 0rgb(186, 75, 0),
+                0 1.1px 1px rgba(0,0,0,.1),
+                0 0 1px rgba(0,0,0,.1),
+                0 .6px .8px rgba(0,0,0,.3),
+                0 .8px 1px rgba(0,0,0,.2),
+                0 1px .6px rgba(0,0,0,.25),
+                0 .6px .6px rgba(0,0,0,.2),
+                0 .7px .7px rgba(0,0,0,.15);
+  color:  rgb(29, 56, 138);
+  text-align: start;
+  width: 100%; 
 }

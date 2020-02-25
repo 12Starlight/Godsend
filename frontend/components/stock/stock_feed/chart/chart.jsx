@@ -29,7 +29,7 @@ import ReactFC from 'react-fusioncharts';
 
   const dataSource = {
     caption: {
-      text: `Apple, Inc. Stock Price`
+      // text: `Apple, Inc. Stock Price`
     },
     subcaption: {
       text: "Stock prices from May 2014 - November 2018"
@@ -80,7 +80,7 @@ class Chart extends React.Component {
       timeseriesDs: {
         type: "timeseries",
         renderAt: "container",
-        width: "674",
+        width: "675",
         height: "380",
         dataSource
       }
@@ -114,17 +114,25 @@ class Chart extends React.Component {
   }
 
   render() {
-    const { stock } = this.props; 
+    const { stock, stockStats } = this.props; 
     // debugger; 
+
+    if (!stock || !stockStats ) {
+      return <div></div>;
+    }
 
     return(
       <div className='chart_container' >
-
-        {this.state.timeseriesDs.dataSource.data ? (
-          <ReactFC {...this.state.timeseriesDs} />
-        ) : (
-            "loading"
-        )}
+        <div className='chart_title' >{stock.companyName}</div>
+        <div className='chart_price' >{'$' + stockStats.latestPrice}</div>
+        <div className='chart_change' ><span>{'$' + stockStats.change}</span><span>{' [' + stockStats.changePercent.toFixed(2) + '%] '}</span><span className='chart_today'>{' Today'}</span></div>
+        <div className='chart_container_inner'>
+          {this.state.timeseriesDs.dataSource.data ? (
+            <ReactFC {...this.state.timeseriesDs} />
+          ) : (
+              "loading"
+          )}
+        </div>
       </div>
     )
   }

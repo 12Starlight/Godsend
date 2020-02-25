@@ -50,65 +50,65 @@ class About extends React.Component {
     // debugger; 
     return(
       <article className='about_container' >
-        <div className='about_inner'>
-          <div>About</div>
-          <div>{stock.description}</div>
+        <div className='about_inner' >
+          <div className='about_title' >About</div>
+          <div className='about_description' >{stock.description}</div>
           <div className='aboutData_container'>
             <div className={'aboutData_inner'} >
-              <div>{`CEO`}</div>
-              <div>{stock.CEO}</div>
+              <div className='aboutData_title' >{`CEO`}</div>
+              <div className='aboutData_ceo' >{stock.CEO}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Exchange`}</div>
+              <div className='aboutData_title'>{`Exchange`}</div>
               <div>{stock.exchange}</div>                           
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Website`}</div>
+              <div className='aboutData_title'>{`Website`}</div>
               <div>{stock.website}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Employees`}</div>
-              <div>{stock.employees}</div>
+              <div className='aboutData_title'>{`Employees`}</div>
+              <div>{Math.floor(stock.employees/1000) + ',' + Math.floor(stock.employees%1000)}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Market Cap`}</div>
-              <div>{((stockStats.marketCap)/1000000).toFixed(2) + 'B'}</div>
+              <div className='aboutData_title'>{`Market Cap`}</div>
+              <div>{((stockStats.marketCap)/1000000000).toFixed(2) + 'B'}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Price-Earnings Ratio`}</div>
+              <div className='aboutData_title'>{`Price-Earnings Ratio`}</div>
               <div>{stockStats.peRatio}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Year-to-date Change`}</div>
+              <div className='aboutData_title'>{`Year-to-date Change`}</div>
               <div>{(stockStats.ytdChange*100).toFixed(2) + '%'}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Average Total Volume`}</div>
+              <div className='aboutData_title'>{`Average Total Volume`}</div>
               <div>{(stockStats.avgTotalVolume/1000000).toFixed(2) + 'M'}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Today's High`}</div>
-              <div>{stockStats.high}</div>
+              <div className='aboutData_title'>{`Today's High`}</div>
+              <div>{'$' + stockStats.high}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Today's Low`}</div>
-              <div>{stockStats.low}</div>
+              <div className='aboutData_title'>{`Today's Low`}</div>
+              <div>{'$' + stockStats.low}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Open`}</div>
-              <div>{stockStats.open}</div>
+              <div className='aboutData_title'>{`Open`}</div>
+              <div>{'$' + stockStats.open}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`Volume`}</div>
+              <div className='aboutData_title'>{`Volume`}</div>
               <div>{(stockStats.volume/1000000).toFixed(2) + 'M'}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`52 Week High`}</div>
-              <div>{stockStats.week52High}</div>
+              <div className='aboutData_title'>{`52 Week High`}</div>
+              <div>{'$' + stockStats.week52High}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div>{`52 Week Low`}</div>
-              <div>{stockStats.week52Low}</div>
+              <div className='aboutData_title'>{`52 Week Low`}</div>
+              <div>{'$' + stockStats.week52Low}</div>
             </div>
           </div>
         </div>
