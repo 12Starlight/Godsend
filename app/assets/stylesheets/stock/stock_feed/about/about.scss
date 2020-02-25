@@ -7,7 +7,7 @@
   border: solid .5px blue;   
 }
 
-.about_container_inner {
+.about_inner {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -28,8 +28,9 @@
   border: solid .5px fuchsia; 
 }
 
-.aboutData {
-  
+.aboutData_inner {
+  display: flex;
+  flex-direction: column;
   color: white;
   background: darkgray;
 }

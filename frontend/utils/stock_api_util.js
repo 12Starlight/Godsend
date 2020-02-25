@@ -10,7 +10,7 @@ export const giveMeMyStock = (stockSearch) => (
 export const giveMeMyStockStats = (stockSearch) => (
   $.ajax({
     type: 'GET',
-    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/stats/stat?token=sk_a88370cdf5ed4d0182b3af410705cd94`
+    url: `https://cloud.iexapis.com/stable/stock/${stockSearch}/quote?token=sk_a88370cdf5ed4d0182b3af410705cd94`
   })
 )
 

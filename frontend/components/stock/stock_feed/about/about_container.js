@@ -5,6 +5,7 @@ import { merge } from 'lodash'
 
 // Import Local Directory Files
 import About from './about';
+import { giveMeMyStock, giveMeMyStockStats } from '../../../../actions/stock_actions';
 
 
 // mapStateToProps
@@ -14,18 +15,20 @@ const mapStateToProps = (state, ownProps) => {
   // if (stock) {
   //   stock = merge({}, stock);
   // }
-
+  // debugger; 
   return {
-    stock: state.entities.stock.stockSymbol
+    stock: state.entities.stock.stockSymbol,
+    stockStats: state.entities.stock.stockStats
   }
 };
 
 // mapDispatchToProps
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   // const ticker = ownProps.match.params.ticker;
 
   return  {
-    giveMeMyStock: (searchTerm) => dispatch(giveMeMyStock(searchTerm))
+    giveMeMyStock: (searchTerm) => dispatch(giveMeMyStock(searchTerm)),
+    giveMeMyStockStats: (searchTerm) => dispatch(giveMeMyStockStats(searchTerm))
   }
 };
 
