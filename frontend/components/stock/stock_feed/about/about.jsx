@@ -70,7 +70,7 @@ class About extends React.Component {
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Employees`}</div>
-              <div>{Math.floor(stock.employees/1000) + ',' + Math.floor(stock.employees%1000)}</div>
+              <div>{stock.employees}</div>
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Market Cap`}</div>
@@ -127,5 +127,5 @@ export default withRouter(About);
 // <div>{}</div>
 // <div>{}</div>
 // <div>{}</div>
-
+// <div>{Math.floor(stock.employees / 1000) + ',' + Math.floor(stock.employees % 1000)}</div>
 
