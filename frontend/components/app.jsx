@@ -4,8 +4,8 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
 // Import Local Directory Files
 import { AuthRoute, ProtectedRoute, LoggedInRoute } from '../utils/route_util';
-import SignInFormContainer from '../components/session_form/signin_form_container';
-import SignUpFormContainer from '../components/session_form/signup_form_container';
+import SignInFormContainer from './session_form_signin/signin_form_container';
+import SignUpFormContainer from './session_form_signup/signup_form_container';
 import UserProfileContainer from '../components/user_profile/user_profile_container';
 import StockProfileContainer from '../components/stock/stock_container';
 

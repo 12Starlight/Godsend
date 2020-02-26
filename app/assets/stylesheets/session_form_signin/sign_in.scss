@@ -18,11 +18,12 @@
 }
 
 .si_background_img {
+  display: flex; 
   align-items: stretch;
   height: 100vh;
-  width: 100vw; 
+  width: 100vh; 
   background-size: cover; 
-  // background-image: url('star');
+  background-image: url('star.jpg');
 }
 
 

@@ -74,8 +74,8 @@ class SignIn extends React.Component {
 
     return (
       <div className='si_outer_container'>
-        <div src={window.star} className='si_left_container'>
-          <img className='si_background_img' />
+        <div className='si_left_container'>
+          <div className='si_background_img'></div>
         </div>
         <div className='si_right_container'>
           <div className='si_form_background'>
@@ -112,4 +112,5 @@ export default SignIn;
 
 
 // <button className='si_button' onClick={this.handleDemo} >Demo</button>
+// <img src={window.star} className='si_background_img' />
 // <div className='si_background_img'></div>
