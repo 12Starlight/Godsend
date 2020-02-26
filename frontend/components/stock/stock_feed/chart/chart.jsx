@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 // Import FusionCharts
 import FusionCharts from 'fusioncharts';
 import TimeSeries from 'fusioncharts/fusioncharts.timeseries';
+import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import ReactFC from 'react-fusioncharts';
 
 
@@ -17,7 +18,7 @@ import ReactFC from 'react-fusioncharts';
 //     }
 //   }
 
-  ReactFC.fcRoot(FusionCharts, TimeSeries);
+  ReactFC.fcRoot(FusionCharts, TimeSeries, FusionTheme);
 
   const jsonify = res => res.json();
   const dataFetch = fetch(

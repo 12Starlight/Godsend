@@ -1,5 +1,6 @@
 // Import React Redux
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 // Import Local Directory Files
 import ChartContainer from './chart/chart_container';
@@ -19,17 +20,24 @@ class StockFeed extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.giveMeMyStockRatings(this.props.match.params.ticker)
+  }
 
   render() {
     // debugger; 
-    const { stock } = this.props; 
+    const { stockRatings } = this.props; 
+
+    if (!stockRatings) {
+      return <div></div>
+    }
 
     return(
       <div className='stockFeed_container' >
-        <ChartContainer stock={stock} />
-        <AboutContainer stock={stock} />
+        <ChartContainer />
+        <AboutContainer />
         <StockNewsContainer />
-        <AnalystContainer />
+        <AnalystContainer stockRatings={stockRatings} />
         <StockEarningsContainer />
         <AlsoContainer />
       </div>
@@ -38,5 +46,5 @@ class StockFeed extends React.Component {
 }
 
 
-export default StockFeed; 
+export default withRouter(StockFeed); 
 
