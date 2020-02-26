@@ -24,6 +24,18 @@ class StockFeed extends React.Component {
     this.props.giveMeMyStockRatings(this.props.match.params.ticker)
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      // console.log('Now I am on fire')
+      // console.log(this.props.match.params);
+      // debugger; 
+      this.props.giveMeMyStockRatings(this.props.match.params.ticker);
+      // this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
+      // this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
+      this.props.history.push(`/stock/${this.props.match.params.ticker}`);
+    }
+  }
+
   render() {
     // debugger; 
     const { stockRatings } = this.props; 

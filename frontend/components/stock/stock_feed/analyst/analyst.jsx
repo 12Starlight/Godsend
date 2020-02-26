@@ -41,7 +41,7 @@ class Analyst extends React.Component {
 
   componentDidMount() {
     // debugger; 
-    this.props.giveMeMyStockRatings(this.props.match.params.ticker);
+    // this.props.giveMeMyStockRatings(this.props.match.params.ticker);
 
     // this.setState({
     //   stockdata: this.props.stockdata
@@ -53,7 +53,7 @@ class Analyst extends React.Component {
       // console.log('Now I am on fire')
       // console.log(this.props.match.params);
       // debugger; 
-      this.props.giveMeMyStockRating(this.props.match.params.ticker);
+      this.props.giveMeMyStockRatings(this.props.match.params.ticker);
       // this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
       // this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
       this.props.history.push(`/stock/${this.props.match.params.ticker}`);
