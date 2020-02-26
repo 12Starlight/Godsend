@@ -41,7 +41,7 @@ class Analyst extends React.Component {
 
   componentDidMount() {
     // debugger; 
-    // this.props.giveMeMyStockRatings(this.props.match.params.ticker);
+    this.props.giveMeMyStockRatings(this.props.match.params.ticker);
 
     // this.setState({
     //   stockdata: this.props.stockdata
