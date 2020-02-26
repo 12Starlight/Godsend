@@ -51,7 +51,9 @@ class About extends React.Component {
     return(
       <article className='about_container' >
         <div className='about_inner' >
-          <div className='about_title' >About</div>
+          <div className='about_title' >
+            <div className='about_title_inner' >About</div>
+          </div>
           <div className='about_description' >{stock.description}</div>
           <div className='aboutData_container'>
             <div className={'aboutData_inner'} >
