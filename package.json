@@ -34,7 +34,8 @@
     "npm": "6.11.3"
   },
   "scripts": {
-    "webpack": "webpack --mode=development --watch"
+    "webpack": "webpack --mode=development --watch",
+    "postinstall": "webpack"
   },
   "devDependencies": {
     "file-loader": "^5.1.0",
