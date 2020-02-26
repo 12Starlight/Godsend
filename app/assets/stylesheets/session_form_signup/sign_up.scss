@@ -1,18 +1,37 @@
 .su_container {
-  position: absolute;
+  z-index: 1; 
+  position: relative;
   top: 0; 
   right: 0;
   bottom: 0;
   left: 0; 
 }
 
-.su_single_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.su_single_container_img {
+  background-position-y: -1;
+  display: absolute;
+  top: 0; 
+  right: 0;
+  bottom: 0;
+  left: 0; 
   height: 100vh;
   width: 100vw; 
-  background-image: url('star_signup');
+  // background-image: url('star_signup');
+}
+
+.su_single_container {
+  z-index: 1;
+  position: absolute;
+  top: 0; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  top: 0; 
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  height: 100vh;
+  width: 100vw; 
 }
 
 .su_form_background {
@@ -168,20 +187,22 @@
 
 .su_icon_container {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 350px;
-  width: 55%;
+  width: 45%;
   margin: 3% 2.5% 0 1%; 
   border-radius: 15px;
   background: linear-gradient(rgba(245, 245, 245, 0.795), white, rgba(245, 245, 245, 0.788))  
 }
 
 .su_icon {
-  height: 95%;
-  width: 95%;
-  margin: auto; 
+  position: absolute;
+  height: 32%;
+  width: 14.5%;
+  // margin: auto; 
   border-radius: 15px;
-  background: no-repeat;
-  background-size: cover; 
-  background: url('su_icon')
+  // background: no-repeat;
+  // background-size: cover; 
+  // background: url('su_icon')
 }

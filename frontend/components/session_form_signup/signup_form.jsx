@@ -120,13 +120,14 @@ class SignUp extends React.Component {
                 </div>
               </div>
               <div className='su_icon_container' >
-                <div className='su_icon'></div>
+                <img src={window.suIcon} className='su_icon' />
               </div>
             </div>
           </form>
           <div className='su_errors' >{this.renderErrors()}</div>  
          </div>    
         </div>
+        <img src={window.starSignup} className='su_single_container_img' />
       </div>
     )
   }
@@ -137,5 +138,5 @@ export default withRouter(SignUp);
 
 
 
-
+// <div className='su_icon'></div>
 

@@ -75,7 +75,7 @@ class SignIn extends React.Component {
     return (
       <div className='si_outer_container'>
         <div className='si_left_container'>
-          <div className='si_background_img'></div>
+          <img src={window.star} className='si_background_img' />
         </div>
         <div className='si_right_container'>
           <div className='si_form_background'>
