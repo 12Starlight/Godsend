@@ -21,7 +21,8 @@ class StockFeed extends React.Component {
   }
 
   componentDidMount() {
-    this.props.giveMeMyStockRatings(this.props.match.params.ticker)
+    this.props.giveMeMyStockRatings(this.props.match.params.ticker);
+    this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
   }
 
   componentDidUpdate(prevProps) {
@@ -30,7 +31,7 @@ class StockFeed extends React.Component {
       // console.log(this.props.match.params);
       // debugger; 
       this.props.giveMeMyStockRatings(this.props.match.params.ticker);
-      // this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
+      this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
       // this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
       this.props.history.push(`/stock/${this.props.match.params.ticker}`);
     }
@@ -38,9 +39,9 @@ class StockFeed extends React.Component {
 
   render() {
     // debugger; 
-    const { stockRatings } = this.props; 
+    const { stockRatings, stockEarnings } = this.props; 
 
-    if (!stockRatings) {
+    if (!stockRatings || !stockEarnings) {
       return <div></div>
     }
 
@@ -50,7 +51,7 @@ class StockFeed extends React.Component {
         <AboutContainer />
         <StockNewsContainer />
         <AnalystContainer stockRatings={stockRatings} />
-        <StockEarningsContainer />
+        <StockEarningsContainer stockEarnings={stockEarnings} />
         <AlsoContainer />
       </div>
     )

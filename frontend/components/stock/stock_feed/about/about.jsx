@@ -90,15 +90,15 @@ class About extends React.Component {
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Today's High`}</div>
-              <div>{'$' + stockStats.high.toFixed(2)}</div>
+              <div>{'null'}</div>
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Today's Low`}</div>
-              <div>{'$' + stockStats.low.toFixed(2)}</div>
+              <div>{'null'}</div>
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Open`}</div>
-              <div>{'$' + stockStats.open.toFixed(2)}</div>
+              <div>{'null'}</div>
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Volume`}</div>
@@ -129,3 +129,7 @@ export default withRouter(About);
 // <div>{}</div>
 // <div>{Math.floor(stock.employees / 1000) + ',' + Math.floor(stock.employees % 1000)}</div>
 
+// market hours
+// ('$' + stockStats.high.toFixed(2))
+// ('$' + stockStats.low.toFixed(2)) 
+// ('$' + stockStats.open.toFixed(2)) 

@@ -21,7 +21,7 @@ class Analyst extends React.Component {
       chartConfigs: {
         type: 'column2d',
         width: '613',
-        height: '380',
+        height: '358',
         // dataFormat: 'jsonurl',
         dataSource: {
           chart: this.props.chart,
@@ -67,7 +67,7 @@ class Analyst extends React.Component {
   render() {
     const { chart, data, stockdata } = this.props; 
     // debugger; 
-    if (!chart && !stockdata) {
+    if (!chart || !stockdata) {
       return <div>There are no ratings</div>;
     }
 
