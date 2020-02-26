@@ -58,7 +58,7 @@ class Feed extends React.Component {
         <SectorsContainer /> {/* Popular Collections */}
         <div className='topNews_container'></div> {/* Top News */}
         <div className='feed_news_container'>
-          {/*reversed*/}
+          {reversed}
         </div>
         <button className='button' onClick={signOut} >Sign Out</button>
       </div>
