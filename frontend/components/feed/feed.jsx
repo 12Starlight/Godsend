@@ -53,7 +53,7 @@ class Feed extends React.Component {
       <div className='feed_container'>
         <div className='feed_header' >
           <div className='feed_header_title' >Welcome To Godsend</div>
-          <div className='feed_header_pic' ></div>
+          <img src={window.stockChartURL} className='feed_header_pic' />
         </div>
         <SectorsContainer /> {/* Popular Collections */}
         <div className='topNews_container'></div> {/* Top News */}
@@ -71,5 +71,4 @@ export default Feed;
 
 
 
-
-// <img src={feedChart} className='feed_header_pic' />
+// <div className='feed_header_pic' ></div>

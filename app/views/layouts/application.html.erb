@@ -15,8 +15,14 @@
       <script type='text/javascript'>
         window.currentUser = <%= render('api/users/user.json.jbuilder',
         user: current_user).html_safe %>
+        window.stockChartURL = "<%= image_url('feed/stock_chart.jpg') %>";
+        window.starSignup = "<%= image_url('session_form/star_signup.jpg') %>";
+        window.star = "<%= image_url('session_form/star.jpg') %>";
+        window.suIcon = "<%= image_url('session_form/su_icon.jpg') %>";
+        window.userProfile = "<%= image_url('user_profile/pleiades-33.jpg') %>";
       </script>
     <% end %>
+
 
     <div id='content'>REACT IS TAKING OVER</div>
 
