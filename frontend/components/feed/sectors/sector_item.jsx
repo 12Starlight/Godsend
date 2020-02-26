@@ -58,7 +58,7 @@ class SectorItem extends React.Component {
   valueEnterRate(e, sector) {
     e.preventDefault();
 
-    if (this.state.logic === false) {
+    if (this.state.logic === true) {
       if (sector.performance <= 0) {
         // this.value.style.background = 'rgba(129, 71, 0, .822)';
         this.valueRate.style.color = 'rgb(141, 15, 15)';
@@ -73,7 +73,7 @@ class SectorItem extends React.Component {
     e.preventDefault();
 
     if (this.state.logic === true) {
-      this.valueRate.style.color = 'rgb(0, 68, 78)';
+      this.valueRate.style.color = 'rgb(0, 68, 78)'; 
     }
   }
 
