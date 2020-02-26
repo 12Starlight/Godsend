@@ -61,8 +61,8 @@ class About extends React.Component {
               <div className='aboutData_ceo' >{stock.CEO}</div>
             </div>
             <div className={'aboutData_inner'} >
-              <div className='aboutData_title'>{`Exchange`}</div>
-              <div>{stock.exchange}</div>                           
+              <div className='aboutData_title'>{`Sector`}</div>
+              <div>{stock.sector}</div>                           
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Website`}</div>
@@ -90,15 +90,15 @@ class About extends React.Component {
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Today's High`}</div>
-              <div>{'$' + stockStats.high}</div>
+              <div>{'$' + stockStats.high.toFixed(2)}</div>
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Today's Low`}</div>
-              <div>{'$' + stockStats.low}</div>
+              <div>{'$' + stockStats.low.toFixed(2)}</div>
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Open`}</div>
-              <div>{'$' + stockStats.open}</div>
+              <div>{'$' + stockStats.open.toFixed(2)}</div>
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`Volume`}</div>
@@ -106,11 +106,11 @@ class About extends React.Component {
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`52 Week High`}</div>
-              <div>{'$' + stockStats.week52High}</div>
+              <div>{'$' + stockStats.week52High.toFixed(2)}</div>
             </div>
             <div className={'aboutData_inner'} >
               <div className='aboutData_title'>{`52 Week Low`}</div>
-              <div>{'$' + stockStats.week52Low}</div>
+              <div>{'$' + stockStats.week52Low.toFixed(2)}</div>
             </div>
           </div>
         </div>
