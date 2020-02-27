@@ -19,7 +19,7 @@ class StockEarnings extends React.Component {
 
   componentDidMount() {
     // debugger; 
-    this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
+    // this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
   }
 
   componentDidUpdate(prevProps) {
@@ -27,7 +27,7 @@ class StockEarnings extends React.Component {
       // console.log('Now I am on fire')
       // console.log(this.props.match.params);
       // debugger; 
-      this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
+      // this.props.giveMeMyStockEarnings(this.props.match.params.ticker);
       // this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
       this.props.history.push(`/stock/${this.props.match.params.ticker}`);
     }

@@ -17,7 +17,7 @@ class Sectors extends React.Component {
     const { sectors } = this.props;
     // debugger; 
     const allSectors = sectors.slice(0,8).map((sector, i) => {
-      
+    
       return(
         <div key={i} className='sectorsItem_container_inner'>
           <SectorItem sector={sector} />

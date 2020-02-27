@@ -114,26 +114,26 @@ const mapStateToProps = (state, ownProps) => {
     // }
   
     const stockdata = [
-      {
-        "label": "Buy", // 1
-        "value": `${data[0].ratingBuy}`
-      },
-      {
-        "label": "Outperform", // 1.5
-        "value": `${data[0].ratingOverweight}`
-      },
-      {
-        "label": "Hold", // 2
-        "value": `${data[0].ratingHold}`
-      },
-      {
-        "label": "Underperform", // 2.5
-        "value": `${data[0].ratingUnderweight}`
-      },
-      {
-        "label": "sell", // 3
-        "value": `${data[0].ratingSell}`
-      }
+      // {
+      //   "label": "Buy", // 1
+      //   "value": `${data[0].ratingBuy}`
+      // },
+      // {
+      //   "label": "Outperform", // 1.5
+      //   "value": `${data[0].ratingOverweight}`
+      // },
+      // {
+      //   "label": "Hold", // 2
+      //   "value": `${data[0].ratingHold}`
+      // },
+      // {
+      //   "label": "Underperform", // 2.5
+      //   "value": `${data[0].ratingUnderweight}`
+      // },
+      // {
+      //   "label": "sell", // 3
+      //   "value": `${data[0].ratingSell}`
+      // }
     ];
   // }
 
