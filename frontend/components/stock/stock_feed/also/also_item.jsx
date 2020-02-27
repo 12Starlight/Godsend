@@ -108,7 +108,7 @@ class AlsoItem extends React.Component {
       <article ref={e => this.item = e} className='alsoItem'>
         <div className='alsoItem_title_container'>
           <div>{itemStats.companyName}</div>
-          <div>{bought}</div>
+          <div>{itemStats.symbol}</div>
         </div>
         <div>
           <div>{'$' + itemStats.latestPrice}</div>

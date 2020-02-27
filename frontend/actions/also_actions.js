@@ -9,7 +9,10 @@ export const ALSO_ERRORS = 'ALSO_ERRORS';
 // Regular Action Creators
 const gotAlsoStockStats = (stats) => ({
   type: GET_ALSO_STOCK_STATS,
-  stats
+  company: stats.companyName,
+  symbol: stats.symbol,
+  latestPrice: stats.latestPrice,
+  changePercent: stats.changePercent
 });
 
 const gotAlsoErrors = (errors) => ({

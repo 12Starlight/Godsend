@@ -10,7 +10,7 @@ const alsoReducer = (oldState = [], action) => {
 
   switch(action.type) {
     case GET_ALSO_STOCK_STATS:
-      return;
+      return [...]
     default:
       return oldState; 
   }
