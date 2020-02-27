@@ -8,12 +8,13 @@ import { givePeopleAlsoBought, giveMeMyStockStats } from '../../../../actions/st
 
 // mapStateToProps
 const mapStateToProps = (state) => ({
-  alsoBought: state.entities.stock.recommendId
+  // alsoBought: state.entities.stock.recommendId
 });
 
 // mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
   givePeopleAlsoBought: (searchTerm) => dispatch(givePeopleAlsoBought(searchTerm))
+  
 });
 
 

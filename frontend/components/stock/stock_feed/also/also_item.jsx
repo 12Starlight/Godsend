@@ -82,7 +82,7 @@ class AlsoItem extends React.Component {
 
   componentDidMount() {
     debugger; // ?
-    this.props.giveMeMyStockStats(this.props.bought);
+    // this.props.giveMeMyStockStats(this.props.bought);
   }
 
   componentDidUpdate() {
@@ -91,19 +91,12 @@ class AlsoItem extends React.Component {
 
 
   render() {
-    const { bought, itemStats } = this.props;
+    const { alsoStats } = this.props;
     debugger; // 2
 
-     if (!bought || !itemStats) {
+     if (!alsoStats) {
        return <div></div>
      }
-
-    // let j = 0;
-
-    // j = j++
-    console.log(bought)
-    console.log(itemStats.companyName)
-    console.log(this.item, 'item')
     
     return (
       // <div ref={e => this.value = e} onPointerEnter={(e) => this.valueEnter(e, sector)} onPointerLeave={(e) => this.valueExit(e)} className='sectorsItem'>

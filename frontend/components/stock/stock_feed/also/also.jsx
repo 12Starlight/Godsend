@@ -35,9 +35,9 @@ class Also extends React.Component {
     const allBought = alsoBought.slice(0, 4).map((bought, i) => {
       // debugger; 
 
-      // if (bought) {
-      //   this.props.giveMeMyStockStats(bought); 
-      // }
+      if (bought) {
+        this.props.giveMeMyStockStats(bought); 
+      }
 
       // if (!stockStats) {
       //   return <div></div>
