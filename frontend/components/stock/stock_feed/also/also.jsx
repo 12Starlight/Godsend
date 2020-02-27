@@ -14,7 +14,7 @@ class Also extends React.Component {
 
     }
 
-    // this.item = React.createRef(); 
+    this.parent = React.createRef(); 
   }
 
   componentDidMount() {
@@ -43,8 +43,13 @@ class Also extends React.Component {
       //   return <div></div>
       // }
 
+      // let j = 0;
+
+      // j = j++
+      console.log(this.parent, 'parent');
+
       return (
-        <AlsoItemContainer key={i} bought={bought} />
+        <AlsoItemContainer ref={e => this.parent = e} key={i} bought={bought} />
       )
     }) 
     debugger; // 1

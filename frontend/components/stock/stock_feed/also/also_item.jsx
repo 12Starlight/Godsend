@@ -97,6 +97,13 @@ class AlsoItem extends React.Component {
      if (!bought || !itemStats) {
        return <div></div>
      }
+
+    // let j = 0;
+
+    // j = j++
+    console.log(bought)
+    console.log(itemStats.companyName)
+    console.log(this.item, 'item')
     
     return (
       // <div ref={e => this.value = e} onPointerEnter={(e) => this.valueEnter(e, sector)} onPointerLeave={(e) => this.valueExit(e)} className='sectorsItem'>
