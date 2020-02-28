@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :edit, :create, :destroy] 
     resource :session, only: [:create, :destroy]
     resources :watchlists, only: [:index, :show, :create, :destroy]
+    resources :securities, only: [:create, :destroy]
   end
   
 end
+ 
