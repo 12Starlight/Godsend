@@ -47,7 +47,6 @@ class Also extends React.Component {
   }
 
 
-
   render() {
 
     const items = this.createAlsoItems(); 

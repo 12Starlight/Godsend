@@ -10,26 +10,6 @@ const alsoReducer = (oldState = [], action) => {
 
   switch(action.type) {
     case GET_ALSO_STOCK_STATS:
-    //     if (oldState.length === 0) {
-    //       return [...oldState, { company: action.alsoStats.company} ]
-    //     }
-
-    //     let logic = false; 
-    //     while (logic === false) {
-    //       oldState.forEach((stateObj) => {
-    //         if (stateObj.company.includes(action.alsoStats.company)) {
-    //           logic = true;
-    //         }
-
-    //         if (logic === true) {
-    //           return [...oldState, { company: action.alsoStats.company }]
-    //         } else {
-    //           return { company: action.alsoStats.company }
-    //         }
-    //       })
-    //     }
-
-      // debugger; 
       return [...oldState, {
         company: action.alsoStats.company,
         symbol: action.alsoStats.symbol,
