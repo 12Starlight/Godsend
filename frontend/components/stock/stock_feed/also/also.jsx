@@ -58,13 +58,15 @@ class Also extends React.Component {
     }) 
     // debugger; // 1
 
+    const four = allAlsoStats.slice(0, 4);
+
     return(
       <article className='also_container' >
         <div className='also_title' >
           <div className='also_title_inner' >People Also Bought</div>
         </div>      
         <div className='alsoItem_container' >
-          {allAlsoStats}
+          {four}
         </div>
       </article>
     )

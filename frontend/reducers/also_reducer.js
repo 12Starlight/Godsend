@@ -10,8 +10,25 @@ const alsoReducer = (oldState = [], action) => {
 
   switch(action.type) {
     case GET_ALSO_STOCK_STATS:
-      console.log('Now I am on fire');
-      return; 
+        // if (oldState.length === 0) {
+        //   return [...oldState, { company: action.alsoStats.company} ]
+        // }
+
+        // let newState = []
+        // oldState.forEach((stateObj) => {
+        //   if (stateObj.company.includes(action.alsoStats.company)) {
+        //     newState = [...oldState, { company: action.alsoStats.company }]
+        //   }
+        // })
+        
+        // return newState; 
+      
+      return [...oldState, {
+        company: action.alsoStats.company,
+        symbol: action.alsoStats.symbol,
+        latestPrice: action.alsoStats.latestPrice,
+        priceChange: action.alsoStats.changePercent
+      } ]; 
     default:
       return oldState; 
   }
@@ -23,9 +40,3 @@ export default alsoReducer;
 
 
 
-// [...oldState, {
-//   company: action.alsoStats.company,
-//   symbol: action.alsoStats.symbol,
-//   latestPrice: action.alsoStats.latestPrice,
-//   priceChange: action.alsoStats.changePercent
-// }]; 
