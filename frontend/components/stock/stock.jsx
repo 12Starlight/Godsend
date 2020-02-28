@@ -10,6 +10,12 @@ import StockFeedContainer from './stock_feed/stock_feed_container';
 class Stock extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      logic: false 
+    }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // componentDidUpdate(prevProps) {
@@ -26,6 +32,14 @@ class Stock extends React.Component {
   //   }
   // }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    
+    const security = { company_name: this.props.stock.stockSymbol.companyName, ticker: this.props.stock.stockSymbol.symbol }
+    this.props.createSecurity(security); 
+  }
+
+
 
   render(){
     // debugger; 
@@ -40,7 +54,7 @@ class Stock extends React.Component {
           <StockFeedContainer />
           <div className='action_container'>
             <div className='trade_container' >Trade</div>
-            <button className='watchlist_action'>Watchlist</button>
+            <button onClick={this.handleSubmit} className='watchlist_action'>Add To Watchlist</button>
           </div>
         </div>
       </div>
