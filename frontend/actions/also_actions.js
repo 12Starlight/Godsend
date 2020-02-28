@@ -9,10 +9,12 @@ export const ALSO_ERRORS = 'ALSO_ERRORS';
 // Regular Action Creators
 const gotAlsoStockStats = (stats) => ({
   type: GET_ALSO_STOCK_STATS,
-  company: stats.companyName,
-  symbol: stats.symbol,
-  latestPrice: stats.latestPrice,
-  changePercent: stats.changePercent
+  alsoStats: {
+    company: stats.companyName,
+    symbol: stats.symbol,
+    latestPrice: stats.latestPrice,
+    changePercent: stats.changePercent
+  }
 });
 
 const gotAlsoErrors = (errors) => ({
@@ -22,7 +24,7 @@ const gotAlsoErrors = (errors) => ({
 
 // Thunk Action Creators
 export const giveAlsoStockStats = (stockSearch) => (dispatch) => (
-  StockApiUtil.giveMeMyStock(stockSearch).then(
+  StockApiUtil.giveMeMyStockStats(stockSearch).then(
     alsoStatsReturned => dispatch(gotAlsoStockStats(alsoStatsReturned)),
     stockErrors => dispatch(gotStockErrors(stockErrors))
   )

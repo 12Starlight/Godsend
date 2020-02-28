@@ -3,7 +3,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 // Import Local Directory Files
-import AlsoItemContainer from './also_item_container';
+import AlsoItem from './also_item';
 
 
 class Also extends React.Component {
@@ -14,45 +14,49 @@ class Also extends React.Component {
 
     }
 
-    this.parent = React.createRef(); 
+    this.getStats = this.getStats.bind(this);
   }
 
   componentDidMount() {
     this.props.givePeopleAlsoBought(this.props.match.params.ticker);
   }
 
+  componentDidUpdate() {
+    // debugger; 
+    if (this.props.alsoStats.length === 0 && this.props.alsoBought !== undefined) {
+      // debugger; 
+      console.log('Now I am on fire!')
+      this.getStats(); 
+    }
+  }
+
+  getStats() {
+    // debugger; 
+
+    this.props.alsoBought.slice(0, 4).map((bought, i) => {
+      console.log(bought);
+      return this.props.giveAlsoStockStats(bought);
+    })
+  }
+
 
 
   render() {
-    const { alsoBought, stockStats } = this.props;
+    const { alsoBought, alsoStats } = this.props;
     // debugger; 
 
     if (!alsoBought) {
       return <div></div>
     }
 
-
-    const allBought = alsoBought.slice(0, 4).map((bought, i) => {
-      // debugger; 
-
-      if (bought) {
-        this.props.giveMeMyStockStats(bought); 
-      }
-
-      // if (!stockStats) {
-      //   return <div></div>
-      // }
-
-      // let j = 0;
-
-      // j = j++
-      console.log(this.parent, 'parent');
+    const allAlsoStats = alsoStats.map((alsoStat, i) => {
+      // debugger;  
 
       return (
-        <AlsoItemContainer ref={e => this.parent = e} key={i} bought={bought} />
+        <AlsoItem key={i} alsoStat={alsoStat} />
       )
     }) 
-    debugger; // 1
+    // debugger; // 1
 
     return(
       <article className='also_container' >
@@ -60,7 +64,7 @@ class Also extends React.Component {
           <div className='also_title_inner' >People Also Bought</div>
         </div>      
         <div className='alsoItem_container' >
-          {allBought}
+          {allAlsoStats}
         </div>
       </article>
     )

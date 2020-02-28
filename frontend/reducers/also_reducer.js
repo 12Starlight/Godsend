@@ -2,7 +2,7 @@
 import { merge } from 'lodash';
 
 // Import Local Directory Files
-import { GET_ALSO_STOCK_STATS } from '../actions/stock_actions';
+import { GET_ALSO_STOCK_STATS } from '../actions/also_actions';
 
 
 const alsoReducer = (oldState = [], action) => {
@@ -10,7 +10,8 @@ const alsoReducer = (oldState = [], action) => {
 
   switch(action.type) {
     case GET_ALSO_STOCK_STATS:
-      return [...]
+      console.log('Now I am on fire');
+      return; 
     default:
       return oldState; 
   }
@@ -18,3 +19,13 @@ const alsoReducer = (oldState = [], action) => {
 
 
 export default alsoReducer; 
+
+
+
+
+// [...oldState, {
+//   company: action.alsoStats.company,
+//   symbol: action.alsoStats.symbol,
+//   latestPrice: action.alsoStats.latestPrice,
+//   priceChange: action.alsoStats.changePercent
+// }]; 

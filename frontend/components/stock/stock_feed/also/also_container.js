@@ -3,18 +3,24 @@ import { connect } from 'react-redux';
 
 // Import Local Directory Files
 import Also from './also';
-import { givePeopleAlsoBought, giveMeMyStockStats } from '../../../../actions/stock_actions';
+import { givePeopleAlsoBought } from '../../../../actions/stock_actions';
+import { giveAlsoStockStats } from '../../../../actions/also_actions';
 
 
 // mapStateToProps
-const mapStateToProps = (state) => ({
-  // alsoBought: state.entities.stock.recommendId
-});
+const mapStateToProps = (state) => {
+  // debugger; 
+
+  return {
+    alsoBought: state.entities.stock.recommendId, // array of tickers
+    alsoStats: state.entities.also // array of stat objects
+  }
+};
 
 // mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
-  givePeopleAlsoBought: (searchTerm) => dispatch(givePeopleAlsoBought(searchTerm))
-  
+  givePeopleAlsoBought: (searchTerm) => dispatch(givePeopleAlsoBought(searchTerm)),
+  giveAlsoStockStats: (searchTerm) => dispatch(giveAlsoStockStats(searchTerm))
 });
 
 
