@@ -6,5 +6,5 @@ class Watchlist < ApplicationRecord
     foreign_key: :godsend_id,
     class_name: :User 
 
-  has_many :securities
+  #has_many :securities
 end 

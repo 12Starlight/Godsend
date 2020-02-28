@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 // Import Local Directory Files
 import StockFeed from './stock_feed';
-import { giveMeMyStockRatings, giveMeMyStockEarnings } from '../../../actions/stock_actions';
+import { giveMeMyStockRatings, giveMeMyStockEarnings, givePeopleAlsoBought } from '../../../actions/stock_actions';
 
 
 // mapStateToProps
@@ -15,7 +15,8 @@ const mapStateToProps = (state) => ({
 // mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
   giveMeMyStockRatings: (searchTerm) => dispatch(giveMeMyStockRatings(searchTerm)),
-  giveMeMyStockEarnings: (searchTerm) => dispatch(giveMeMyStockEarnings(searchTerm))
+  giveMeMyStockEarnings: (searchTerm) => dispatch(giveMeMyStockEarnings(searchTerm)),
+  givePeopleAlsoBought: (searchTerm) => dispatch(givePeopleAlsoBought(searchTerm))
 });
 
 

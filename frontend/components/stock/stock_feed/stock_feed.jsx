@@ -23,6 +23,7 @@ class StockFeed extends React.Component {
   componentDidMount() {
     // this.props.giveMeMyStockRatings(this.props.match.params.ticker); //
     // this.props.giveMeMyStockEarnings(this.props.match.params.ticker); //
+    this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
   }
 
   componentDidUpdate(prevProps) {
@@ -32,7 +33,7 @@ class StockFeed extends React.Component {
       // debugger; 
       // this.props.giveMeMyStockRatings(this.props.match.params.ticker); //
       // this.props.giveMeMyStockEarnings(this.props.match.params.ticker); //
-      // this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
+      this.props.givePeopleAlsoBought(this.props.match.params.ticker); 
       this.props.history.push(`/stock/${this.props.match.params.ticker}`);
     }
   }
