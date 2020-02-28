@@ -79,15 +79,6 @@ class AlsoItem extends React.Component {
   //   }
   // }
 
-  componentDidMount() {
-    // debugger; // ?
-    // this.props.giveMeMyStockStats(this.props.bought);
-  }
-
-  componentDidUpdate() {
-    // this.props.giveMeMyStockStats(this.props.bought)
-  }
-
 
   render() {
     const { alsoStat } = this.props;
@@ -106,14 +97,16 @@ class AlsoItem extends React.Component {
       //     <div ref={e => this.valueRate = e} onPointerEnter={(e) => this.valueEnterRate(e, sector)} onPointerLeave={(e) => this.valueExitRate(e)} className='sectorsItem_rate'>{(sector.performance * 100).toFixed(2) + '%'}</div>
       //   </div>
       // </div>
-      <article className='alsoItem'>
-        <div className='alsoItem_title_container'>
-          <div>{alsoStat.company}</div>
-          <div>{alsoStat.symbol}</div>
-        </div>
-        <div>
-          <div>{'$' + alsoStat.latestPrice}</div>
-          <div>{(alsoStat.priceChange * 100).toFixed(2) + '%'}</div>
+      <article className='alsoItem_container_inner'>
+        <div className='alsoItem'>
+          <div className='alsoItem_title_container'>
+            <div className='alsoItem_title'>{alsoStat.company}</div>
+            <div className='alsoItem_ticker'>{alsoStat.symbol}</div>
+          </div>
+          <div className='alsoItem_price_container'>
+            <div className='alsoItem_price'>{'$' + alsoStat.latestPrice}</div>
+            <div className='alsoItem_change'>{(alsoStat.priceChange * 100).toFixed(2) + '%'}</div>
+          </div>        
         </div>
       </article>
     )

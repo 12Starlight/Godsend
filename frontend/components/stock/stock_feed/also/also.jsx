@@ -66,7 +66,9 @@ class Also extends React.Component {
           <div className='also_title_inner' >People Also Bought</div>
         </div>      
         <div className='alsoItem_container' >
-          {four}
+          <div className='also_inner'>
+           {four}
+          </div>
         </div>
       </article>
     )
