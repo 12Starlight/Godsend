@@ -36,7 +36,7 @@ class Stock extends React.Component {
     e.preventDefault();
     
     const security = { company_name: this.props.stock.stockSymbol.companyName, ticker: this.props.stock.stockSymbol.symbol }
-    this.props.createSecurity(security); 
+    this.props.addSecurity(security); 
   }
 
 

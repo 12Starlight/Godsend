@@ -1,11 +1,11 @@
 class Api::SecuritiesController < ApplicationController
   def new 
-    @security = Security.new 
+    @security = Securities.new 
     render :new 
   end
 
   def create 
-    @security = Security.new(security_params)
+    @security = Securities.new(security_params)
 
     if @security.save
       render json: 'Successfully Added To Watchlist!'
@@ -15,7 +15,7 @@ class Api::SecuritiesController < ApplicationController
   end
 
   def destroy
-    @security = Security.find(params[:id])
+    @security = Securities.find(params[:id])
 
     if @security.destroy 
       render json: 'Deleted Security From Watchlist'
