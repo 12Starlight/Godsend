@@ -15,7 +15,7 @@ class Also extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    debugger; 
+
     if (prevProps.alsoBought !== this.props.alsoBought) {
     
       this.getStats(); 
@@ -50,6 +50,10 @@ class Also extends React.Component {
   render() {
 
     const items = this.createAlsoItems(); 
+
+    if (items === undefined) {
+      return <div></div>
+    }
 
     return(
       <article className='also_container' >
