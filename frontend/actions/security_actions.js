@@ -39,5 +39,8 @@ export const addedSecurity = (security) => (dispatch) => (
 );
 
 export const removedSecurity = (securityId) => (dispatch) => (
-  SecurityApiUtil.
-)
+  SecurityApiUtil.removeSecurity(securityId).then(
+    removedSecurity => dispatch(trashSecurity(removedSecurity)),
+    securitiesErrors => dispatch(securityErrors(securitiesErrors))
+  )
+);
