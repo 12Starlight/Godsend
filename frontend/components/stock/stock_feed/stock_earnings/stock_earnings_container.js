@@ -9,7 +9,7 @@ import StockEarnings from './stock_earnings';
 const mapStateToProps = (state, ownProps) => {
   let data = ownProps.stockEarnings.earnings; 
 
-  debugger; 
+  // debugger; 
   const dataSource = {
     chart: {
       caption: 'Quarterly Earnings',
