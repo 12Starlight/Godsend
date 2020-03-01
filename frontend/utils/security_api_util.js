@@ -9,6 +9,6 @@ export const addSecurity = (security) => (
 export const removeSecurity = (securityId) => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/securites/${securityId}`
+    url: `/api/securities/${securityId}`
   })
 );

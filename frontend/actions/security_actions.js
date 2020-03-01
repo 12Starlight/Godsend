@@ -17,10 +17,10 @@ const gotSecurity = (security) => {
 };
 
 const trashSecurity = (security) => {
-
+  // debugger;
   return{
   type: TRASH_SECURITY,
-  securityId: security.id 
+  securityId: security.id
   }
 }
 

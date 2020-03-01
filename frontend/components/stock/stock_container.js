@@ -10,12 +10,13 @@ import {
   giveMeMyStockEarnings,
   givePeopleAlsoBought
 } from '../../actions/stock_actions';
-import { addedSecurity } from '../../actions/security_actions';
+import { addedSecurity, removedSecurity } from '../../actions/security_actions';
 
 
 // mapStateToProps
 const mapStateToProps = (state) => ({
-  stock: state.entities.stock
+  stock: state.entities.stock,
+  securities: state.entities.securities
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -24,7 +25,8 @@ const mapDispatchToProps = (dispatch) => ({
   giveMeMyStockRatings: (searchTerm) => dispatch(giveMeMyStockRatings(searchTerm)),
   giveMeMyStockEarnings: (searchTerm) => dispatch(giveMeMyStockEarnings(searchTerm)),
   givePeopleAlsoBought: (searchTerm) => dispatch(givePeopleAlsoBought(searchTerm)),
-  addedSecurity: (security) => dispatch(addedSecurity(security))
+  addedSecurity: (security) => dispatch(addedSecurity(security)),
+  removedSecurity: (securityId) => dispatch(removedSecurity(securityId))
 });
 
 

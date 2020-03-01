@@ -18,7 +18,7 @@ const entitiesReducer = combineReducers({
   sectors: sectorsReducer, 
   stock: stockReducer,
   also: alsoReducer,
-  security: securitiesReducer
+  securities: securitiesReducer
 });
 
 

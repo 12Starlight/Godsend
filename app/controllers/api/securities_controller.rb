@@ -18,7 +18,7 @@ class Api::SecuritiesController < ApplicationController
     @security = Security.find(params[:id])
 
     if @security.destroy 
-      render json: 'Deleted Security From Watchlist'
+      render :show
     else
       render json: 'Sorry Security Not Found'
     end

@@ -18,7 +18,7 @@ import {
   giveMeMyStockEarnings,
   givePeopleAlsoBought
 } from './actions/stock_actions';
-import { addSecurity } from './utils/security_api_util';
+import { addedSecurity, removedSecurity } from './actions/security_actions';
 
 
 
@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.giveMeMyStockRatings = giveMeMyStockRatings;
   window.giveMeMyStockEarnings = giveMeMyStockEarnings;
   window.givePeopleAlsoBought = givePeopleAlsoBought;
-  window.addSecurity = addSecurity; 
+  window.addedSecurity = addedSecurity; 
+  window.removedSecurity = removedSecurity; 
 
 
   // ReactDOM.render(<div>HI REACT HERE</div>, root);
