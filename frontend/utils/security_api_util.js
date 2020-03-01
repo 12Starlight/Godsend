@@ -5,3 +5,10 @@ export const addSecurity = (security) => (
     data: { security }
   })
 );
+
+export const removeSecurity = (securityId) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/securites/${securityId}`
+  })
+);

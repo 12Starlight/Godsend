@@ -3,6 +3,7 @@ import * as SecurityApiUtil from '../utils/security_api_util';
 
 // Constraints
 export const ADD_TO_SECURITIES = 'ADD_TO_SECURITIES';
+export const TRASH_SECURITY = 'TRASH_SECURITY';
 export const SECURITY_ERRORS = 'SECURITY_ERRORS';
 
 
@@ -14,6 +15,14 @@ const gotSecurity = (security) => {
   security
   }
 };
+
+const trashSecurity = (security) => {
+
+  return{
+  type: TRASH_SECURITY,
+  securityId: security.id 
+  }
+}
 
 const securityErrors = (errors) => ({
   type: SECURITY_ERRORS,
@@ -28,3 +37,7 @@ export const addedSecurity = (security) => (dispatch) => (
     securitiesErrors => dispatch(securityErrors(securitiesErrors))
   )
 );
+
+export const removedSecurity = (securityId) => (dispatch) => (
+  SecurityApiUtil.
+)
