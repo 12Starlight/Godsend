@@ -1,5 +1,5 @@
 class Api::WatchlistsController < ApplicationController
-  before_action :require_logged_in, only: [:index, :show, :create, :destroy]
+  # before_action :require_logged_in, only: [:index, :show, :create, :destroy]
   
   def index
     @watchlists = current_user.watchlists.all 
@@ -22,7 +22,6 @@ class Api::WatchlistsController < ApplicationController
   end
 
   def create 
-    #debugger 
     @watchlist = Watchlist.new(watchlist_params)
     @watchlist.godsend_id = current_user.id 
 
@@ -35,7 +34,7 @@ class Api::WatchlistsController < ApplicationController
   end 
 
   def destroy
-    @watchlist = Watchlist.find(params[:id])
+    @watchlist = Watchlist.find_by(params[:securities_id])
 
     if @watchlist.destroy
       render :show 

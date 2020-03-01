@@ -47,7 +47,7 @@ export const getWatchListSecurity = (id) => dispatch => (
 
 export const createWatchListSecurity = (watchlist) => dispatch => (
   WatchlistApiUtil.createWatchlistSecurity(watchlist).then(
-    watchlistSecurityResponse => dispatch(getWatchlist(watchlistSecurityResponse)),
+    watchlistSecurityResponse => dispatch(getWatchlistSecurity(watchlistSecurityResponse)),
     errors => dispatch(getWatchlistErrors(errors))
   )
 );

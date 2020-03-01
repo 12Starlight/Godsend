@@ -2,7 +2,7 @@
 import { merge } from 'lodash'
 
 // Import Local Directory Files
-import { GET_WATCHLISTS, GET_WATCHLIST, TRASH_WATCHLIST } from '../actions/watchlist_actions';
+import { GET_WATCHLISTS, GET_WATCHLIST, TRASH_WATCHLIST } from '../actions/watchlist_security_actions';
 
 // Build Variables Needed
 const _nulWatchlist = Object.freeze({
@@ -10,7 +10,7 @@ const _nulWatchlist = Object.freeze({
 });
 
 
-const watchlistReducer = (oldState = {}, action) => {
+const watchlistSecuritiesReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let newState; 
 
@@ -22,7 +22,7 @@ const watchlistReducer = (oldState = {}, action) => {
     case TRASH_WATCHLIST:
       // debugger 
       newState = Object.assign({}, oldState) 
-      delete newState[action.watchlist.id]
+      delete newState[action.watchlistId]
       return newState;  
     default:
       return oldState;  
@@ -30,7 +30,7 @@ const watchlistReducer = (oldState = {}, action) => {
 }
 
 
-export default watchlistReducer; 
+export default watchlistSecuritiesReducer; 
 
 
 

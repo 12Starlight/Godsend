@@ -7,7 +7,7 @@ import configureStore from './store/store';
 // Import Local Directory Files
 import { signOut, signIn } from './actions/session_actions';
 // import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
-import { getWatchListSecurities, getWatchListSecurity, createWatchListSecurity, trashWatchListSecurity } from './actions/watchlist_actions';
+import { getWatchListSecurities, getWatchListSecurity, createWatchListSecurity, trashWatchListSecurity } from './actions/watchlist_security_actions';
 import { receiveAllNews } from './actions/news_actions';
 import { receiveAllSectors } from './actions/sectors_actions';
 import { 

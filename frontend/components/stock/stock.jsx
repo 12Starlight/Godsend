@@ -13,6 +13,7 @@ class Stock extends React.Component {
 
     this.state = {
       logic: false, 
+      added: false,
       message: 'Add To Watchlist'
     }
 
@@ -39,6 +40,7 @@ class Stock extends React.Component {
     e.preventDefault();
     this.setState({
       logic: !this.logic,
+      added: true,
       message: 'Remove From Watchlist'
     })
 
@@ -50,18 +52,33 @@ class Stock extends React.Component {
     e.preventDefault();
     this.setState({
       logic: false, 
+      added: false,
       message: 'Add To Watchlist'
     })
 
     let securityId = Object.keys(this.props.securities)
+    debugger; 
+    this.props.trashWatchListSecurity(securityId); 
     this.props.removedSecurity(securityId);
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.securities !== prevProps.securities && this.state.added !== false) {
+      let watchlistSecurityId = Object.keys(this.props.securities);
+      // debugger;
+      let watchlistSecurity = { securities_id: watchlistSecurityId[0] };
+      this.props.createWatchListSecurity(watchlistSecurity);
+    }
+  }
 
-  render(){
+
+  render() {
     // debugger; 
     const { securities } = this.props; 
     // debugger; 
+    if (!securities) {
+      return <div></div>
+    }
 
     if (this.state.logic === false) {
       return (

@@ -12,11 +12,11 @@ export const receiveWatchlistSecurity = (id) => (
   })
 );
 
-export const createWatchlistSecurity = (watchlistSecurity) => (
+export const createWatchlistSecurity = (watchlistsss) => (
   $.ajax({
     method: `POST`,
     url: `/api/watchlists`,
-    data: { watchlistSecurity }
+    data: { watchlist: watchlistsss } // the key must match the strong parameters
   })
 );
 

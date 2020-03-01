@@ -11,6 +11,7 @@ import {
   givePeopleAlsoBought
 } from '../../actions/stock_actions';
 import { addedSecurity, removedSecurity } from '../../actions/security_actions';
+import { createWatchListSecurity, trashWatchListSecurity } from '../../actions/watchlist_security_actions'
 
 
 // mapStateToProps
@@ -26,7 +27,9 @@ const mapDispatchToProps = (dispatch) => ({
   giveMeMyStockEarnings: (searchTerm) => dispatch(giveMeMyStockEarnings(searchTerm)),
   givePeopleAlsoBought: (searchTerm) => dispatch(givePeopleAlsoBought(searchTerm)),
   addedSecurity: (security) => dispatch(addedSecurity(security)),
-  removedSecurity: (securityId) => dispatch(removedSecurity(securityId))
+  removedSecurity: (securityId) => dispatch(removedSecurity(securityId)),
+  createWatchListSecurity: (security) => dispatch(createWatchListSecurity(security)),
+  trashWatchListSecurity: (securityId) => dispatch(trashWatchListSecurity(securityId))
 });
 
 
