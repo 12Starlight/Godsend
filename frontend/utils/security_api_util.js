@@ -3,7 +3,5 @@ export const addSecurity = (security) => (
     method: 'POST',
     url: '/api/securities',
     data: { security }
-  }).then(
-    security => console.log(security)
-  )
+  })
 );

@@ -8,6 +8,7 @@ import newsReducer from './news_reducer';
 import sectorsReducer from './sectors_reducer';
 import stockReducer from './stock_reducer';
 import alsoReducer from './also_reducer';
+import securitiesReducer from './securities_reducer';
 
 
 const entitiesReducer = combineReducers({
@@ -16,7 +17,8 @@ const entitiesReducer = combineReducers({
   news: newsReducer,
   sectors: sectorsReducer, 
   stock: stockReducer,
-  also: alsoReducer 
+  also: alsoReducer,
+  security: securitiesReducer
 });
 
 

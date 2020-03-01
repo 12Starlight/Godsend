@@ -8,6 +8,7 @@ import news from './session_errors_reducer';
 import sectors from './session_errors_reducer';
 import stock from './session_errors_reducer';
 import also from './session_errors_reducer';
+import security from './session_errors_reducer';
 
 
 const errorsReducer = combineReducers({
@@ -16,7 +17,8 @@ const errorsReducer = combineReducers({
   news: news,
   sectors: sectors,
   stock: stock,
-  also: also 
+  also: also,
+  security: security 
 });
 
 

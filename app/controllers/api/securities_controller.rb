@@ -5,11 +5,10 @@ class Api::SecuritiesController < ApplicationController
   end
 
   def create 
-    debugger 
     @security = Security.new(security_params)
 
     if @security.save
-      render json: 'Successfully Added To Watchlist!'
+      render :show
     else 
       render json: @security.errors.full_messages, status: 422
     end
