@@ -10,7 +10,7 @@ const securitiesReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case ADD_TO_SECURITIES:
-      debugger; 
+      // debugger; 
       return Object.assign({}, oldState, { [action.security.id]: action.security })
     default:
       return oldState;

@@ -1,0 +1,1 @@
+json.extract! security, :id, :company_name, :ticker 

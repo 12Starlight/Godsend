@@ -8,7 +8,7 @@ export const SECURITY_ERRORS = 'SECURITY_ERRORS';
 
 // Regular Action Creators
 const gotSecurity = (security) => {
-  debugger; 
+  // debugger; 
   return {
   type: ADD_TO_SECURITIES,
   security
@@ -22,12 +22,9 @@ const securityErrors = (errors) => ({
 
 
 // Thunk Action Creator
-export const addedSecurity = (security) => (dispatch) => {
-  
-  debugger; 
+export const addedSecurity = (security) => (dispatch) => (
   SecurityApiUtil.addSecurity(security).then(
     securityResponse => dispatch(gotSecurity(securityResponse)),
-    console.log(securityResponse),
     securitiesErrors => dispatch(securityErrors(securitiesErrors))
-  ) 
-};
+  )
+);
