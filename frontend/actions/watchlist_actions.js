@@ -9,19 +9,19 @@ export const GET_WATCHLIST_ERRORS = 'GET_WATCHLIST_ERRORS'
 
 
 // Regular Action Creators // Return POJO
-const getWatchlists = (watchlists) => ({
+const getWatchlistSecurities = (watchlists) => ({
   type: GET_WATCHLISTS,
   watchlists
 });
 
-const getWatchlist = (watchlist) => ({
+const getWatchlistSecurity = (watchlist) => ({
   type: GET_WATCHLIST,
   watchlist 
 });
 
-const trashWatchlist = (watchlist) => ({
+const trashWatchlistSecurity = (watchlist) => ({
   type: TRASH_WATCHLIST,
-  watchlist 
+  watchlistId: watchlist.id 
 });
 
 const getWatchlistErrors = (errors) => ({
@@ -31,30 +31,30 @@ const getWatchlistErrors = (errors) => ({
 
 
 // Thunk Action Creators
-export const getWatchLists = () => dispatch => (
-  WatchlistApiUtil.receiveWatchlists().then(
-    watchlistsResponse => dispatch(getWatchlists(watchlistsResponse)),
+export const getWatchListSecurities = () => dispatch => (
+  WatchlistApiUtil.receiveWatchlistSecurities().then(
+    watchlistSecurityResponse => dispatch(getWatchlistSecurities(watchlistSecurityResponse)),
     errors => dispatch(getWatchlistErrors(errors.responseJSON)) 
   )
 );
 
-export const getWatchList = (id) => dispatch => (
-  WatchlistApiUtil.receiveWatchlist(id).then(
-    watchlistResponse => dispatch(getWatchlist(watchlistResponse)),
+export const getWatchListSecurity = (id) => dispatch => (
+  WatchlistApiUtil.receiveWatchlistSecurity(id).then(
+    watchlistSecurityResponse => dispatch(getWatchlistSecurity(watchlistSecurityResponse)),
     errors => dispatch(getWatchlistErrors(errors))
   )
 );
 
-export const createWatchList = (watchlist) => dispatch => (
-  WatchlistApiUtil.createWatchlist(watchlist).then(
-    watchlistResponse => dispatch(getWatchlist(watchlistResponse)),
+export const createWatchListSecurity = (watchlist) => dispatch => (
+  WatchlistApiUtil.createWatchlistSecurity(watchlist).then(
+    watchlistSecurityResponse => dispatch(getWatchlist(watchlistSecurityResponse)),
     errors => dispatch(getWatchlistErrors(errors))
   )
 );
 
-export const trashWatchList = (id) => dispatch => (
-  WatchlistApiUtil.deleteWatchlist(id).then(
-    watchlistResponse => dispatch(trashWatchlist(watchlistResponse)),
+export const trashWatchListSecurity = (id) => dispatch => (
+  WatchlistApiUtil.deleteWatchlistSecurity(id).then(
+    watchlistSecurityResponse => dispatch(trashWatchlistSecurity(watchlistSecurityResponse)),
     errors => dispatch(getWatchlistErrors(errors))
   )
 );

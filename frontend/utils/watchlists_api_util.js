@@ -1,26 +1,26 @@
-export const receiveWatchlists = () => (
+export const receiveWatchlistSecurities = () => (
   $.ajax({
     method: 'GET',
     url: `/api/watchlists`
   })
 );
 
-export const receiveWatchlist = (id) => (
+export const receiveWatchlistSecurity = (id) => (
   $.ajax({
     method: 'GET',
     url: `/api/watchlists/${id}`
   })
 );
 
-export const createWatchlist = (watchlist) => (
+export const createWatchlistSecurity = (watchlistSecurity) => (
   $.ajax({
     method: `POST`,
     url: `/api/watchlists`,
-    data: { watchlist }
+    data: { watchlistSecurity }
   })
 );
 
-export const deleteWatchlist = (id) => (
+export const deleteWatchlistSecurity = (id) => (
   $.ajax({
     method: `DELETE`,
     url: `/api/watchlists/${id}`

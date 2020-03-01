@@ -7,7 +7,7 @@ import configureStore from './store/store';
 // Import Local Directory Files
 import { signOut, signIn } from './actions/session_actions';
 // import { receiveWatchlists, receiveWatchlist, createWatchlist, deleteWatchlist } from './utils/watchlists_api_util';
-import { getWatchLists, getWatchList, createWatchList, trashWatchList } from './actions/watchlist_actions';
+import { getWatchListSecurities, getWatchListSecurity, createWatchListSecurity, trashWatchListSecurity } from './actions/watchlist_actions';
 import { receiveAllNews } from './actions/news_actions';
 import { receiveAllSectors } from './actions/sectors_actions';
 import { 
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState; 
   window.signOut = signOut; 
   window.signIn = signIn;
-  window.getWatchLists = getWatchLists;
-  window.getWatchList = getWatchList;
-  window.createWatchList = createWatchList;
-  window.trashWatchList = trashWatchList; 
+  window.getWatchListSecurities = getWatchListSecurities;
+  window.getWatchListSecurity = getWatchListSecurity;
+  window.createWatchListSecurity = createWatchListSecurity;
+  window.trashWatchListSecurity = trashWatchListSecurity; 
   window.receiveAllNews = receiveAllNews;
   window.receiveAllSectors = receiveAllSectors; 
   window.giveMeMyStock = giveMeMyStock;
