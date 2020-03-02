@@ -3,7 +3,6 @@ import React from 'react';
 
 // Import Local Directory Files
 import WatchlistItem from './watchlist_item';
-import { render } from 'react-dom';
 
 
 class WatchList extends React.Component {
@@ -18,8 +17,11 @@ class WatchList extends React.Component {
 
   render() {
     return(
-      <div className='watchlist_container'>
-      </div>
+      <article className='watchlist_container'>
+        <div className='watchlist_title_container'>
+          <div className='watchlist_title'>Watchlist Securities</div>
+        </div>
+      </article>
     )
   }
 }
