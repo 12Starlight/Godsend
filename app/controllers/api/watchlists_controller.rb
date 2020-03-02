@@ -2,7 +2,7 @@ class Api::WatchlistsController < ApplicationController
   # before_action :require_logged_in, only: [:index, :show, :create, :destroy]
   
   def index
-    @watchlists = current_user.watchlists.all 
+    @watchlists = current_user.watchlist_securities.all 
     render :index 
   end
 

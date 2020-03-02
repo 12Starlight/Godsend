@@ -5,8 +5,8 @@ import { Link, Route } from 'react-router-dom';
 
 // Import Local Directory Files
 import NavbarContainer from '../navbar/navbar_container'
-import FeedContainer from '../feed/feed_container';
-import UserProfileContainer from './user_profile_container';
+// import FeedContainer from '../feed/feed_container';
+import WatchlistContainer from './watchlist/watchlist_container';
 
 
 class UserProfile extends React.Component {
@@ -41,9 +41,8 @@ class UserProfile extends React.Component {
         <NavbarContainer userId={userId} />
         <div className="user_container">
           <div className='user'>
-            <FeedContainer signOut={signOut} />
-            <div className='watchlist_container'>
-            </div>
+            {/*<FeedContainer signOut={signOut} />*/}
+            <WatchlistContainer />
           </div>
         </div>
       </div>
