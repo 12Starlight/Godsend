@@ -11,10 +11,10 @@ class User < ApplicationRecord
     foreign_key: :godsend_id,
     class_name: :Watchlist 
     
-  has_many :securities,
-    primary_key: :id,
-    foreign_key: :godsend_id,
-    class_name: :Security 
+#  has_many :securities,
+#    primary_key: :id,
+#    foreign_key: :godsend_id,
+#    class_name: :Security 
 
   # Main Methods
   def self.find_by_credentials(username, password)

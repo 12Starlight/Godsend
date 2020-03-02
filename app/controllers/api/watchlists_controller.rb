@@ -2,7 +2,11 @@ class Api::WatchlistsController < ApplicationController
   # before_action :require_logged_in, only: [:index, :show, :create, :destroy]
   
   def index
-    @watchlists = current_user.watchlist_securities.all 
+    #debugger 
+    @securities = Security.all 
+    #@security = Security.find_by(params[:securities_id])
+    @security = Watchlist.find_by(params[:securities_id])
+    @watchlists = current_user.watchlist_securities.all
     render :index 
   end
 

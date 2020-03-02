@@ -1,10 +1,13 @@
 class Security < ApplicationRecord 
 
-  belongs_to :watchlist
+#  belongs_to :user, 
+#    primary_key: :id,
+#    foreign_key: :godsend_id,
+#    class_name: :User 
 
-  belongs_to :user, 
+has_many :watchlist_securities,
   primary_key: :id,
-  foreign_key: :godsend_id,
-  class_name: :User 
+  foreign_key: :securities_id,
+  class_name: :Watchlist
 
 end 
