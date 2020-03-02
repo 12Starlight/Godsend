@@ -12,7 +12,7 @@ class WatchList extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getWatchlistSecurities(); 
+    this.props.getWatchListSecurities(); 
   }
 
 
