@@ -1,4 +1,4 @@
-class Watchlist < ApplicationRecord
+class WatchlistSecurity < ApplicationRecord
   validates :godsend_id, :securities_id, presence: true 
 
   belongs_to :user, 
