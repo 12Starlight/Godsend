@@ -20,6 +20,7 @@ class UserProfile extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.location.pathname !== prevProps.location.pathname) {
+      this.props.getWatchListSecurities(); 
       this.props.history.push(`/users/${this.props.match.params.awesome}`)
     }
   }
