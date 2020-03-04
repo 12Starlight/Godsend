@@ -1,4 +1,4 @@
-class Api::WatchlistsController < ApplicationController
+class Api::WatchlistSecuritiesController < ApplicationController
   # before_action :require_logged_in, only: [:index, :show, :create, :destroy]
   
   def index
@@ -53,8 +53,3 @@ class Api::WatchlistsController < ApplicationController
     params.require(:watchlist).permit(:securities_id)
   end 
 end
-
-
-
-
-
