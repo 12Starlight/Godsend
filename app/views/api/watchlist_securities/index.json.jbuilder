@@ -1,6 +1,6 @@
 @watchlists.each do |watchlist_security|
   json.set! watchlist_security.security_id do 
-    #json.partial! 'api/watchlists/watchlist', watchlist_security: watchlist_security 
+    #json.partial! 'api/watchlist_securities/watchlist_security', watchlist_security: watchlist_security 
     json.user watchlist_security.godsend_id
   end
 end
