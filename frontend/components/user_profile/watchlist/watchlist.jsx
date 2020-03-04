@@ -19,7 +19,7 @@ class WatchList extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.watchlistSecurities !== this.props.watchlistSecurities) {
-      if (this.props.alsoStats.length < this.props.watchlistSecurities.length) {
+      if (this.props.alsoStats.length < this.props.watchlistSecurities.length % 2) {
         this.getWatchlistStats();
       }
     }
