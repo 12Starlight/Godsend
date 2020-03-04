@@ -1,0 +1,1 @@
+json.partial! 'watchlist', watchlist_security: @watchlist
