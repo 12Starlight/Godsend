@@ -1,1 +1,1 @@
-json.partial! 'watchlist', watchlist_security: @watchlist
+json.partial! 'api/watchlist_securities/watchlist_security', watchlist_security: @watchlist

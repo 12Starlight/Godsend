@@ -66,7 +66,7 @@ class Stock extends React.Component {
     if (this.props.securities !== prevProps.securities && this.state.added !== false) {
       let watchlistSecurityId = Object.keys(this.props.securities);
       // debugger;
-      let watchlistSecurity = { securities_id: watchlistSecurityId[0] };
+      let watchlistSecurity = { security_id: watchlistSecurityId[0] };
       this.props.createWatchListSecurity(watchlistSecurity);
     }
   }

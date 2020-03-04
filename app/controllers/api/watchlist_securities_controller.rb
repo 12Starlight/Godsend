@@ -2,16 +2,15 @@ class Api::WatchlistSecuritiesController < ApplicationController
   # before_action :require_logged_in, only: [:index, :show, :create, :destroy]
   
   def index
-    #debugger 
     @securities = Security.all 
-    #@security = Security.find_by(params[:securities_id])
-    @security = Watchlist.find_by(params[:securities_id])
+    #@security = Security.find_by(params[:security_id])
+    @security = WatchlistSecurity.find_by(params[:security_id])
     @watchlists = current_user.watchlist_securities.all
     render :index 
   end
 
   def show
-    @watchlist = Watchlist.find(params[:id])
+    @watchlist = WatchlistSecurity.find(params[:id])
 
     if @watchlist
       render :show 
@@ -21,12 +20,12 @@ class Api::WatchlistSecuritiesController < ApplicationController
   end 
 
   def new
-    @watchlist = Watchlist.new
+    @watchlist = WatchlistSecurity.new
    render :new 
   end
 
   def create 
-    @watchlist = Watchlist.new(watchlist_params)
+    @watchlist = WatchlistSecurity.new(watchlist_params)
     @watchlist.godsend_id = current_user.id 
 
 
@@ -38,7 +37,7 @@ class Api::WatchlistSecuritiesController < ApplicationController
   end 
 
   def destroy
-    @watchlist = Watchlist.find_by(params[:securities_id])
+    @watchlist = WatchlistSecurity.find_by(params[:security_id])
 
     if @watchlist.destroy
       render :show 
@@ -50,6 +49,6 @@ class Api::WatchlistSecuritiesController < ApplicationController
 
   private 
   def watchlist_params
-    params.require(:watchlist).permit(:securities_id)
+    params.require(:watchlist_security).permit(:security_id)
   end 
 end

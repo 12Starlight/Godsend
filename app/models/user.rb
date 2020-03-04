@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :watchlist_securities,
     primary_key: :id,
     foreign_key: :godsend_id,
-    class_name: :Watchlist 
+    class_name: :WatchlistSecurity 
     
 #  has_many :securities,
 #    primary_key: :id,

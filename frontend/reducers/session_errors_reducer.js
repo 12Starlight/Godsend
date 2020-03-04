@@ -18,7 +18,7 @@ const sessionErrorsReducer = (state = [], action) => {
     case ACCEPT_CURRENT_USER:
       return [];
     case GET_WATCHLIST_ERRORS:
-      return action.errors;  
+      return action.errors || [];  
     case GET_NEWS_ERRORS:
       return action.errors || [];  
     case GET_ALL_SECTOR_ERRORS:

@@ -7,7 +7,7 @@ class Security < ApplicationRecord
 
 has_many :watchlist_securities,
   primary_key: :id,
-  foreign_key: :securities_id,
-  class_name: :Watchlist
+  foreign_key: :security_id,
+  class_name: :WatchlistSecurity
 
 end 
