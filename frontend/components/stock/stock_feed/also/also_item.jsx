@@ -105,7 +105,7 @@ class AlsoItem extends React.Component {
           </div>
           <div className='alsoItem_price_container'>
             <div className='alsoItem_price'>{'$' + alsoStat.latestPrice}</div>
-            <div className='alsoItem_change'>{(alsoStat.priceChange * 100).toFixed(2) + '%'}</div>
+            <div className='alsoItem_change'>{(alsoStat.changePercent * 100).toFixed(2) + '%'}</div>
           </div>        
         </div>
       </article>

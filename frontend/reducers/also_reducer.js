@@ -5,17 +5,13 @@ import { merge } from 'lodash';
 import { GET_ALSO_STOCK_STATS } from '../actions/also_actions';
 
 
-const alsoReducer = (oldState = [], action) => {
+const alsoReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
 
   switch(action.type) {
+
     case GET_ALSO_STOCK_STATS:
-      return [...oldState, {
-        company: action.alsoStats.company,
-        symbol: action.alsoStats.symbol,
-        latestPrice: action.alsoStats.latestPrice,
-        priceChange: action.alsoStats.changePercent
-      } ]; 
+      return Object.assign({}, oldState, { [action.alsoStats.symbol]: action.alsoStats } ); 
     default:
       return oldState; 
   }

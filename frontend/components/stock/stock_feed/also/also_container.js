@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 
   return {
     alsoBought: state.entities.stock.recommendId, // array of tickers
-    alsoStats: state.entities.also // array of stat objects
+    alsoStats: Object.values(state.entities.also) // array of stat objects
   }
 };
 

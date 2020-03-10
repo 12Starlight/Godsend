@@ -14,19 +14,25 @@ class WatchlistSecurityItem extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.fetch(this.props.security.ticker)
+  }
+
 
   render() {
     const { security } = this.props; 
+    let stat = this.props.stats[security.ticker] ? this.props.stats[security.ticker] : {} ;
 
+    // debugger; 
     return(
       <article className=''>
-      <Link className='watchlistItem_container_inner' to={`/stock/${security.symbol}`}>
-        <div className='watchlistItem_company' >{security.company}</div>
+      <Link className='watchlistItem_container_inner' to={`/stock/${security.ticker}`}>
+        <div className='watchlistItem_company' >{security.company_name}</div>
         <div className='watchlistItem_data'>
-          <div>{security.symbol}</div>
-          <div>{security.latestPrice}</div>
-          <div className='watchlistItem_priceChange'>{(security.priceChange * 100).toFixed(1) + '%'}</div>
-        </div>      
+          <div>{stat.symbol}</div>
+          <div>{stat.latestPrice}</div>
+          <div className='watchlistItem_priceChange'>{(stat.changePercent * 100).toFixed(1) + '%'}</div>
+        </div>  
       </Link>
       </article>
     )
@@ -34,4 +40,4 @@ class WatchlistSecurityItem extends React.Component {
 }
 
 
-export  default WatchlistSecurityItem; 
+export  default WatchlistSecurityItem;  

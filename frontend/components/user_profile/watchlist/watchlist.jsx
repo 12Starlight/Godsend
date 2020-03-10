@@ -18,33 +18,46 @@ class WatchList extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.watchlistSecurities !== this.props.watchlistSecurities) {
-      if (this.props.alsoStats.length < this.props.watchlistSecurities.length % 2) {
-        this.getWatchlistStats();
-      }
-    }
+    // if (prevProps.watchlistSecurities !== this.props.watchlistSecurities) {
+    //   console.log(this.props.alsoStats.length)
+    //   console.log(this.props.watchlistSecurities.length)
+    //   // debugger; 
+    //   if (this.props.alsoStats.length < this.props.watchlistSecurities.length) {
+    //     this.getWatchlistStats(); 
+    //   } else {
+    //     return; 
+    //   }
+    // }
+  }
+
+  componentDidMount() {
+
   }
 
   getWatchlistStats() {
     // debugger; 
-    this.props.watchlistSecurities.map((key) => {
+    let items = this.props.watchlistSecurities
+    items.map((item) => {
       // debugger; 
-      return this.props.giveAlsoStockStats(Object.values(key));
+      return this.props.giveAlsoStockStats(item.ticker);
     })
   }
 
   createWatchlistSecurityItems () {
-    if (this.props.alsoStats.length === this.props.watchlistSecurities.length) {
 
-      let allWatchlistSecuritites = this.props.alsoStats.map((security, i) => {
+    // if (this.props.alsoStats.length === this.props.watchlistSecurities.length) {
+      let fetch = this.props.giveAlsoStockStats
+      let stats = this.props.alsoStats 
+
+      let allWatchlistSecuritites = this.props.watchlistSecurities.map((security, i) => {
         return (
-          <WatchlistSecurityItem key={i} security={security} />
+          <WatchlistSecurityItem key={i} fetch={fetch} stats={stats} security={security} />
         )
       })
 
       // debugger; 
       return allWatchlistSecuritites;
-    }
+    // }
   }
 
 

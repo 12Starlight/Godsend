@@ -16,8 +16,10 @@ const watchlistSecuritiesReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case GET_WATCHLISTS: 
+      // debugger; 
       return Object.assign({}, oldState, action.watchlists);
     case GET_WATCHLIST:
+      // debugger; 
       return Object.assign({}, oldState, { [action.watchlist.id]: action.watchlist });
     case TRASH_WATCHLIST:
       // debugger 
