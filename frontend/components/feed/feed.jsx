@@ -60,7 +60,6 @@ class Feed extends React.Component {
         <div className='feed_news_container'>
           {reversed}
         </div>
-        <button className='button' onClick={signOut} >Sign Out</button>
       </div>
     )
   }

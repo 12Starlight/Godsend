@@ -15,6 +15,7 @@ class WatchList extends React.Component {
 
     this.getWatchlistStats = this.getWatchlistStats.bind(this);
     this.createWatchlistSecurityItems = this.createWatchlistSecurityItems.bind(this);
+    this.switch = this.switch.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -60,9 +61,19 @@ class WatchList extends React.Component {
     // }
   }
 
+  switch() {
+    let securityItems = this.createWatchlistSecurityItems()
+    if (securityItems.length < 1) {
+      return <div className='watchlistItem_container_inner_add'>Please add a security to watchlist</div>
+    } else {
+      // debugger;
+      return securityItems;
+    }
+  }
+
 
   render() {
-    const securities = this.createWatchlistSecurityItems(); 
+    // const securities = this.createWatchlistSecurityItems(); 
     // debugger; 
 
     return(
@@ -72,7 +83,7 @@ class WatchList extends React.Component {
         </div>
         <div className=''>
           <div className='' >
-            {securities}
+            {this.switch()}
           </div>
         </div>
       </article>

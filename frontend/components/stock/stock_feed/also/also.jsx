@@ -45,7 +45,7 @@ class Also extends React.Component {
       return allAlsoStats; 
     }
   }
-
+ 
 
   render() {
 
@@ -69,7 +69,7 @@ class Also extends React.Component {
     )
   }
 }
-
+ 
 
 export default withRouter(Also); 
 

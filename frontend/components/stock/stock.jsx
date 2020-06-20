@@ -57,7 +57,7 @@ class Stock extends React.Component {
     })
 
     let securityId = Object.keys(this.props.securities)
-    debugger; 
+    // debugger; 
     this.props.trashWatchListSecurity(securityId); 
     this.props.removedSecurity(securityId);
   }

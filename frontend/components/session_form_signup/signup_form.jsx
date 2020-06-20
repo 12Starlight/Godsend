@@ -38,7 +38,7 @@ class SignUp extends React.Component {
     this.props.userAction(user)
   }
 
-    handleDemo(e) {
+  handleDemo(e) {
     e.preventDefault();
     // debugger; 
     // const demo = { first_name: 'Awesome', last_name: 'Trader', email: 'awesome.trader@gmail.com', username: 'Trader123', password: '123456' }
